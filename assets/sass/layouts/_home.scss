@@ -1,0 +1,95 @@
+// =============== LANDING PAGE STYLES =========
+@use '../abstracts/variables' as *;
+
+// NEWSLINE (TOP OF PAGE)
+.newsline {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: $medium;
+	padding: $tiny $small;
+	height: $small;
+	margin-bottom: $tiny;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+
+	&__txt {
+		display: flex;
+		align-items: baseline;
+		gap: 0.2rem;
+
+		&--heading {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+
+		&--link {
+			text-transform: capitalize;
+		}
+	}
+
+	&__link--group {
+		display: flex;
+		gap: $tiny;
+	}
+
+	&__link {
+		height: $tiny;
+	}
+}
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	background-image: url('/assets/images/hero-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-blend-mode: darken;
+	height: 100vh;
+	height: 100dvh;
+	width: 100%;
+	padding: $small;
+}
+
+// ============= HERO SECTION ==============
+.hero {
+	display: block;
+	margin-block: auto 0;
+	width: 100%;
+
+	&__txt {
+		width: 50%;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin-top: $big;
+
+		&--stats {
+			display: flex;
+			gap: $small;
+		}
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.logo {
+		height: $big;
+	}
+}
+
+// ================ WELCOME SECTION ==============

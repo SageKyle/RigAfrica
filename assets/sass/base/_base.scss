@@ -1,0 +1,36 @@
+// ============= FONTS =========
+// RUBIK
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	width: 100%;
+}
+
+body {
+	font-size: 1.6rem;
+	width: 100%;
+	overflow-x: hidden;
+	position: relative;
+	font-family: 'Rubik', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a,
+a:link {
+	text-decoration: none;
+	color: unset;
+}
+
+img {
+	object-fit: contain;
+	-o-object-fit: contain;
+}

@@ -1,0 +1,40 @@
+.navbar {
+	// width: 90%;
+	height: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 2rem;
+	margin: 4rem auto;
+	border-radius: 1rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: fixed;
+	left: 2rem;
+	right: 2rem;
+	top: 1rem;
+
+	&__logo {
+		display: inline-block;
+		margin-right: auto;
+		justify-self: start;
+		width: 15%;
+	}
+
+	.logo {
+		width: 100%;
+	}
+}
+
+.navigation {
+	display: flex;
+	gap: 2rem;
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	margin-inline: 2rem;
+}
+
+.search-icon {
+	display: inline-block;
+	margin-left: 2rem;
+	cursor: pointer;
+}
