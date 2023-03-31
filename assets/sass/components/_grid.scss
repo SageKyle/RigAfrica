@@ -3,3 +3,37 @@
 	display: grid;
 	width: 100%;
 }
+
+.col-3 {
+	grid-template-columns: repeat(3, minmax(25px, 1fr));
+	justify-content: space-between;
+	gap: 4rem;
+}
+
+.card {
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
+.split-2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 4rem;
+	gap: 2rem;
+	width: 90%;
+	margin: 2rem auto;
+
+	&__txt {
+		width: 60%;
+	}
+
+	&__img {
+		width: 35%;
+
+		.main-img {
+			width: 100%;
+		}
+	}
+}
