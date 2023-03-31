@@ -4,7 +4,8 @@
 .footer {
 	display: flex;
 	padding: $tiny $medium;
-	background-color: bisque;
+	background-color: $secondaryColor;
+	color: $backgroundColor;
 
 	// FOOTER MAIN CONTENT
 	&__main {
@@ -19,6 +20,11 @@
 	&__links {
 		display: flex;
 		align-items: center;
+	}
+
+	.navigation,
+	.paragraph {
+		font-size: 1.2rem;
 	}
 
 	// SOCIAL ICONS

@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .btn {
 	min-width: max-content;
 	padding: 0.5rem 1rem;
@@ -6,10 +8,16 @@
 	border: unset;
 	outline: unset;
 	cursor: pointer;
+
+	a {
+		color: inherit;
+	}
 }
 
 .btn-primary {
 	font-size: 2rem;
 	padding: 1rem 2rem;
 	text-transform: capitalize;
+	background-color: $primaryColor;
+	color: $backgroundColor;
 }
