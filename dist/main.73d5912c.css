@@ -43,14 +43,44 @@ img {
 .secondary-heading {
   font-size: 2rem;
   line-height: 1;
-  margin: 1rem;
+  margin-block: 1rem;
+  text-transform: capitalize;
+}
+
+.tertiary-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-block: 1rem;
   text-transform: capitalize;
 }
 
 .paragraph {
-  margin: 1rem;
+  margin-block: 1rem;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  padding: 2rem 6rem;
+  background-color: bisque;
+}
+.footer__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 4rem;
+  gap: 1rem;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
 }
 
 .newsline {
@@ -183,6 +213,86 @@ img {
   margin-left: 1rem;
 }
 
+.events {
+  width: 80%;
+  margin-block: 6rem 4rem;
+  margin-inline: auto;
+}
+.events__txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+.events__card {
+  width: 100%;
+}
+.events .event {
+  width: 100%;
+}
+
+.about {
+  margin-bottom: 6rem;
+}
+
+.cta {
+  width: 100%;
+  height: 80%;
+  padding: 4rem 2rem;
+  margin-top: auto;
+  border-radius: 1rem;
+  background-color: orangered;
+  display: flex;
+  justify-content: space-between;
+}
+.cta__wrapper {
+  width: 80%;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin: 4rem auto;
+}
+.cta__txt {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.cta__txt--info {
+  margin-block: 4rem 1rem;
+}
+.cta__form {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.cta__form--input {
+  border: unset;
+  outline: unset;
+  width: 70%;
+  padding: 1rem;
+}
+.cta__form .btn {
+  border-radius: 1.5rem;
+}
+.cta__form--btn,
+.cta__form .icon {
+  height: 100%;
+}
+.cta__img {
+  width: 35%;
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
+}
+.cta__img .main-img {
+  width: 100%;
+}
+
 .grid {
   display: grid;
   width: 100%;
@@ -191,7 +301,7 @@ img {
 .col-3 {
   grid-template-columns: repeat(3, minmax(25px, 1fr));
   justify-content: space-between;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .card {

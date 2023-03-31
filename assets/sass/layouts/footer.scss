@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+// =============== FOOTER SECTION =============
+.footer {
+	display: flex;
+	padding: $tiny $medium;
+	background-color: bisque;
+
+	// FOOTER MAIN CONTENT
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-inline: $small;
+		gap: 1rem;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	// SOCIAL ICONS
+	&__socials {
+		display: flex;
+		gap: $tiny;
+	}
+}

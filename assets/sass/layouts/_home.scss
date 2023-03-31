@@ -156,3 +156,99 @@
 		margin-left: 1rem;
 	}
 }
+
+// ================= UPCOMING EVENTS SECTION ===============
+.events {
+	width: 80%;
+	margin-block: $medium $small;
+	margin-inline: auto;
+
+	&__txt {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-inline: $tiny;
+	}
+
+	&__card {
+		width: 100%;
+	}
+	.event {
+		width: 100%;
+	}
+}
+
+// ==================== ABOUT ============
+.about {
+	margin-bottom: $medium;
+}
+
+// ============ CALL-T0-ACTION ==============
+.cta {
+	width: 100%;
+	height: 80%;
+	padding: $small $tiny;
+	margin-top: auto;
+	border-radius: 1rem;
+	background-color: orangered;
+	display: flex;
+	justify-content: space-between;
+
+	// CTA CONTAINER
+	&__wrapper {
+		width: 80%;
+		height: calc($large * 3);
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		margin: $small auto;
+	}
+
+	&__txt {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+
+		&--info {
+			margin-block: $small 1rem;
+		}
+	}
+
+	// CTA FORM
+	&__form {
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		border-radius: $tiny;
+		padding: 0.5rem;
+
+		&--input {
+			border: unset;
+			outline: unset;
+			width: 70%;
+			padding: 1rem;
+		}
+
+		.btn {
+			border-radius: 1.5rem;
+		}
+
+		&--btn,
+		.icon {
+			height: 100%;
+		}
+	}
+
+	&__img {
+		width: 35%;
+		position: absolute;
+		right: $small;
+		bottom: 0;
+
+		.main-img {
+			width: 100%;
+		}
+	}
+}
