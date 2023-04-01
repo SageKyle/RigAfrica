@@ -6,6 +6,7 @@
 	padding: $tiny $medium;
 	background-color: $secondaryColor;
 	color: $backgroundColor;
+	position: relative;
 
 	// FOOTER MAIN CONTENT
 	&__main {
@@ -33,3 +34,19 @@
 		gap: $tiny;
 	}
 }
+
+// ==================== MEDIA QUERIES ================
+// @media screen and (max-width: 650px) {
+// 	.footer {
+// 		position: relative;
+// 		left: 0;
+// 		right: 0;
+// 	}
+
+// 	.navigation {
+// 		background-color: $textColor;
+// 		flex-direction: column;
+// 		position: absolute;
+// 		top: $tiny;
+// 	}
+// }

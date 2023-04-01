@@ -9,7 +9,6 @@
 	padding: $tiny;
 	margin: $tiny auto;
 	border-radius: 1rem;
-	// background-color: $accentColor;
 	background: rgba(217, 217, 217, 0.2);
 	border: 1px solid rgba(30, 30, 30, 0.5);
 	box-shadow: 0px 0.4rem 2.5rem rgba(0, 0, 0, 0.25);
@@ -42,4 +41,22 @@
 	display: inline-block;
 	margin-left: $tiny;
 	cursor: pointer;
+}
+
+// ==================== MEDIA QUERIES ================
+@media screen and (max-width: 650px) {
+	.navbar {
+		position: relative;
+		left: 0;
+		right: 0;
+	}
+
+	.navigation {
+		background-color: $textColor;
+		flex-direction: column;
+		position: absolute;
+		top: $medium;
+		padding: $tiny $small;
+		border-radius: 1rem;
+	}
 }
