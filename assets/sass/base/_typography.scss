@@ -26,3 +26,15 @@
 	line-height: 1.5;
 	font-size: 1.5rem;
 }
+
+// =============== MEDIA QUERIES ===============
+@media screen and (max-width: 650px) {
+	.primary-heading {
+		font-size: 2rem;
+	}
+
+	.secondary-heading,
+	.tertiary-heading {
+		font-size: 1.8rem;
+	}
+}

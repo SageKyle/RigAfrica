@@ -11,10 +11,11 @@
 // layouts
 @use 'layouts/header' as *;
 @use 'layouts/footer.scss' as *;
+@use 'layouts/partners' as *;
 @use 'layouts/home' as *;
 
 // utilities
 @use 'components/grid' as *;
 @use 'components/navbar' as *;
-@use 'components/utilities' as *;
 @use 'components/buttons' as *;
+@use 'components/utilities' as *;

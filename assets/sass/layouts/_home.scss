@@ -86,6 +86,10 @@
 		padding-inline: $tiny;
 	}
 
+	.card {
+		padding: 0;
+	}
+
 	&__card {
 		width: 100%;
 	}
@@ -202,7 +206,8 @@
 	}
 
 	&__main {
-		margin-block: $small;
+		margin: $small auto;
+		width: 90%;
 	}
 
 	&__card {
@@ -218,6 +223,99 @@
 		&--name {
 			margin-bottom: 0;
 			font-weight: 500;
+		}
+	}
+}
+
+// ==================== MEDIA QUERIES ==================
+@media screen and (max-width: 650px) {
+	// ============ UPCOMING EVENTS =======
+	.events__txt {
+		flex-direction: column;
+		gap: $tiny;
+		margin-bottom: $tiny;
+	}
+
+	// ============= PARTNERS SECTION =====================
+	.partners {
+		width: 80%;
+
+		&__wrapper {
+			height: auto;
+			padding-block: $small;
+
+			&::after {
+				clip-path: none;
+			}
+		}
+	}
+
+	// =============== FATHER'S BLESSING ==============
+	.prophecy-section.split-2 {
+		flex-direction: column-reverse;
+		padding: 0;
+
+		.split-2__img {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.main-img {
+			transform: rotateY(180deg);
+			position: static;
+			width: 80%;
+		}
+
+		.prophecy-section__txt {
+			padding: $tiny;
+		}
+	}
+
+	// =================== CTA ====================
+	.cta {
+		padding: $tiny;
+		justify-content: space-between;
+
+		// CTA CONTAINER
+		&__wrapper {
+			width: 100%;
+			height: auto;
+			align-items: flex-end;
+			// margin: $small auto;
+		}
+
+		&__txt {
+			width: 60%;
+
+			&--info {
+				margin-block: 1rem;
+				line-height: 1;
+				font-size: 1.3rem;
+			}
+		}
+
+		// CTA FORM
+		&__form {
+			width: 100%;
+			border-radius: 1.5rem;
+			padding: 0.5rem;
+
+			&--input {
+				width: 70%;
+				padding: 1rem;
+			}
+
+			.btn {
+				border-radius: 1.5rem;
+			}
+		}
+
+		&__img {
+			width: 38%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
 		}
 	}
 }

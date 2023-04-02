@@ -61,6 +61,15 @@ img {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 650px) {
+  .primary-heading {
+    font-size: 2rem;
+  }
+  .secondary-heading,
+  .tertiary-heading {
+    font-size: 1.8rem;
+  }
+}
 .newsline {
   display: flex;
   align-items: center;
@@ -150,8 +159,39 @@ img {
 }
 
 @media screen and (max-width: 650px) {
+  .header .hide-nav {
+    display: none !important;
+    height: 0;
+  }
   .header__wrapper {
     padding: 0;
+  }
+  .header .nav-toggle.hidden {
+    display: block;
+    filter: invert(100%);
+    margin-left: 2rem;
+  }
+  .newsline {
+    display: none;
+  }
+  .hero__txt {
+    width: 80%;
+    margin-block: auto 6rem;
+  }
+  .hero__info {
+    margin: 4rem 1rem;
+    gap: 4rem;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .hero__info .logo {
+    height: 6rem;
+  }
+  .hero__info--stats {
+    align-self: center;
+  }
+  .hero__info .stat__info {
+    font-size: 1.4rem;
   }
 }
 .footer {
@@ -180,6 +220,91 @@ img {
 .footer__socials {
   display: flex;
   gap: 2rem;
+}
+
+.partners-page .main {
+  background-color: #cbd5e1;
+}
+.partners-page .header {
+  background-image: url("/map-bg.db189f06.png");
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.partners-page .header__wrapper {
+  padding-top: 0;
+  background-image: unset;
+  background-color: rgba(236, 153, 47, 0.1);
+  color: black;
+}
+.partners-page .header .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-inline: auto;
+}
+.partners-page .header .hero__main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.partners-page .header .hero__main--quote {
+  width: 40%;
+}
+.partners-page .header .hero__heading {
+  width: 70%;
+  display: inline-block;
+  text-align: center;
+  margin-inline: auto;
+}
+.partners-page .header .hero__img--group {
+  width: 80%;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: repeat(3, 6rem);
+  gap: 1rem;
+  margin: 4rem;
+}
+.partners-page .header .img-wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.partners-page .header .img-wrapper .img {
+  object-fit: fill;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+}
+.partners-page .header .box1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.partners-page .header .box2 {
+  grid-row: 1/span 3;
+  grid-column: 2/3;
+}
+.partners-page .header .box3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.partners-page .header .box4 {
+  grid-column: 1/2;
+  grid-row: 3/span 1;
+}
+.partners-page .header .box5 {
+  grid-row: 2/span 2;
+  grid-column: 3/span 1;
+  background-color: #d9d9d9;
+}
+.partners-page .event-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.partners-page .split-2__txt {
+  width: 44%;
+}
+.partners-page .split-2__img {
+  width: 52%;
 }
 
 .welcome__txt--title {
@@ -246,6 +371,9 @@ img {
   justify-content: space-between;
   align-items: center;
   padding-inline: 2rem;
+}
+.events .card {
+  padding: 0;
 }
 .events__card {
   width: 100%;
@@ -345,7 +473,8 @@ img {
   font-size: 2.5rem;
 }
 .testimonies__main {
-  margin-block: 4rem;
+  margin: 4rem auto;
+  width: 90%;
 }
 .testimonies__card {
   display: flex;
@@ -361,13 +490,82 @@ img {
   font-weight: 500;
 }
 
+@media screen and (max-width: 650px) {
+  .events__txt {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .partners {
+    width: 80%;
+  }
+  .partners__wrapper {
+    height: auto;
+    padding-block: 4rem;
+  }
+  .partners__wrapper::after {
+    clip-path: none;
+  }
+  .prophecy-section.split-2 {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .prophecy-section.split-2 .split-2__img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .prophecy-section.split-2 .main-img {
+    transform: rotateY(180deg);
+    position: static;
+    width: 80%;
+  }
+  .prophecy-section.split-2 .prophecy-section__txt {
+    padding: 2rem;
+  }
+  .cta {
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  .cta__wrapper {
+    width: 100%;
+    height: auto;
+    align-items: flex-end;
+  }
+  .cta__txt {
+    width: 60%;
+  }
+  .cta__txt--info {
+    margin-block: 1rem;
+    line-height: 1;
+    font-size: 1.3rem;
+  }
+  .cta__form {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+  }
+  .cta__form--input {
+    width: 70%;
+    padding: 1rem;
+  }
+  .cta__form .btn {
+    border-radius: 1.5rem;
+  }
+  .cta__img {
+    width: 38%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
 .grid {
   display: grid;
   width: 100%;
 }
 
 .col-3 {
-  grid-template-columns: repeat(3, minmax(25px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: space-between;
   gap: 2rem;
 }
@@ -397,6 +595,19 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 650px) {
+  .split-2 {
+    flex-direction: column;
+    padding: 4rem;
+    width: 100%;
+  }
+  .split-2__txt {
+    width: 100%;
+  }
+  .split-2__img {
+    width: 80%;
+  }
+}
 .navbar {
   height: 6rem;
   display: flex;
@@ -429,6 +640,7 @@ img {
   text-transform: capitalize;
   font-size: 1.5rem;
   margin-inline: 2rem;
+  flex-wrap: wrap;
 }
 
 .search-icon {
@@ -438,12 +650,12 @@ img {
 }
 
 @media screen and (max-width: 650px) {
-  .navbar {
+  .header .navbar {
     position: relative;
     left: 0;
     right: 0;
   }
-  .navigation {
+  .header .navigation {
     background-color: #1e293b;
     flex-direction: column;
     position: absolute;
@@ -451,12 +663,10 @@ img {
     padding: 2rem 4rem;
     border-radius: 1rem;
   }
+  .header .navbar__logo {
+    width: 38%;
+  }
 }
-.icon {
-  height: 2rem;
-  aspect-ratio: 1/1;
-}
-
 .btn {
   min-width: max-content;
   padding: 0.5rem 1rem;
@@ -465,6 +675,9 @@ img {
   border: unset;
   outline: unset;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn a {
   color: inherit;
@@ -476,6 +689,19 @@ img {
   text-transform: capitalize;
   background-color: #ec992f;
   color: #fff;
+}
+
+.icon {
+  height: 2rem;
+  aspect-ratio: 1/1;
+}
+
+.primary-color {
+  color: #ec992f;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=/main.73d5912c.css.map */

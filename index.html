@@ -6,8 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>RIG Africa</title>
 		<link rel="stylesheet" href="assets/sass/main.scss" />
+		<script src="/assets/js/app.js" defer></script>
 	</head>
-	<body>
+	<body class="home-page">
 		<header class="header">
 			<!-- ---------------- TOP NEWSLINE ---------------- -->
 			<aside class="newsline">
@@ -52,12 +53,12 @@
 			<section class="header__wrapper">
 				<!-- ----------------- NAVBAR----------------------------- -->
 				<nav class="navbar">
-					<div class="navbar__logo">
+					<a href="/index.html" class="navbar__logo">
 						<img src="/assets/icons/rig-nav-logo.png" alt="" class="logo" />
-					</div>
-					<section class="navigation">
+					</a>
+					<section class="navigation main-nav hide-nav">
 						<a href="#" class="navigation__link">about us</a>
-						<a href="#" class="navigation__link">partner</a>
+						<a href="/partners.html" class="navigation__link">partner</a>
 						<a href="#" class="navigation__link">RIGX</a>
 						<a href="#" class="navigation__link">RIG school</a>
 						<a href="#" class="navigation__link">events</a>
@@ -70,6 +71,11 @@
 						alt="search"
 						title="Search"
 						class="icon search-icon"
+					/>
+					<img
+						src="/assets/icons/icon-hamburger.svg"
+						alt=""
+						class="icon nav-toggle hidden"
 					/>
 				</nav>
 				<!-- ------------------------ HERO SECTION -------------------- -->
@@ -346,13 +352,17 @@
 			<div class="footer__main">
 				<div class="footer__links">
 					<section class="navigation">
-						<a href="#" class="navigation__link">about us</a>
-						<a href="#" class="navigation__link">partner</a>
-						<a href="#" class="navigation__link">RIGX</a>
-						<a href="#" class="navigation__link">RIG school</a>
-						<a href="#" class="navigation__link">events</a>
-						<a href="#" class="navigation__link">shops</a>
-						<a href="#" class="navigation__link">affiliate</a>
+						<div class="nav-group">
+							<a href="#" class="navigation__link">about us</a>
+							<a href="#" class="navigation__link">partner</a>
+							<a href="#" class="navigation__link">RIGX</a>
+							<a href="#" class="navigation__link">RIG school</a>
+						</div>
+						<div class="nav-group">
+							<a href="#" class="navigation__link">events</a>
+							<a href="#" class="navigation__link">shops</a>
+							<a href="#" class="navigation__link">affiliate</a>
+						</div>
 					</section>
 					<button class="btn btn-primary">donate</button>
 				</div>

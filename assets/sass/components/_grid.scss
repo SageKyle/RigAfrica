@@ -5,7 +5,7 @@
 }
 
 .col-3 {
-	grid-template-columns: repeat(3, minmax(25px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	justify-content: space-between;
 	gap: 2rem;
 }
@@ -34,6 +34,23 @@
 
 		.main-img {
 			width: 100%;
+		}
+	}
+}
+
+// ==================== MEDIA QUERIES ==================
+@media screen and (max-width: 650px) {
+	.split-2 {
+		flex-direction: column;
+		padding: 4rem;
+		width: 100%;
+
+		&__txt {
+			width: 100%;
+		}
+
+		&__img {
+			width: 80%;
 		}
 	}
 }

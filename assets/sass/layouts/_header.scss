@@ -104,8 +104,46 @@
 // ================ MEDIA QUERIES ======================
 @media screen and (max-width: 650px) {
 	.header {
+		.hide-nav {
+			display: none !important;
+			height: 0;
+		}
+
 		&__wrapper {
 			padding: 0;
+		}
+
+		.nav-toggle.hidden {
+			display: block;
+			filter: invert(100%);
+			margin-left: $tiny;
+		}
+	}
+	.newsline {
+		display: none;
+	}
+
+	.hero__txt {
+		width: 80%;
+		margin-block: auto $medium;
+	}
+
+	.hero__info {
+		margin: $small 1rem;
+		gap: $small;
+		flex-direction: column;
+		align-items: flex-end;
+
+		.logo {
+			height: $medium;
+		}
+
+		&--stats {
+			align-self: center;
+		}
+
+		.stat__info {
+			font-size: 1.4rem;
 		}
 	}
 }
