@@ -1,0 +1,137 @@
+// ================== EVENTS PAGE STYLES =======
+@use '../abstracts/variables' as *;
+
+.events-page {
+	background-color: rgba($accentColor, 0.2);
+
+	.navbar {
+		width: 90%;
+	}
+
+	.main {
+		margin-inline: auto;
+		width: 70%;
+	}
+
+	.top-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		width: 100%;
+		background-color: rgba($backgroundColor, 0.8);
+		margin-bottom: $tiny;
+
+		.tertiary-heading {
+			display: flex;
+			align-items: center;
+		}
+
+		.search-form {
+			display: flex;
+			align-items: center;
+
+			&__label {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				background-color: rgba($accentColor, 0.2);
+				outline: 2px solid $accentColor;
+				border-radius: 0.5rem;
+				margin-left: 1rem;
+			}
+
+			&__input,
+			&__input:focus {
+				background-color: transparent;
+				border: unset;
+				outline: unset;
+				height: 100%;
+				padding: 1rem;
+			}
+
+			&__close {
+				display: inline-block;
+				color: $backgroundColor;
+				padding-inline: 1rem;
+				cursor: pointer;
+			}
+
+			.toggle-form {
+				cursor: pointer;
+				filter: invert(80%);
+			}
+		}
+	}
+
+	.events__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-block: $small;
+	}
+
+	.date__nav {
+		display: flex;
+		align-items: center;
+
+		.btn {
+			margin-right: 1rem;
+
+			.icon {
+				transform: rotateY(180deg);
+				filter: invert(80%);
+			}
+		}
+	}
+
+	.events {
+		width: 100%;
+
+		.events-section {
+			margin-bottom: $small;
+		}
+
+		.event {
+			display: flex;
+			background-color: rgba($backgroundColor, 0.8);
+			align-items: center;
+			margin-bottom: $tiny;
+			padding: 1rem;
+			border-radius: 0.5rem;
+
+			&__img {
+				width: 15rem;
+				object-fit: contain;
+			}
+
+			&__txt {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				padding: 1rem;
+			}
+
+			&__date {
+				display: flex;
+				align-items: flex-end;
+				width: 100%;
+				gap: 0.5rem;
+			}
+			// .online {
+			// 	display: flex;
+			// 	align-items: center;
+			// }
+		}
+
+		.empty-event {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			text-transform: capitalize;
+		}
+	}
+}
