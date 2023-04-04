@@ -4,10 +4,6 @@
 .contact-page {
 	background-color: rgba($accentColor, 0.2);
 
-	img {
-		max-width: 15rem;
-	}
-
 	.navbar {
 		width: 90%;
 	}
@@ -79,6 +75,48 @@
 		textarea {
 			height: 12rem;
 		}
+	}
+
+	.contact__img--group {
+		width: fit-content;
+		margin: $medium auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.pattern {
+		width: 25rem;
+	}
+
+	.center-img {
+		width: 20rem;
+		z-index: 5;
+		left: -1rem;
+		bottom: 1rem;
+	}
+
+	.top-img {
+		width: $large;
+		z-index: 6;
+		top: 0;
+		left: -1rem;
+	}
+
+	.bottom-img {
+		width: $large;
+		z-index: 6;
+		bottom: -1rem;
+		left: 8rem;
+	}
+
+	.center-img,
+	.top-img,
+	.bottom-img {
+		border-radius: 50%;
+		position: absolute;
 	}
 
 	.rig-branch__group {
