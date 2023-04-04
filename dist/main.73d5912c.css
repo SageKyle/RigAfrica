@@ -37,6 +37,10 @@ textarea {
   resize: none;
 }
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 .primary-heading {
   font-size: 2.5rem;
   line-height: 1;
@@ -625,6 +629,9 @@ textarea {
 .contact-page .contact-main textarea {
   height: 12rem;
 }
+.contact-page .contact-main option {
+  width: inherit;
+}
 .contact-page .contact__img--group {
   width: fit-content;
   margin: 6rem auto;
@@ -639,19 +646,19 @@ textarea {
 }
 .contact-page .center-img {
   width: 20rem;
-  z-index: 5;
+  z-index: 2;
   left: -1rem;
   bottom: 1rem;
 }
 .contact-page .top-img {
   width: 10rem;
-  z-index: 6;
+  z-index: 3;
   top: 0;
   left: -1rem;
 }
 .contact-page .bottom-img {
   width: 10rem;
-  z-index: 6;
+  z-index: 3;
   bottom: -1rem;
   left: 8rem;
 }
