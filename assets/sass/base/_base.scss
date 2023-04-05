@@ -57,3 +57,12 @@ html.sr .load-hidden {
 		transform: translateX(-100%);
 	}
 }
+
+@keyframes rotate {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}

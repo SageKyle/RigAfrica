@@ -143,8 +143,22 @@
 		align-items: center;
 	}
 
-	.logo {
-		height: $big;
+	&__logo {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.rig-logo {
+			height: $small;
+		}
+
+		.rig-txt {
+			height: $big;
+			position: absolute;
+			animation: rotate 15s linear infinite;
+			z-index: 5;
+		}
 	}
 }
 

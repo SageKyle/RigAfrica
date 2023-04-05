@@ -60,9 +60,16 @@
 .events-page {
 	background-color: rgba($accentColor, 0.2);
 
+	.navbar {
+		background-color: rgba($accentColor, 0.6);
+		color: $backgroundColor;
+		top: 0;
+	}
+
 	.main {
 		margin-inline: auto;
 		width: 70%;
+		padding-top: 12rem;
 	}
 
 	.events__nav {
@@ -141,9 +148,16 @@
 	font-size: 1.4rem;
 	background-color: rgba($accentColor, 0.2);
 
+	.navbar {
+		background-color: rgba($accentColor, 0.6);
+		color: $backgroundColor;
+		top: 0;
+	}
+
 	.main {
 		margin-inline: auto;
-		width: 75%;
+		width: 70%;
+		padding-top: 12rem;
 	}
 
 	.events__nav {

@@ -1820,17 +1820,15 @@ var options = {
 var observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach(function (entry) {
     if (entry.intersectionRatio !== 1) {
-      navContainer.classList.add('primary-bg');
+      // navContainer.classList.add('primary-bg');
       console.log('color added');
     } else {
       // navContainer.style.backgroundColor = 'green';
       console.log('color removed');
-      navContainer.classList.remove('primary-bg');
+      // navContainer.classList.remove('primary-bg');
     }
   });
-}, {
-  threshold: 1
-});
+}, options);
 observer.observe(mainContainer);
 
 // ============= CONTACT PAGE ANIMATION =============

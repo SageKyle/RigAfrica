@@ -180,7 +180,7 @@
 	color: $backgroundColor;
 	display: flex;
 	justify-content: space-between;
-	// position: relative;
+	position: relative;
 
 	&::after {
 		display: block;
@@ -195,7 +195,6 @@
 		right: $tiny;
 		position: absolute;
 		z-index: 1;
-		isolation: isolate;
 		animation: loopHorizontal 15s linear infinite;
 	}
 

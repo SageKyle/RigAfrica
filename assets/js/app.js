@@ -18,21 +18,18 @@ const options = {
 	threshold: 0.5,
 };
 
-let observer = new IntersectionObserver(
-	(entries, observer) => {
-		entries.forEach((entry) => {
-			if (entry.intersectionRatio !== 1) {
-				navContainer.classList.add('primary-bg');
-				console.log('color added');
-			} else {
-				// navContainer.style.backgroundColor = 'green';
-				console.log('color removed');
-				navContainer.classList.remove('primary-bg');
-			}
-		});
-	},
-	{ threshold: 1 }
-);
+let observer = new IntersectionObserver((entries, observer) => {
+	entries.forEach((entry) => {
+		if (entry.intersectionRatio !== 1) {
+			// navContainer.classList.add('primary-bg');
+			console.log('color added');
+		} else {
+			// navContainer.style.backgroundColor = 'green';
+			console.log('color removed');
+			// navContainer.classList.remove('primary-bg');
+		}
+	});
+}, options);
 
 observer.observe(mainContainer);
 

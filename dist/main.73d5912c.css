@@ -50,6 +50,14 @@ html.sr .load-hidden {
     transform: translateX(-100%);
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 .primary-heading {
   font-size: 2.5rem;
   line-height: 1;
@@ -211,8 +219,20 @@ html.sr .load-hidden {
   flex-direction: column;
   align-items: center;
 }
-.hero .logo {
+.hero__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__logo .rig-logo {
+  height: 4rem;
+}
+.hero__logo .rig-txt {
   height: 8rem;
+  position: absolute;
+  animation: rotate 15s linear infinite;
+  z-index: 5;
 }
 
 @media screen and (max-width: 650px) {
@@ -257,6 +277,21 @@ html.sr .load-hidden {
   background-color: #2f1f09;
   color: #fff;
   position: relative;
+}
+.footer__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__logo .rig-logo {
+  height: 4rem;
+}
+.footer__logo .rig-txt {
+  height: 8rem;
+  position: absolute;
+  animation: rotate 15s linear infinite;
+  z-index: 5;
 }
 .footer__main {
   display: flex;
@@ -507,6 +542,7 @@ html.sr .load-hidden {
   color: #fff;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .cta::after {
   display: block;
@@ -521,7 +557,6 @@ html.sr .load-hidden {
   right: 2rem;
   position: absolute;
   z-index: 1;
-  isolation: isolate;
   animation: loopHorizontal 15s linear infinite;
 }
 .cta__wrapper {
@@ -814,9 +849,15 @@ html.sr .load-hidden {
 .events-page {
   background-color: rgba(72, 84, 97, 0.2);
 }
+.events-page .navbar {
+  background-color: rgba(72, 84, 97, 0.6);
+  color: #fff;
+  top: 0;
+}
 .events-page .main {
   margin-inline: auto;
   width: 70%;
+  padding-top: 12rem;
 }
 .events-page .events__nav {
   display: flex;
@@ -878,9 +919,15 @@ html.sr .load-hidden {
   font-size: 1.4rem;
   background-color: rgba(72, 84, 97, 0.2);
 }
+.past-events-page .navbar {
+  background-color: rgba(72, 84, 97, 0.6);
+  color: #fff;
+  top: 0;
+}
 .past-events-page .main {
   margin-inline: auto;
-  width: 75%;
+  width: 70%;
+  padding-top: 12rem;
 }
 .past-events-page .events__nav {
   display: flex;
