@@ -122,15 +122,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var searchIcon = document.querySelector('.toggle-form');
 var closeIcon = document.querySelector('.event-close');
 var searchInput = document.querySelector('.event-search');
+
+// ========= DISPLAY FORM INPUT ====================
 searchIcon.addEventListener('click', function () {
   searchInput.classList.remove('hidden');
-
-  // searchIcon.removeEventListener
+  document.querySelector('.search-form__input').focus();
+  CloseOnKeyPress();
 });
 
-closeIcon.addEventListener('click', function () {
-  searchInput.classList.add('hidden');
-});
+// ========================= HIDE FORM INPUT FUNCTION ==================
+function CloseOnKeyPress() {
+  // HIDE FORM BY CLICKING X
+  closeIcon.addEventListener('click', function () {
+    searchInput.classList.add('hidden');
+  });
+
+  // HIDE FORM WITH ESC KEY
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      searchInput.classList.add('hidden');
+    }
+  });
+}
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

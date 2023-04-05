@@ -63,6 +63,53 @@
 		background-image: linear-gradient(rgb(40, 49, 59), rgba(72, 84, 97, 0.46));
 		padding: $small;
 	}
+
+	.search-form {
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 15rem;
+		left: 50%;
+		z-index: 50;
+
+		&__label {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			background-color: rgba($accentColor, 0.5);
+			outline: 2px solid $accentColor;
+			border-radius: 0.5rem;
+			margin-left: 1rem;
+		}
+
+		&__input,
+		&__input:focus {
+			background-color: transparent;
+			border: unset;
+			color: $backgroundColor;
+			outline: unset;
+			height: 100%;
+			padding: 1rem;
+		}
+
+		&__input::placeholder {
+			color: $primaryColor;
+			text-transform: capitalize;
+			font-weight: bold;
+		}
+
+		&__close {
+			display: inline-block;
+			color: $backgroundColor;
+			padding-inline: 1rem;
+			cursor: pointer;
+		}
+
+		.toggle-form {
+			cursor: pointer;
+			filter: invert(80%);
+		}
+	}
 }
 
 // ============= HERO SECTION ==============

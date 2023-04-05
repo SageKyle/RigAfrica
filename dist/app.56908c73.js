@@ -1807,9 +1807,31 @@ _scrollreveal.default.debug = true;
 // ========== NAVIGATION TOGGLE =============
 var navBar = document.querySelector('.main-nav');
 var toggle = document.querySelector('.nav-toggle');
+var navContainer = document.querySelector('.navbar');
+var mainContainer = document.querySelector('.main');
 toggle.addEventListener('click', function (e) {
   navBar.classList.toggle('hide-nav');
 });
+var options = {
+  root: document.querySelector('body'),
+  rootMargin: '0px',
+  threshold: 0.5
+};
+var observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio !== 1) {
+      navContainer.classList.add('primary-bg');
+      console.log('color added');
+    } else {
+      // navContainer.style.backgroundColor = 'green';
+      console.log('color removed');
+      navContainer.classList.remove('primary-bg');
+    }
+  });
+}, {
+  threshold: 1
+});
+observer.observe(mainContainer);
 
 // ============= CONTACT PAGE ANIMATION =============
 (0, _scrollreveal.default)().reveal('.center-img', {
@@ -1829,6 +1851,33 @@ toggle.addEventListener('click', function (e) {
   reset: true,
   delay: 1000
 });
+
+// ================ SEARCH EVENTS ====================
+var searchIcon = document.querySelector('.toggle-form');
+var closeIcon = document.querySelector('.event-close');
+var searchInput = document.querySelector('.event-search');
+
+// ========= DISPLAY FORM INPUT ====================
+searchIcon.addEventListener('click', function () {
+  searchInput.classList.remove('hidden');
+  document.querySelector('.search-form__input').focus();
+  CloseOnKeyPress();
+});
+
+// ========================= HIDE FORM INPUT FUNCTION ==================
+function CloseOnKeyPress() {
+  // HIDE FORM BY CLICKING X
+  closeIcon.addEventListener('click', function () {
+    searchInput.classList.add('hidden');
+  });
+
+  // HIDE FORM WITH ESC KEY
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      searchInput.classList.add('hidden');
+    }
+  });
+}
 },{"scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

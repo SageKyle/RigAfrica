@@ -84,6 +84,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding-inline: $tiny;
+		margin-block: $small;
 	}
 
 	.card {
@@ -197,9 +198,25 @@
 	text-align: center;
 	padding: $small;
 	margin-bottom: $medium;
-	background-image: url('/assets/images/map-bg.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+	position: relative;
+
+	&::after {
+		display: block;
+		content: url('/assets/images/map-bg.png');
+		width: 100%;
+		top: $tiny;
+		bottom: $tiny;
+		position: absolute;
+		z-index: -1;
+		isolation: isolate;
+		animation-name: loopHorizontal;
+		animation-duration: 40s;
+		animation-delay: 0s;
+		animation-play-state: running;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-fill-mode: none;
+	}
 
 	&__heading {
 		font-size: 2.5rem;

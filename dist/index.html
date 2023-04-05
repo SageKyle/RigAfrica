@@ -14,6 +14,7 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.86193476.png">
 		<link rel="manifest" href="/assets\icons\favicon\site.webmanifest">
 		<!-- js -->
+		<!-- <script src="/assets/js/event.js" defer></script> -->
 		<script src="/app.56908c73.js" defer=""></script>
 	<script src="/main.73d5912c.js"></script></head>
 	<body class="home-page">
@@ -58,9 +59,15 @@
 						<a href="#" class="navigation__link">affiliate</a>
 					</section>
 					<button class="btn btn-primary">donate</button>
-					<img src="/search-icon.a77f22bf.png" alt="search" title="Search" class="icon search-icon">
+					<img src="/search-icon.a77f22bf.png" alt="search" title="Search" class="icon search-icon toggle-form">
 					<img src="/icon-hamburger.7419e5e5.svg" alt="" class="icon nav-toggle hidden">
 				</nav>
+				<form class="search-form hidden event-search">
+					<label class="search-form__label">
+						<span class="search-form__close event-close">x</span>
+						<input class="search-form__input" placeholder="search events" type="text" autofocus="">
+					</label>
+				</form>
 				<!-- ------------------------ HERO SECTION -------------------- -->
 				<section class="hero">
 					<article class="hero__txt">
@@ -96,198 +103,200 @@
 				</section>
 			</section>
 		</header>
-		<!-- <main class="main"> -->
-		<!-- ---------------- WELCOME SECTION -------------- -->
-		<section class="welcome split-2">
-			<article class="welcome__txt split-2__txt">
-				<h3 class="welcome__txt--title">welcome</h3>
-				<h4 class="welcome__txt--heading secondary-heading">
-					Rig Africa - a place where prophets a built
-				</h4>
-				<p class="paragraph welcome__txt-paragraph">
-					Rig Africa is a sub-organization under the Rig Nation umbrella, a
-					faith-based organization that seeks to spread the message of
-					Christianity globally. Rig Africa focuses specifically on evangelism
-					and support for Christians in Africa. Through training and development
-					programs, mission trips, and outreach events, Rig Africa aims to equip
-					Christians in Africa to become effective ministers of the gospel. The
-					organization is committed to serving the people of Africa and making a
-					positive impact in their communities, in line with the broader mission
-					of Rig Nation.
-				</p>
-			</article>
-			<div class="welcome__img split-2__img">
-				<img src="/Rig Africa map 1.9f69e41b.png" alt="Welcome to RIG Africa" class="main-img">
-			</div>
-		</section>
-		<!-- -------------- PARTNERS SECTION ------------ -->
-		<section class="partners__wrapper">
-			<div class="partners">
-				<h2 class="secondary-heading partners__heading">partner with us</h2>
-				<!-- -------- PARTNERS CARDS -------------- -->
-				<div class="grid col-3">
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+		<main class="main">
+			<!-- ---------------- WELCOME SECTION -------------- -->
+			<section class="welcome split-2">
+				<article class="welcome__txt split-2__txt">
+					<h3 class="welcome__txt--title">welcome</h3>
+					<h4 class="welcome__txt--heading secondary-heading">
+						Rig Africa - a place where prophets a built
+					</h4>
+					<p class="paragraph welcome__txt-paragraph">
+						Rig Africa is a sub-organization under the Rig Nation umbrella, a
+						faith-based organization that seeks to spread the message of
+						Christianity globally. Rig Africa focuses specifically on evangelism
+						and support for Christians in Africa. Through training and
+						development programs, mission trips, and outreach events, Rig Africa
+						aims to equip Christians in Africa to become effective ministers of
+						the gospel. The organization is committed to serving the people of
+						Africa and making a positive impact in their communities, in line
+						with the broader mission of Rig Nation.
+					</p>
+				</article>
+				<div class="welcome__img split-2__img">
+					<img src="/Rig Africa map 1.9f69e41b.png" alt="Welcome to RIG Africa" class="main-img">
+				</div>
+			</section>
+			<!-- -------------- PARTNERS SECTION ------------ -->
+			<section class="partners__wrapper">
+				<div class="partners">
+					<h2 class="secondary-heading partners__heading">partner with us</h2>
+					<!-- -------- PARTNERS CARDS -------------- -->
+					<div class="grid col-3">
+						<div class="card partners__card">
+							<div class="partners__card--logo">
+								<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+							</div>
+							<h4 class="secondary-heading partners__card--heading">
+								online donation
+							</h4>
+							<p class="paragraph">Tithes, offerings or random giving.</p>
 						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							online donation
-						</h4>
-						<p class="paragraph">Tithes, offerings or random giving.</p>
-					</div>
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+						<div class="card partners__card">
+							<div class="partners__card--logo">
+								<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+							</div>
+							<h4 class="secondary-heading partners__card--heading">
+								become a partner
+							</h4>
+							<p class="paragraph">
+								Join our vision to raise 4000 active prophets.
+							</p>
 						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							become a partner
-						</h4>
-						<p class="paragraph">
-							Join our vision to raise 4000 active prophets.
-						</p>
-					</div>
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+						<div class="card partners__card">
+							<div class="partners__card--logo">
+								<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+							</div>
+							<h4 class="secondary-heading partners__card--heading">
+								sponsor a project
+							</h4>
+							<p class="paragraph">
+								Give to any of our projects or programs we are working on.
+							</p>
 						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							sponsor a project
-						</h4>
-						<p class="paragraph">
-							Give to any of our projects or programs we are working on.
-						</p>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- ------------ UPCOMING EVENTS --------- -->
-		<section class="events">
-			<div class="events__txt">
-				<h4 class="tertiary-heading events__txt--heading">upcoming events</h4>
-				<button class="btn btn-primary">
-					<a href="#">view upcoming events</a>
-				</button>
-			</div>
-			<div class="grid col-3 events__wrapper">
-				<div class="card event__card">
-					<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+			</section>
+			<!-- ------------ UPCOMING EVENTS --------- -->
+			<section class="events">
+				<div class="events__txt">
+					<h4 class="tertiary-heading events__txt--heading">upcoming events</h4>
+					<button class="btn btn-primary">
+						<a href="#">view upcoming events</a>
+					</button>
 				</div>
-				<div class="card event__card">
-					<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+				<div class="grid col-3 events__wrapper">
+					<div class="card event__card">
+						<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+					</div>
+					<div class="card event__card">
+						<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+					</div>
+					<div class="card event__card">
+						<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+					</div>
 				</div>
-				<div class="card event__card">
-					<img src="/event-img.fc61c3ac.png" alt="upcoming event" class="event">
+			</section>
+			<!------------- FATHER BLESSINGS (PROPHECY) ----------->
+			<section class="prophecy-section split-2">
+				<div class="prophecy-section__img split-2__img">
+					<img src="/prophet.d49dcae0.png" alt="the father's blessing" class="main-img">
 				</div>
-			</div>
-		</section>
-		<!------------- FATHER BLESSINGS (PROPHECY) ----------->
-		<section class="prophecy-section split-2">
-			<div class="prophecy-section__img split-2__img">
-				<img src="/prophet.d49dcae0.png" alt="the father's blessing" class="main-img">
-			</div>
-			<div class="prophecy-section__txt split-2__txt">
-				<h4 class="secondary-heading">father's blessing</h4>
-				<p class="paragraph">
-					Whether you're seeking to deepen your faith, find meaning in your
-					life, or simply gain a new perspective on the world around you, the
-					teachings of Prophet Tomi Arayom are a must-listen. Tune in today and
-					experience the transformative power of his wisdom and guidance.
-				</p>
-				<button class="btn btn-primary"><a href="#">watch sermons</a></button>
-			</div>
-		</section>
-		<!-- ------------ ABOUT -------------- -->
-		<section class="about split-2">
-			<div class="about__txt split-2__txt">
-				<h5 class="tertiary-heading">
-					Training People to be prophets and prophets to be people
-				</h5>
-				<p class="paragraph">
-					RIG Nation was founded in 2007 by Tomi Arayomi with the vision to
-					restore the apostolic and prophetic ministry back into the Body of
-					Christ and to equip this generation to be in a position and condition
-					for use by God. RIG stands for Restoring Issachar’s Generation, a
-					mission formed by the scriptural Chronicles 12:32: “Of the sons of
-					Issachar who had an understanding of the times to know what Israel
-					ought to do…” RIG Nation is headquartered in London, United Kingdom
-					and has a growing presence in Africa (Nigeria), Asia (Philippines),
-					North America (USA) and Europe (United Kingdom).
-				</p>
-			</div>
-			<div class="about__img split-2__img">
-				<img src="/about-img.b502d015.png" alt="" class="main-img">
-			</div>
-		</section>
-		<!-- ------- TESTIMONIES -------------->
-		<section class="testimonies">
-			<h4 class="secondary-heading testimonies__heading">testimonies</h4>
-			<article class="grid col-3 testimonies__main">
-				<div class="testimonies__card">
-					<img src="/Avatar Image.5e146502.png" alt="" class="testimonies__card--img">
-					<h5 class="secondary-heading testimonies__card--name">
-						mathew akoki
+				<div class="prophecy-section__txt split-2__txt">
+					<h4 class="secondary-heading">father's blessing</h4>
+					<p class="paragraph">
+						Whether you're seeking to deepen your faith, find meaning in your
+						life, or simply gain a new perspective on the world around you, the
+						teachings of Prophet Tomi Arayom are a must-listen. Tune in today
+						and experience the transformative power of his wisdom and guidance.
+					</p>
+					<button class="btn btn-primary"><a href="#">watch sermons</a></button>
+				</div>
+			</section>
+			<!-- ------------ ABOUT -------------- -->
+			<section class="about split-2">
+				<div class="about__txt split-2__txt">
+					<h5 class="tertiary-heading">
+						Training People to be prophets and prophets to be people
 					</h5>
-					<p class="paragraph testimonies__card--location">Nairobi, Kenya</p>
-
-					<p class="paragraph testimonies__card--info">
-						Growing up, I felt like something was missing in my life. But when I
-						walked through the doors of the church, I finally found the missing
-						piece - a relationship with God
+					<p class="paragraph">
+						RIG Nation was founded in 2007 by Tomi Arayomi with the vision to
+						restore the apostolic and prophetic ministry back into the Body of
+						Christ and to equip this generation to be in a position and
+						condition for use by God. RIG stands for Restoring Issachar’s
+						Generation, a mission formed by the scriptural Chronicles 12:32: “Of
+						the sons of Issachar who had an understanding of the times to know
+						what Israel ought to do…” RIG Nation is headquartered in London,
+						United Kingdom and has a growing presence in Africa (Nigeria), Asia
+						(Philippines), North America (USA) and Europe (United Kingdom).
 					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
 				</div>
-				<div class="testimonies__card">
-					<img src="/Avatar Image (1).a4b4ab24.png" alt="" class="testimonies__card--img">
-					<h5 class="secondary-heading testimonies__card--name">anabel joy</h5>
-					<p class="paragraph testimonies__card--location">Lagos, Nigeria</p>
+				<div class="about__img split-2__img">
+					<img src="/about-img.b502d015.png" alt="" class="main-img">
+				</div>
+			</section>
+			<!-- ------- TESTIMONIES -------------->
+			<section class="testimonies">
+				<h4 class="secondary-heading testimonies__heading">testimonies</h4>
+				<article class="grid col-3 testimonies__main">
+					<div class="testimonies__card">
+						<img src="/Avatar Image.5e146502.png" alt="" class="testimonies__card--img">
+						<h5 class="secondary-heading testimonies__card--name">
+							mathew akoki
+						</h5>
+						<p class="paragraph testimonies__card--location">Nairobi, Kenya</p>
 
-					<p class="paragraph testimonies__card--info">
-						I had hit rock bottom, but through prayer and the support of my
-						church family, I found the strength to turn my life around and start
-						fresh.
-					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
-				</div>
-				<div class="testimonies__card">
-					<img src="/Avatar Image (2).d210913a.png" alt="" class="testimonies__card--img">
-					<h5 class="secondary-heading testimonies__card--name">
-						jasmine okafor
-					</h5>
-					<p class="paragraph testimonies__card--location">Abuja, Nigeria</p>
+						<p class="paragraph testimonies__card--info">
+							Growing up, I felt like something was missing in my life. But when
+							I walked through the doors of the church, I finally found the
+							missing piece - a relationship with God
+						</p>
+						<p class="paragraph testimonies__card--date">11th June, 2022</p>
+					</div>
+					<div class="testimonies__card">
+						<img src="/Avatar Image (1).a4b4ab24.png" alt="" class="testimonies__card--img">
+						<h5 class="secondary-heading testimonies__card--name">
+							anabel joy
+						</h5>
+						<p class="paragraph testimonies__card--location">Lagos, Nigeria</p>
 
-					<p class="paragraph testimonies__card--info">
-						I used to feel so alone in the world, but now I know that I am never
-						truly alone. God is always with me, and the church community is
-						always there to offer support and encouragement.
-					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
-				</div>
-			</article>
-		</section>
+						<p class="paragraph testimonies__card--info">
+							I had hit rock bottom, but through prayer and the support of my
+							church family, I found the strength to turn my life around and
+							start fresh.
+						</p>
+						<p class="paragraph testimonies__card--date">11th June, 2022</p>
+					</div>
+					<div class="testimonies__card">
+						<img src="/Avatar Image (2).d210913a.png" alt="" class="testimonies__card--img">
+						<h5 class="secondary-heading testimonies__card--name">
+							jasmine okafor
+						</h5>
+						<p class="paragraph testimonies__card--location">Abuja, Nigeria</p>
 
-		<!-- ----------- CALL-TO-ACTION ------------ -->
-		<section class="cta__wrapper">
-			<div class="cta">
-				<div class="cta__txt">
-					<h6 class="tertiary-heading cta__txt--heading">
-						Subscribe to our newsletter
-					</h6>
-					<p class="paragraph cta__txt--info">
-						Stay up-to-date with our latest events, offers and launches.
-					</p>
-					<form action="#" class="cta__form">
-						<input type="email" name="email" id="email" title="Enter Your Email Here" class="cta__form--input" placeholder="Email Address">
-						<button class="btn form-btn cta__form--btn">
-							<img src="/send-white.e0fa5169.png" alt="" class="icon">
-						</button>
-					</form>
+						<p class="paragraph testimonies__card--info">
+							I used to feel so alone in the world, but now I know that I am
+							never truly alone. God is always with me, and the church community
+							is always there to offer support and encouragement.
+						</p>
+						<p class="paragraph testimonies__card--date">11th June, 2022</p>
+					</div>
+				</article>
+			</section>
+
+			<!-- ----------- CALL-TO-ACTION ------------ -->
+			<section class="cta__wrapper">
+				<div class="cta">
+					<div class="cta__txt">
+						<h6 class="tertiary-heading cta__txt--heading">
+							Subscribe to our newsletter
+						</h6>
+						<p class="paragraph cta__txt--info">
+							Stay up-to-date with our latest events, offers and launches.
+						</p>
+						<form action="#" class="cta__form">
+							<input type="email" name="email" id="email" title="Enter Your Email Here" class="cta__form--input" placeholder="Email Address">
+							<button class="btn form-btn cta__form--btn">
+								<img src="/send-white.e0fa5169.png" alt="" class="icon">
+							</button>
+						</form>
+					</div>
+					<div class="cta__img">
+						<img src="/mobile-mockup.7d1512c7.png" class="main-img" alt="">
+					</div>
 				</div>
-				<div class="cta__img">
-					<img src="/mobile-mockup.7d1512c7.png" class="main-img" alt="">
-				</div>
-			</div>
-		</section>
-		<!-- </main> -->
+			</section>
+		</main>
 		<!-- -------------- FOOTER --------------->
 		<footer class="footer">
 			<div class="footer__logo">

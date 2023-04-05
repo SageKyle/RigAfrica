@@ -42,6 +42,19 @@ textarea {
 	resize: none;
 }
 
+// scrollreveal animation class
 html.sr .load-hidden {
 	visibility: hidden;
+}
+
+// animations
+
+@keyframes loopHorizontal {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(-200%);
+	}
 }
