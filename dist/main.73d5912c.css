@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabriela&display=swap");
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -42,11 +43,11 @@ html.sr .load-hidden {
 }
 
 @keyframes loopHorizontal {
-  from {
-    transform: translateX(200%);
+  0% {
+    transform: translateX(100%);
   }
-  to {
-    transform: translateX(-200%);
+  100% {
+    transform: translateX(-100%);
   }
 }
 .primary-heading {
@@ -457,6 +458,45 @@ html.sr .load-hidden {
   margin-bottom: 6rem;
 }
 
+.testimonies {
+  width: 100%;
+  text-align: center;
+  padding: 4rem;
+  margin-bottom: 6rem;
+  position: relative;
+}
+.testimonies::after {
+  display: block;
+  content: url("/map-bg.db189f06.png");
+  width: 100%;
+  top: 2rem;
+  bottom: 2rem;
+  position: absolute;
+  z-index: -1;
+  isolation: isolate;
+  animation: loopHorizontal 15s linear infinite;
+}
+.testimonies__heading {
+  font-size: 2.5rem;
+}
+.testimonies__main {
+  margin: 4rem auto;
+  width: 90%;
+}
+.testimonies__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
+  border-radius: 2rem;
+}
+.testimonies__card--name {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
 .cta {
   width: 100%;
   height: 80%;
@@ -467,6 +507,22 @@ html.sr .load-hidden {
   color: #fff;
   display: flex;
   justify-content: space-between;
+}
+.cta::after {
+  display: block;
+  content: "Be in the Know";
+  font-family: "Gabriela", serif;
+  font-size: 5rem;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+  width: 100%;
+  top: 8rem;
+  left: 2rem;
+  right: 2rem;
+  position: absolute;
+  z-index: 1;
+  isolation: isolate;
+  animation: loopHorizontal 15s linear infinite;
 }
 .cta__wrapper {
   width: 80%;
@@ -512,54 +568,10 @@ html.sr .load-hidden {
   position: absolute;
   right: 4rem;
   bottom: 0;
+  z-index: 2;
 }
 .cta__img .main-img {
   width: 100%;
-}
-
-.testimonies {
-  width: 100%;
-  text-align: center;
-  padding: 4rem;
-  margin-bottom: 6rem;
-  position: relative;
-}
-.testimonies::after {
-  display: block;
-  content: url("/map-bg.db189f06.png");
-  width: 100%;
-  top: 2rem;
-  bottom: 2rem;
-  position: absolute;
-  z-index: -1;
-  isolation: isolate;
-  animation-name: loopHorizontal;
-  animation-duration: 40s;
-  animation-delay: 0s;
-  animation-play-state: running;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: none;
-}
-.testimonies__heading {
-  font-size: 2.5rem;
-}
-.testimonies__main {
-  margin: 4rem auto;
-  width: 90%;
-}
-.testimonies__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
-  border-radius: 2rem;
-}
-.testimonies__card--name {
-  margin-bottom: 0;
-  font-weight: 500;
 }
 
 @media screen and (max-width: 650px) {
@@ -1073,6 +1085,10 @@ html.sr .load-hidden {
 
 .primary-color {
   color: #ec992f;
+}
+
+.primary-bg {
+  background-color: #ec992f;
 }
 
 .hidden {

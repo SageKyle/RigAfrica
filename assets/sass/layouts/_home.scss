@@ -1,6 +1,9 @@
 // =============== LANDING PAGE STYLES =========
 @use '../abstracts/variables' as *;
 
+// Gabriela font
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
 // ================ WELCOME SECTION ==============
 .welcome {
 	&__txt--title {
@@ -120,6 +123,52 @@
 	margin-bottom: $medium;
 }
 
+// ===================== TESTIMONIES ====================
+.testimonies {
+	width: 100%;
+	text-align: center;
+	padding: $small;
+	margin-bottom: $medium;
+	position: relative;
+
+	&::after {
+		display: block;
+		content: url('/assets/images/map-bg.png');
+		width: 100%;
+		top: $tiny;
+		bottom: $tiny;
+		position: absolute;
+		z-index: -1;
+		isolation: isolate;
+		animation: loopHorizontal 15s linear infinite;
+	}
+
+	&__heading {
+		font-size: 2.5rem;
+	}
+
+	&__main {
+		margin: $small auto;
+		width: 90%;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $tiny;
+		// height: fit-content;
+		background-color: $backgroundColor;
+		box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
+		border-radius: $tiny;
+
+		&--name {
+			margin-bottom: 0;
+			font-weight: 500;
+		}
+	}
+}
+
 // ============ CALL-T0-ACTION ==============
 .cta {
 	width: 100%;
@@ -131,6 +180,24 @@
 	color: $backgroundColor;
 	display: flex;
 	justify-content: space-between;
+	// position: relative;
+
+	&::after {
+		display: block;
+		content: 'Be in the Know';
+		font-family: 'Gabriela', serif;
+		font-size: 5rem;
+		color: transparent;
+		-webkit-text-stroke: 2px rgba($backgroundColor, 0.4);
+		width: 100%;
+		top: $big;
+		left: $tiny;
+		right: $tiny;
+		position: absolute;
+		z-index: 1;
+		isolation: isolate;
+		animation: loopHorizontal 15s linear infinite;
+	}
 
 	// CTA CONTAINER
 	&__wrapper {
@@ -185,61 +252,10 @@
 		position: absolute;
 		right: $small;
 		bottom: 0;
+		z-index: 2;
 
 		.main-img {
 			width: 100%;
-		}
-	}
-}
-
-// ===================== TESTIMONIES ====================
-.testimonies {
-	width: 100%;
-	text-align: center;
-	padding: $small;
-	margin-bottom: $medium;
-	position: relative;
-
-	&::after {
-		display: block;
-		content: url('/assets/images/map-bg.png');
-		width: 100%;
-		top: $tiny;
-		bottom: $tiny;
-		position: absolute;
-		z-index: -1;
-		isolation: isolate;
-		animation-name: loopHorizontal;
-		animation-duration: 40s;
-		animation-delay: 0s;
-		animation-play-state: running;
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		animation-fill-mode: none;
-	}
-
-	&__heading {
-		font-size: 2.5rem;
-	}
-
-	&__main {
-		margin: $small auto;
-		width: 90%;
-	}
-
-	&__card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: $tiny;
-		// height: fit-content;
-		background-color: $backgroundColor;
-		box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
-		border-radius: $tiny;
-
-		&--name {
-			margin-bottom: 0;
-			font-weight: 500;
 		}
 	}
 }
@@ -299,7 +315,6 @@
 			width: 100%;
 			height: auto;
 			align-items: flex-end;
-			// margin: $small auto;
 		}
 
 		&__txt {
