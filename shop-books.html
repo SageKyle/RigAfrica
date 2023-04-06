@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>RIG Africa | Events</title>
+		<title>RIG Africa | Books</title>
 		<link rel="stylesheet" href="assets/sass/main.scss" />
 		<!-- favicon -->
 		<link
@@ -41,7 +41,7 @@
 		<!-- <script src="/assets/js/event.js" defer></script> -->
 		<script src="/assets/js/app.js" defer></script>
 	</head>
-	<body class="events-page">
+	<body class="shop-page">
 		<!-- ----------------- NAVBAR----------------------------- -->
 		<nav class="navbar">
 			<a href="/index.html" class="navbar__logo">
@@ -72,15 +72,7 @@
 		<main class="main">
 			<!-- ---------------- TOP BAR SECTION -------------- -->
 			<section class="top-bar">
-				<h4 class="tertiary-heading">
-					Upcoming Events
-					<img
-						src="/assets/icons/right-arrow.svg"
-						alt=""
-						aria-hidden="true"
-						class="icon"
-					/>
-				</h4>
+				<h4 class="primary-heading primary-color">Welcome To Our Shop</h4>
 				<form class="search-form">
 					<img
 						src="/assets/icons/search-icon.png"
@@ -92,160 +84,174 @@
 						<span class="search-form__close event-close">x</span>
 						<input
 							class="search-form__input"
-							placeholder="search events"
+							placeholder="Search Shop"
 							type="text"
 						/>
 					</label>
 				</form>
 			</section>
-			<!-- EVENTS NAV -->
-			<section class="events__nav">
-				<div class="date__nav">
-					<button type="button" class="btn back">
-						<img
-							src="/assets/icons/right-arrow.svg"
-							alt="previous events"
-							class="icon"
-						/>
-					</button>
-					<h3 class="secondary-heading">june, 2023</h3>
+
+			<select name="shop" class="shop-category" id="shop">
+				<option selected class="shop-category__item" value="books">
+					Books
+				</option>
+				<option class="shop-category__item" value="books">Merch</option>
+			</select>
+
+			<!-- ------------ SHOP (BOOKS) --------- -->
+			<section class="grid col-3 shop">
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book1.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">
+						The Cosmopolitan Christian
+					</h4>
+					<p class="shop__card--info">
+						"The Cosmopolitan Christian" challenges Christians to disrupt and
+						transform culture through Christ-centered action beyond traditional
+						salvation-oriented beliefs, emphasizing the need for the church to
+						evolve and for a new generation to carry present truth.
+					</p>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a href="#">buy now</a>
+						</button>
+					</div>
 				</div>
-				<button class="btn btn-primary">
-					<a href="/past-events.html">past events</a>
-				</button>
-			</section>
-
-			<!-- ------------ ALL UPCOMING EVENTS --------- -->
-			<section class="events">
-				<article class="events-section">
-					<div class="event">
-						<img src="assets/images/event-img.png" alt="" class="event__img" />
-						<div class="event__txt">
-							<small class="event__date">
-								<img
-									src="assets/icons/calendar-color.svg"
-									alt=""
-									class="icon"
-								/>
-								<span
-									>8th - 12th June, 2023 | 6pm - 10pm daily
-									<span class="online"
-										><img
-											src="assets/icons/globe.svg"
-											alt=""
-											class="icon"
-										/>Online</span
-									>
-								</span>
-							</small>
-							<h3 class="secondary-heading event-title">
-								occupy movement lagos
-							</h3>
-							<p class="event__detail">
-								The "Occupy Movement (Luke 19-13)" is a prophetic evangelism
-								program that encourages believers to invest their God-given
-								talents and resources in kingdom-building activities that will
-								transform communities and impact lives.
-							</p>
-						</div>
-					</div>
-					<div class="event">
-						<img
-							src="/assets/images/events-card.png"
-							alt=""
-							class="event__img"
-						/>
-						<div class="event__txt">
-							<small class="event__date">
-								<img
-									src="/assets/icons/calendar-color.svg"
-									alt=""
-									class="icon"
-								/>
-								<span
-									>8th - 12th June, 2023 | 6pm - 10pm daily
-									<span class="online"
-										><img
-											src="/assets/icons/globe.svg"
-											alt=""
-											class="icon"
-										/>Online</span
-									>
-								</span>
-							</small>
-							<h3 class="secondary-heading event-title">
-								rig nation - abuja lauch
-							</h3>
-							<p class="event__detail">
-								The "Occupy Movement (Luke 19-13)" is a prophetic evangelism
-								program that encourages believers to invest their God-given
-								talents and resources in kingdom-building activities that will
-								transform communities and impact lives.
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="events-section">
-					<h4 class="tertiary-heading">July, 2023</h4>
-					<div class="event">
-						<div class="empty-event">
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book2.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">
+						Eat, Sleep Prophesy, Repeat
+					</h4>
+					<p class="shop__card--info">
+						"Eat, Sleep, Prophesy, Repeat" is a practical guide for Christians
+						seeking to improve their ability to hear the voice of God and
+						navigate the prophetic landscape, answering common questions and
+						providing personal revelations and stories.
+					</p>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
 							<img
-								src="assets/icons/calendar-remove.svg"
-								alt="no events"
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
 								class="icon"
 							/>
-							<span>no events</span>
-						</div>
+							<a href="#">buy now</a>
+						</button>
 					</div>
-				</article>
-				<article class="events-section">
-					<h4 class="tertiary-heading">August, 2023</h4>
-					<div class="event">
-						<div class="empty-event">
+				</div>
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book3.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">Kingdom Secrets</h4>
+					<p class="shop__card--info">
+						"Kingdom Secrets" is an intelligent study guide that challenges
+						Christians to re-evaluate their understanding of the Kingdom, money,
+						and purpose, providing Biblically sound reasons for prosperity and
+						debunking the idea that poverty is humility.
+					</p>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
 							<img
-								src="assets/icons/calendar-remove.svg"
-								alt="no events"
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
 								class="icon"
 							/>
-							<span>no events</span>
-						</div>
-					</div>
-				</article>
-			</section>
-
-			<!-- ----------- CALL-TO-ACTION ------------ -->
-			<section class="cta__wrapper">
-				<div class="cta">
-					<div class="cta__txt">
-						<h6 class="tertiary-heading cta__txt--heading">
-							Subscribe to our newsletter
-						</h6>
-						<p class="paragraph cta__txt--info">
-							Stay up-to-date with our latest events, offers and launches.
-						</p>
-						<form action="#" class="cta__form">
-							<input
-								type="email"
-								name="email"
-								id="email"
-								title="Enter Your Email Here"
-								class="cta__form--input"
-								placeholder="Email Address"
-							/>
-							<button class="btn form-btn cta__form--btn">
-								<img src="assets/icons/send-white.png" alt="" class="icon" />
-							</button>
-						</form>
-					</div>
-					<div class="cta__img">
-						<img
-							src="assets/images/mobile-mockup.png"
-							class="main-img"
-							alt=""
-						/>
+							<a href="#">buy now</a>
+						</button>
 					</div>
 				</div>
 			</section>
+
+			<h2 class="secondary-heading section-title">
+				rig school prophetic academy workbooks
+			</h2>
+			<section class="grid col-3 shop">
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book4.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">
+						Prophetic Foundation
+					</h4>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a href="#">buy now</a>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book5.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">
+						Prophetic Encounter
+					</h4>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a href="#">buy now</a>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="/assets/images/shop/book6.png"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading shop__card--heading">
+						Prophetic Stewardship
+					</h4>
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a href="#">buy now</a>
+						</button>
+					</div>
+				</div>
+			</section>
+			<button class="btn btn-primary main-btn">
+				<a href="#">view collection on amazon</a>
+			</button>
 		</main>
 		<!-- -------------- FOOTER --------------->
 		<footer class="footer">

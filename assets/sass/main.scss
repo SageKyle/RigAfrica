@@ -15,6 +15,7 @@
 @use 'layouts/home' as *;
 @use 'layouts/contact' as *;
 @use 'layouts/events' as *;
+@use 'layouts/shop.scss' as *;
 
 // utilities
 @use 'components/grid' as *;
