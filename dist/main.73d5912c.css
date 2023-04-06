@@ -1003,6 +1003,12 @@ html.sr .load-hidden {
 .shop-page .top-bar {
   background-color: transparent;
 }
+.shop-page .search-form__label {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.shop-page .search-form__close {
+  color: rgba(72, 84, 97, 0.6);
+}
 .shop-page .main {
   margin-inline: auto;
   width: 80%;

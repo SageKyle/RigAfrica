@@ -14,6 +14,14 @@
 		background-color: transparent;
 	}
 
+	.search-form__label {
+		background-color: rgba($backgroundColor, 0.8);
+	}
+
+	.search-form__close {
+		color: rgba($accentColor, 0.6);
+	}
+
 	.main {
 		margin-inline: auto;
 		width: 80%;
