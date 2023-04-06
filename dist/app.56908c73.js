@@ -1809,6 +1809,35 @@ var navBar = document.querySelector('.main-nav');
 var toggle = document.querySelector('.nav-toggle');
 var navContainer = document.querySelector('.navbar');
 var mainContainer = document.querySelector('.main');
+
+// ================ SEARCH EVENTS ====================
+var searchIcon = document.querySelector('.toggle-form');
+var closeIcon = document.querySelector('.event-close');
+var searchInput = document.querySelector('.event-search');
+
+// ========= DISPLAY FORM INPUT ====================
+searchIcon.addEventListener('click', function () {
+  searchInput.classList.remove('hidden');
+  document.querySelector('.search-form__input').focus();
+  CloseOnKeyPress();
+});
+
+// ========================= HIDE FORM INPUT FUNCTION ==================
+function CloseOnKeyPress() {
+  // HIDE FORM BY CLICKING X
+  closeIcon.addEventListener('click', function () {
+    searchInput.classList.add('hidden');
+  });
+
+  // HIDE FORM WITH ESC KEY
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      searchInput.classList.add('hidden');
+    }
+  });
+}
+
+// ============= INTERSECTION OBSERVER ================
 toggle.addEventListener('click', function (e) {
   navBar.classList.toggle('hide-nav');
 });
@@ -1850,32 +1879,53 @@ observer.observe(mainContainer);
   delay: 1000
 });
 
-// ================ SEARCH EVENTS ====================
-var searchIcon = document.querySelector('.toggle-form');
-var closeIcon = document.querySelector('.event-close');
-var searchInput = document.querySelector('.event-search');
-
-// ========= DISPLAY FORM INPUT ====================
-searchIcon.addEventListener('click', function () {
-  searchInput.classList.remove('hidden');
-  document.querySelector('.search-form__input').focus();
-  CloseOnKeyPress();
+// ============== MERCH CARD ===============
+var shopCards = document.querySelectorAll('.shop__card');
+(0, _scrollreveal.default)().reveal(shopCards, {
+  duration: 1000,
+  delay: 100,
+  interval: 200
 });
 
-// ========================= HIDE FORM INPUT FUNCTION ==================
-function CloseOnKeyPress() {
-  // HIDE FORM BY CLICKING X
-  closeIcon.addEventListener('click', function () {
-    searchInput.classList.add('hidden');
-  });
+// ============== EVENTS CARD ===============
+var eventCards = document.querySelectorAll('.event');
+(0, _scrollreveal.default)().reveal(eventCards, {
+  duration: 800,
+  distance: '150%',
+  cleanup: true,
+  delay: 100,
+  interval: 200
+});
 
-  // HIDE FORM WITH ESC KEY
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      searchInput.classList.add('hidden');
-    }
-  });
-}
+// ============ LANDING PAGE ANIMATIONS ==============
+// welcome section partners__card
+var welcomeText = document.querySelector('.welcome__txt');
+var welcomeImg = document.querySelector('.welcome__img');
+(0, _scrollreveal.default)().reveal(welcomeText, {
+  duration: 800,
+  distance: '150%',
+  // reset: true,
+  delay: 100,
+  origin: 'left'
+});
+(0, _scrollreveal.default)().reveal(welcomeImg, {
+  duration: 900,
+  distance: '150%',
+  // reset: true,
+  delay: 200,
+  origin: 'right'
+});
+
+// welcome section partners__card prophecy-section__img
+var partnersCard = document.querySelectorAll('.partners__card');
+(0, _scrollreveal.default)().reveal(partnersCard, {
+  duration: 900,
+  distance: '150%',
+  reset: true,
+  delay: 100,
+  origin: 'left',
+  interval: 200
+});
 },{"scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
