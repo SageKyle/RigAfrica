@@ -1,0 +1,147 @@
+// =============== CONTACT US PAGE STYLES ====================
+@use '../abstracts/variables' as *;
+
+.contact-page {
+	background-color: rgba($accentColor, 0.2);
+
+	.navbar {
+		width: 90%;
+		position: static;
+	}
+
+	.secondary-heading {
+		font-size: 2.8rem;
+		margin-bottom: 0;
+	}
+
+	.main {
+		margin-top: $small;
+		margin-inline: auto;
+		width: 80%;
+	}
+
+	.events__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-block: $small;
+	}
+
+	.top-bar {
+		margin: 0;
+		padding: 1rem;
+		background-color: transparent;
+		border-bottom: 2px solid rgba($accentColor, 0.2);
+
+		.social-icon {
+			margin-right: 1rem;
+			filter: invert(90%);
+		}
+	}
+
+	.contact-main {
+		margin-block: $tiny;
+		display: flex;
+		gap: $small;
+
+		.form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			width: 45%;
+
+			&__item,
+			&__input--wrapper {
+				width: 100%;
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+			}
+
+			&__input,
+			&__input:focus {
+				border: unset;
+				outline: 2px solid rgba($accentColor, 0.2);
+				padding: 1rem;
+				width: 100%;
+				border-radius: 0.5rem;
+				background-color: rgba($backgroundColor, 0.8);
+			}
+		}
+
+		.btn {
+			max-width: 40%;
+			margin: $tiny $medium;
+		}
+
+		textarea {
+			height: 12rem;
+		}
+
+		option {
+			width: inherit;
+		}
+	}
+
+	.contact__img--group {
+		width: fit-content;
+		margin: $medium auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.pattern {
+		width: 25rem;
+	}
+
+	.center-img {
+		width: 20rem;
+		z-index: 2;
+		left: -1rem;
+		bottom: 1rem;
+	}
+
+	.top-img {
+		width: $large;
+		z-index: 3;
+		top: 0;
+		left: -1rem;
+	}
+
+	.bottom-img {
+		width: $large;
+		z-index: 3;
+		bottom: -1rem;
+		left: 8rem;
+	}
+
+	.center-img,
+	.top-img,
+	.bottom-img {
+		border-radius: 50%;
+		position: absolute;
+	}
+
+	.rig-branch__group {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: $small;
+		align-items: center;
+		margin-block: $tiny $medium;
+	}
+
+	.rig-branch {
+		width: 100%;
+		display: inline-block;
+	}
+
+	.rig-img {
+		width: inherit;
+		object-fit: cover;
+		cursor: pointer;
+	}
+}

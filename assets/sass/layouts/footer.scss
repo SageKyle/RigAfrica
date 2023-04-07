@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+// =============== FOOTER SECTION =============
+.footer {
+	display: flex;
+	padding: $tiny $medium;
+	background-color: $secondaryColor;
+	color: $backgroundColor;
+	position: relative;
+
+	&__logo {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.rig-logo {
+			height: $small;
+		}
+
+		.rig-txt {
+			height: $big;
+			position: absolute;
+			animation: rotate 15s linear infinite;
+			z-index: 5;
+		}
+	}
+
+	// FOOTER MAIN CONTENT
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-inline: $small;
+		gap: 1rem;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	.navigation,
+	.paragraph {
+		font-size: 1.2rem;
+	}
+
+	// SOCIAL ICONS
+	&__socials {
+		display: flex;
+		gap: $tiny;
+	}
+}
+
+// ==================== MEDIA QUERIES ================
+// @media screen and (max-width: 650px) {
+// 	.footer {
+// 		position: relative;
+// 		left: 0;
+// 		right: 0;
+// 	}
+
+// 	.navigation {
+// 		background-color: $textColor;
+// 		flex-direction: column;
+// 		position: absolute;
+// 		top: $tiny;
+// 	}
+// }

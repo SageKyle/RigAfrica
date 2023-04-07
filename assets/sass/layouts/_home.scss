@@ -1,0 +1,378 @@
+// =============== LANDING PAGE STYLES =========
+@use '../abstracts/variables' as *;
+
+// Gabriela font
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+// ================ WELCOME SECTION ==============
+.welcome {
+	margin-top: $medium;
+
+	&__txt--title {
+		font-family: 'Sacramento', cursive;
+		color: $primaryColor;
+		margin-left: $big;
+		font-size: 8rem;
+		font-weight: 400;
+	}
+
+	&__txt--heading {
+		margin-block: 0 $tiny;
+		margin-left: $big;
+	}
+
+	&__main {
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	&__txt {
+		align-self: flex-start;
+	}
+
+	&__img {
+		margin-top: -$large;
+	}
+}
+
+// =================== PARTNERS SECTION ===============
+.partners {
+	width: 90%;
+	z-index: 2;
+	margin-bottom: $tiny;
+
+	// the section wrapper with the bg
+	&__wrapper {
+		height: calc($large * 4);
+		background-image: url('/assets/images/partners-bg.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 100%;
+			inset: 0 0 auto;
+			z-index: 1;
+			position: absolute;
+			clip-path: polygon(0 43%, 100% 0, 100% 100%, 0% 100%);
+			background-color: rgba($primaryColor, 0.8);
+		}
+	}
+
+	.col-3 {
+		grid-gap: $medium;
+	}
+
+	&__heading {
+		text-align: center;
+		margin-bottom: $small;
+	}
+
+	&__card {
+		background: linear-gradient(
+			222.92deg,
+			rgba(255, 255, 255, 0.16) 0%,
+			rgba(248, 248, 248, 0) 100%
+		);
+		box-shadow: -15px 17px 27px 1px rgba(13, 13, 13, 0.15);
+
+		&--heading {
+			color: $backgroundColor;
+		}
+	}
+
+	.icon {
+		height: $small;
+		margin-left: 1rem;
+	}
+}
+
+// ================= UPCOMING EVENTS SECTION ===============
+.events {
+	width: 80%;
+	margin-block: $big $large;
+	margin-inline: auto;
+
+	&__txt {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-inline: $tiny;
+		margin-block: $small;
+	}
+
+	.card {
+		padding: 0;
+	}
+
+	&__card {
+		width: 100%;
+	}
+	.event {
+		width: 100%;
+	}
+}
+
+//============= FATHER'S BLESSING (PROPHECY) =======================
+.prophecy-section.split-2 {
+	background-color: $secondaryColor;
+	color: $backgroundColor;
+	margin: $big 0;
+	width: 100%;
+	position: relative;
+
+	.main-img {
+		position: absolute;
+		width: 36%;
+		bottom: 0;
+		left: $tiny;
+	}
+}
+
+// ==================== ABOUT ============
+.about {
+	margin-bottom: $medium;
+
+	&__txt {
+		align-self: flex-start;
+	}
+
+	&__img {
+		box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	}
+}
+
+// ===================== TESTIMONIES ====================
+.testimonies {
+	width: 100%;
+	text-align: center;
+	padding: $small;
+	margin-bottom: $medium;
+	position: relative;
+
+	&::after {
+		display: block;
+		content: url('/assets/images/map-bg.png');
+		width: 100%;
+		top: $tiny;
+		bottom: $tiny;
+		position: absolute;
+		z-index: -1;
+		isolation: isolate;
+		animation: loopHorizontal 15s linear infinite;
+	}
+
+	&__heading {
+		font-size: 2.5rem;
+	}
+
+	&__main {
+		margin: $small auto;
+		width: 90%;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $tiny;
+		// height: fit-content;
+		background-color: $backgroundColor;
+		box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
+		border-radius: $tiny;
+
+		&--name {
+			margin-bottom: 0;
+			font-weight: 500;
+		}
+	}
+}
+
+// ============ CALL-T0-ACTION ==============
+.cta {
+	width: 100%;
+	height: 80%;
+	padding: $small $tiny;
+	margin-top: auto;
+	border-radius: 1rem;
+	background-color: $brightOrange;
+	color: $backgroundColor;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	&::after {
+		display: block;
+		content: 'Be in the Know';
+		font-family: 'Gabriela', serif;
+		font-size: 5rem;
+		color: transparent;
+		-webkit-text-stroke: 2px rgba($backgroundColor, 0.4);
+		width: 100%;
+		top: $big;
+		left: $tiny;
+		right: $tiny;
+		position: absolute;
+		z-index: 1;
+		animation: loopHorizontal 15s linear infinite;
+	}
+
+	// CTA CONTAINER
+	&__wrapper {
+		width: 80%;
+		height: calc($large * 3);
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		margin: $small auto;
+	}
+
+	&__txt {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+
+		&--info {
+			margin-block: $small 1rem;
+		}
+	}
+
+	// CTA FORM
+	&__form {
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		border-radius: 1.5rem;
+		padding: 0.5rem;
+
+		&--input {
+			border: unset;
+			outline: unset;
+			width: 70%;
+			padding: 1rem;
+		}
+
+		.btn {
+			border-radius: 1.5rem;
+			background-color: rgba($paleOrange, 0.8);
+		}
+
+		&--btn,
+		.icon {
+			height: 100%;
+		}
+	}
+
+	&__img {
+		width: 35%;
+		position: absolute;
+		right: $small;
+		bottom: 0;
+		z-index: 2;
+
+		.main-img {
+			width: 100%;
+		}
+	}
+}
+
+// ==================== MEDIA QUERIES ==================
+@media screen and (max-width: 650px) {
+	// ============ UPCOMING EVENTS =======
+	.events__txt {
+		flex-direction: column;
+		gap: $tiny;
+		margin-bottom: $tiny;
+	}
+
+	// ============= PARTNERS SECTION =====================
+	.partners {
+		width: 80%;
+
+		&__wrapper {
+			height: auto;
+			padding-block: $small;
+
+			&::after {
+				clip-path: none;
+			}
+		}
+	}
+
+	// =============== FATHER'S BLESSING ==============
+	.prophecy-section.split-2 {
+		flex-direction: column-reverse;
+		padding: 0;
+
+		.split-2__img {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.main-img {
+			transform: rotateY(180deg);
+			position: static;
+			width: 80%;
+		}
+
+		.prophecy-section__txt {
+			padding: $tiny;
+		}
+	}
+
+	// =================== CTA ====================
+	.cta {
+		padding: $tiny;
+		justify-content: space-between;
+
+		// CTA CONTAINER
+		&__wrapper {
+			width: 100%;
+			height: auto;
+			align-items: flex-end;
+		}
+
+		&__txt {
+			width: 60%;
+
+			&--info {
+				margin-block: 1rem;
+				line-height: 1;
+				font-size: 1.3rem;
+			}
+		}
+
+		// CTA FORM
+		&__form {
+			width: 100%;
+			border-radius: 1.5rem;
+			padding: 0.5rem;
+
+			&--input {
+				width: 70%;
+				padding: 1rem;
+			}
+
+			.btn {
+				border-radius: 1.5rem;
+			}
+		}
+
+		&__img {
+			width: 38%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}

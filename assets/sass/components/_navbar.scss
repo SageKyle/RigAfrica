@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+.navbar {
+	// width: 90%;
+	height: $medium;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: $tiny;
+	margin: $tiny auto;
+	border-radius: 1rem;
+	background: rgba(217, 217, 217, 0.2);
+	border: 1px solid rgba(30, 30, 30, 0.5);
+	box-shadow: 0px 0.4rem 2.5rem rgba(0, 0, 0, 0.25);
+	z-index: 50;
+	position: fixed;
+	left: $tiny;
+	right: $tiny;
+	top: $small;
+
+	&__logo {
+		display: inline-block;
+		margin-right: auto;
+		justify-self: start;
+		width: 15%;
+	}
+
+	.logo {
+		width: 100%;
+	}
+}
+
+.navigation {
+	display: flex;
+	gap: $tiny;
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	margin-inline: $tiny;
+	flex-wrap: wrap;
+}
+
+.search-icon {
+	display: inline-block;
+	margin-left: $tiny;
+	cursor: pointer;
+}
+
+// ==================== MEDIA QUERIES ================
+@media screen and (max-width: 650px) {
+	.header {
+		.navbar {
+			position: relative;
+			left: 0;
+			right: 0;
+		}
+
+		.navigation {
+			background-color: $textColor;
+			flex-direction: column;
+			position: absolute;
+			top: $medium;
+			padding: $tiny $small;
+			border-radius: 1rem;
+		}
+
+		.navbar__logo {
+			width: 38%;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+	min-width: max-content;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+	border-radius: 0.5rem;
+	border: unset;
+	outline: unset;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		color: inherit;
+	}
+}
+
+.btn-primary {
+	font-size: 2rem;
+	padding: 1rem 2rem;
+	text-transform: capitalize;
+	background-color: $primaryColor;
+	color: $backgroundColor;
+}

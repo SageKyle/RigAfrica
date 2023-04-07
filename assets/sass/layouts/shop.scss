@@ -1,0 +1,107 @@
+// ============ SHOP PAGE STYLE =====================
+@use '../abstracts/variables' as *;
+
+.shop-page {
+	background-color: rgba($accentColor, 0.2);
+
+	.navbar {
+		background-color: rgba($accentColor, 0.6);
+		color: $backgroundColor;
+		top: 0;
+	}
+
+	.top-bar {
+		background-color: transparent;
+	}
+
+	.search-form__label {
+		background-color: rgba($backgroundColor, 0.8);
+	}
+
+	.search-form__close {
+		color: rgba($accentColor, 0.6);
+	}
+
+	.main {
+		margin-inline: auto;
+		width: 80%;
+		padding-top: 12rem;
+	}
+
+	.shop-category,
+	.shop-category:focus {
+		border: unset;
+		outline: 2px solid rgba($primaryColor, 1);
+		padding: 1rem;
+		// width: $;
+		border-radius: 0.5rem;
+		background-color: rgba($backgroundColor, 0.8);
+	}
+
+	.shop {
+		width: 100%;
+		text-align: center;
+		padding: $tiny;
+		margin-bottom: $medium;
+
+		&__heading {
+			font-size: 2.5rem;
+		}
+
+		&__card {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			padding: $tiny;
+			background-color: $backgroundColor;
+			box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
+			border-radius: 0.5rem;
+			text-align: left;
+
+			&--heading {
+				margin-bottom: 0;
+				font-weight: 500;
+			}
+
+			&--img {
+				width: 100%;
+			}
+
+			&--info {
+				font-size: 1.4rem;
+
+				// truncate word length
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 5;
+				line-clamp: 5;
+				-webkit-box-orient: vertical;
+			}
+		}
+
+		.card-price {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		.card-footer {
+			width: 100%;
+			display: flex;
+			gap: 1rem;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: auto;
+
+			.icon {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	.main-btn {
+		text-transform: uppercase;
+		margin: $small auto;
+		width: 50%;
+	}
+}
