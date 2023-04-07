@@ -8,6 +8,12 @@
 // @use 'abstracts/mixins' as *;
 // @use 'abstracts/variables' as *;
 
+// utilities
+@use 'components/grid' as *;
+@use 'components/navbar' as *;
+@use 'components/buttons' as *;
+@use 'components/utilities' as *;
+
 // layouts
 @use 'layouts/header' as *;
 @use 'layouts/footer.scss' as *;
@@ -16,9 +22,3 @@
 @use 'layouts/contact' as *;
 @use 'layouts/events' as *;
 @use 'layouts/shop.scss' as *;
-
-// utilities
-@use 'components/grid' as *;
-@use 'components/navbar' as *;
-@use 'components/buttons' as *;
-@use 'components/utilities' as *;

@@ -1863,19 +1863,16 @@ observer.observe(mainContainer);
 // ============= CONTACT PAGE ANIMATION =============
 (0, _scrollreveal.default)().reveal('.center-img', {
   duration: 800,
-  reset: true,
   delay: 500,
   cleanup: true
 });
 (0, _scrollreveal.default)().reveal('.top-img', {
   duration: 800,
-  reset: true,
   delay: 800,
   cleanup: true
 });
 (0, _scrollreveal.default)().reveal('.bottom-img', {
   duration: 800,
-  reset: true,
   delay: 1000
 });
 
@@ -1921,7 +1918,6 @@ var partnersCard = document.querySelectorAll('.partners__card');
 (0, _scrollreveal.default)().reveal(partnersCard, {
   duration: 900,
   distance: '150%',
-  reset: true,
   delay: 100,
   origin: 'left',
   interval: 200
@@ -1951,7 +1947,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53751" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57729" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

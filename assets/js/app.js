@@ -65,21 +65,18 @@ observer.observe(mainContainer);
 // ============= CONTACT PAGE ANIMATION =============
 ScrollReveal().reveal('.center-img', {
 	duration: 800,
-	reset: true,
 	delay: 500,
 	cleanup: true,
 });
 
 ScrollReveal().reveal('.top-img', {
 	duration: 800,
-	reset: true,
 	delay: 800,
 	cleanup: true,
 });
 
 ScrollReveal().reveal('.bottom-img', {
 	duration: 800,
-	reset: true,
 	delay: 1000,
 });
 
@@ -130,7 +127,6 @@ const partnersCard = document.querySelectorAll('.partners__card');
 ScrollReveal().reveal(partnersCard, {
 	duration: 900,
 	distance: '150%',
-	reset: true,
 	delay: 100,
 	origin: 'left',
 	interval: 200,

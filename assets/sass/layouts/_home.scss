@@ -6,16 +6,32 @@
 
 // ================ WELCOME SECTION ==============
 .welcome {
+	margin-top: $medium;
+
 	&__txt--title {
 		font-family: 'Sacramento', cursive;
 		color: $primaryColor;
-		// margin-bottom: $tiny;
+		margin-left: $big;
 		font-size: 8rem;
 		font-weight: 400;
 	}
 
 	&__txt--heading {
 		margin-block: 0 $tiny;
+		margin-left: $big;
+	}
+
+	&__main {
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	&__txt {
+		align-self: flex-start;
+	}
+
+	&__img {
+		margin-top: -$large;
 	}
 }
 
@@ -121,6 +137,16 @@
 // ==================== ABOUT ============
 .about {
 	margin-bottom: $medium;
+
+	&__txt {
+		align-self: flex-start;
+	}
+
+	&__img {
+		box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	}
 }
 
 // ===================== TESTIMONIES ====================
