@@ -93,6 +93,7 @@ html.sr .load-hidden {
   .secondary-heading,
   .tertiary-heading {
     font-size: 1.8rem;
+    margin-inline: 2rem;
   }
 }
 .grid {
@@ -131,7 +132,7 @@ html.sr .load-hidden {
   width: 100%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .split-2 {
     flex-direction: column;
     padding: 4rem;
@@ -186,7 +187,16 @@ html.sr .load-hidden {
   cursor: pointer;
 }
 
-@media screen and (max-width: 650px) {
+.nav-toggle {
+  display: none;
+  filter: invert(80%);
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-toggle {
+    display: inline-block;
+  }
   .header .navbar {
     position: relative;
     left: 0;
@@ -199,6 +209,7 @@ html.sr .load-hidden {
     top: 6rem;
     padding: 2rem 4rem;
     border-radius: 1rem;
+    z-index: 60;
   }
   .header .navbar__logo {
     width: 38%;
@@ -290,6 +301,7 @@ html.sr .load-hidden {
   background-image: url("/hero-bg.fc0c277c.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-blend-mode: screen;
   background-color: rgb(8, 23, 39);
   height: 100vh;
@@ -311,8 +323,8 @@ html.sr .load-hidden {
   align-items: center;
   position: fixed;
   top: 15rem;
-  left: 50%;
-  z-index: 50;
+  margin-right: 8rem;
+  z-index: 20;
 }
 .header .search-form__label {
   display: flex;
@@ -389,18 +401,13 @@ html.sr .load-hidden {
   z-index: 5;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .header .hide-nav {
     display: none !important;
     height: 0;
   }
   .header__wrapper {
     padding: 0;
-  }
-  .header .nav-toggle.hidden {
-    display: block;
-    filter: invert(100%);
-    margin-left: 2rem;
   }
   .newsline {
     display: none;
@@ -409,14 +416,14 @@ html.sr .load-hidden {
     width: 80%;
     margin-block: auto 6rem;
   }
+  .hero__logo {
+    display: none;
+  }
   .hero__info {
     margin: 4rem 1rem;
     gap: 4rem;
     flex-direction: column;
     align-items: flex-end;
-  }
-  .hero__info .logo {
-    height: 6rem;
   }
   .hero__info--stats {
     align-self: center;
@@ -627,10 +634,7 @@ html.sr .load-hidden {
   margin-block: 8rem 10rem;
   margin-inline: auto;
 }
-.events__txt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.events__heading {
   padding-inline: 2rem;
   margin-block: 4rem;
 }
@@ -642,6 +646,9 @@ html.sr .load-hidden {
 }
 .events .event {
   width: 100%;
+}
+.events__btn {
+  margin: 4rem auto;
 }
 
 .prophecy-section.split-2 {
@@ -660,6 +667,14 @@ html.sr .load-hidden {
 
 .about {
   margin-bottom: 6rem;
+}
+.about .tertiary-heading {
+  margin-left: 8rem;
+  width: 50%;
+}
+.about__main {
+  margin-top: 0;
+  padding-top: 0;
 }
 .about__txt {
   align-self: flex-start;
@@ -786,11 +801,26 @@ html.sr .load-hidden {
   width: 100%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
+  .welcome__img {
+    width: 60%;
+    order: -1;
+    margin-top: 0;
+  }
   .events__txt {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 2rem;
+  }
+  .about .tertiary-heading {
+    width: fit-content;
+  }
+  .about__txt, .about__img {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .about__main {
+    flex-direction: column-reverse;
   }
   .partners {
     width: 80%;
@@ -803,30 +833,23 @@ html.sr .load-hidden {
     clip-path: none;
   }
   .prophecy-section.split-2 {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-  .prophecy-section.split-2 .split-2__img {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
   }
   .prophecy-section.split-2 .main-img {
-    transform: rotateY(180deg);
+    margin-top: -12rem;
     position: static;
     width: 80%;
   }
   .prophecy-section.split-2 .prophecy-section__txt {
     padding: 2rem;
   }
+  .cta__wrapper {
+    height: auto;
+    align-items: flex-end;
+  }
   .cta {
     padding: 2rem;
     justify-content: space-between;
-  }
-  .cta__wrapper {
-    width: 100%;
-    height: auto;
-    align-items: flex-end;
   }
   .cta__txt {
     width: 60%;
@@ -849,10 +872,30 @@ html.sr .load-hidden {
     border-radius: 1.5rem;
   }
   .cta__img {
-    width: 38%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .hero {
+    text-align: center;
+  }
+  .welcome__title,
+  .welcome__txt--heading {
+    margin-left: 4rem;
+  }
+  .about .tertiary-heading {
+    margin-inline: 4rem;
+    margin-bottom: 4rem;
+    width: inherit;
+  }
+  .about__main {
+    padding: 0;
+  }
+  .cta::after {
+    display: none;
+  }
+  .cta__txt {
+    width: 100%;
   }
 }
 .contact-page {

@@ -17,6 +17,7 @@ const searchInput = document.querySelector('.event-search');
 searchIcon.addEventListener('click', () => {
 	searchInput.classList.remove('hidden');
 	document.querySelector('.search-form__input').focus();
+	hideNavbar();
 
 	CloseOnKeyPress();
 });
@@ -25,22 +26,32 @@ searchIcon.addEventListener('click', () => {
 function CloseOnKeyPress() {
 	// HIDE FORM BY CLICKING X
 	closeIcon.addEventListener('click', () => {
-		searchInput.classList.add('hidden');
+		hideSearchBar();
 	});
 
 	// HIDE FORM WITH ESC KEY
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape') {
-			searchInput.classList.add('hidden');
+			hideSearchBar();
 		}
 	});
 }
 
-// ============= INTERSECTION OBSERVER ================
+function hideSearchBar() {
+	searchInput.classList.add('hidden');
+}
+
+function hideNavbar() {
+	navBar.classList.add('hide-nav');
+}
+
+// NAVBAR TOGGLE
 toggle.addEventListener('click', (e) => {
 	navBar.classList.toggle('hide-nav');
+	hideSearchBar();
 });
 
+// ============= INTERSECTION OBSERVER ================
 const options = {
 	root: document.querySelector('body'),
 	rootMargin: '0px',

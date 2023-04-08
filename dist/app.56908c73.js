@@ -1819,6 +1819,7 @@ var searchInput = document.querySelector('.event-search');
 searchIcon.addEventListener('click', function () {
   searchInput.classList.remove('hidden');
   document.querySelector('.search-form__input').focus();
+  hideNavbar();
   CloseOnKeyPress();
 });
 
@@ -1826,21 +1827,30 @@ searchIcon.addEventListener('click', function () {
 function CloseOnKeyPress() {
   // HIDE FORM BY CLICKING X
   closeIcon.addEventListener('click', function () {
-    searchInput.classList.add('hidden');
+    hideSearchBar();
   });
 
   // HIDE FORM WITH ESC KEY
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      searchInput.classList.add('hidden');
+      hideSearchBar();
     }
   });
 }
+function hideSearchBar() {
+  searchInput.classList.add('hidden');
+}
+function hideNavbar() {
+  navBar.classList.add('hide-nav');
+}
 
-// ============= INTERSECTION OBSERVER ================
+// NAVBAR TOGGLE
 toggle.addEventListener('click', function (e) {
   navBar.classList.toggle('hide-nav');
+  hideSearchBar();
 });
+
+// ============= INTERSECTION OBSERVER ================
 var options = {
   root: document.querySelector('body'),
   rootMargin: '0px',
@@ -1947,7 +1957,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49687" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

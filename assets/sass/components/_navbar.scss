@@ -45,8 +45,18 @@
 	cursor: pointer;
 }
 
+.nav-toggle {
+	display: none;
+	filter: invert(80%);
+	margin-left: $tiny;
+}
+
 // ==================== MEDIA QUERIES ================
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
+	.nav-toggle {
+		display: inline-block;
+	}
+
 	.header {
 		.navbar {
 			position: relative;
@@ -61,6 +71,7 @@
 			top: $medium;
 			padding: $tiny $small;
 			border-radius: 1rem;
+			z-index: 60;
 		}
 
 		.navbar__logo {

@@ -98,10 +98,15 @@
 	margin-block: $big $large;
 	margin-inline: auto;
 
-	&__txt {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	// &__txt {
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	// 	padding-inline: $tiny;
+	// 	margin-block: $small;
+	// }
+
+	&__heading {
 		padding-inline: $tiny;
 		margin-block: $small;
 	}
@@ -115,6 +120,10 @@
 	}
 	.event {
 		width: 100%;
+	}
+
+	&__btn {
+		margin: $small auto;
 	}
 }
 
@@ -137,6 +146,16 @@
 // ==================== ABOUT ============
 .about {
 	margin-bottom: $medium;
+
+	.tertiary-heading {
+		margin-left: $big;
+		width: 50%;
+	}
+
+	&__main {
+		margin-top: 0;
+		padding-top: 0;
+	}
 
 	&__txt {
 		align-self: flex-start;
@@ -183,7 +202,6 @@
 		flex-direction: column;
 		align-items: center;
 		padding: $tiny;
-		// height: fit-content;
 		background-color: $backgroundColor;
 		box-shadow: 2px 2px 10px 6px rgba(142, 142, 142, 0.15);
 		border-radius: $tiny;
@@ -286,12 +304,34 @@
 }
 
 // ==================== MEDIA QUERIES ==================
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
+	.welcome__img {
+		width: 60%;
+		order: -1;
+		margin-top: 0;
+	}
+
 	// ============ UPCOMING EVENTS =======
 	.events__txt {
 		flex-direction: column;
 		gap: $tiny;
 		margin-bottom: $tiny;
+	}
+
+	.about {
+		.tertiary-heading {
+			width: fit-content;
+		}
+
+		&__txt,
+		&__img {
+			width: 80%;
+			margin-inline: auto;
+		}
+
+		&__main {
+			flex-direction: column-reverse;
+		}
 	}
 
 	// ============= PARTNERS SECTION =====================
@@ -310,17 +350,10 @@
 
 	// =============== FATHER'S BLESSING ==============
 	.prophecy-section.split-2 {
-		flex-direction: column-reverse;
-		padding: 0;
-
-		.split-2__img {
-			width: 100%;
-			display: flex;
-			justify-content: flex-end;
-		}
+		flex-direction: column;
 
 		.main-img {
-			transform: rotateY(180deg);
+			margin-top: -12rem;
 			position: static;
 			width: 80%;
 		}
@@ -331,16 +364,16 @@
 	}
 
 	// =================== CTA ====================
+
+	// CTA CONTAINER
+	.cta__wrapper {
+		height: auto;
+		align-items: flex-end;
+	}
+
 	.cta {
 		padding: $tiny;
 		justify-content: space-between;
-
-		// CTA CONTAINER
-		&__wrapper {
-			width: 100%;
-			height: auto;
-			align-items: flex-end;
-		}
 
 		&__txt {
 			width: 60%;
@@ -369,10 +402,38 @@
 		}
 
 		&__img {
-			width: 38%;
-			position: absolute;
-			right: 0;
-			bottom: 0;
+			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.hero {
+		text-align: center;
+	}
+
+	.welcome__title,
+	.welcome__txt--heading {
+		margin-left: $small;
+	}
+
+	.about {
+		.tertiary-heading {
+			margin-inline: $small;
+			margin-bottom: $small;
+			width: inherit;
+		}
+
+		&__main {
+			padding: 0;
+		}
+	}
+
+	.cta::after {
+		display: none;
+	}
+
+	.cta__txt {
+		width: 100%;
 	}
 }
