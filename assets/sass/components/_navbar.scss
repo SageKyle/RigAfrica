@@ -57,7 +57,7 @@
 		display: inline-block;
 	}
 
-	.header {
+	nav {
 		.navbar {
 			position: relative;
 			left: 0;
@@ -72,6 +72,10 @@
 			padding: $tiny $small;
 			border-radius: 1rem;
 			z-index: 60;
+
+			&__link {
+				width: fit-content;
+			}
 		}
 
 		.navbar__logo {

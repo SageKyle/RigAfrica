@@ -165,16 +165,15 @@
 
 // ================ MEDIA QUERIES ======================
 @media screen and (max-width: 800px) {
-	.header {
-		.hide-nav {
-			display: none !important;
-			height: 0;
-		}
-
-		&__wrapper {
-			padding: 0;
-		}
+	.hide-nav {
+		display: none !important;
+		height: 0;
 	}
+
+	.header__wrapper {
+		padding: 0;
+	}
+
 	.newsline {
 		display: none;
 	}
