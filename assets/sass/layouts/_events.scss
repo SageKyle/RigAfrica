@@ -236,6 +236,10 @@
 		}
 	}
 
+	.cta__wrapper {
+		width: 100%;
+	}
+
 	// hide moving text in the CTA
 	.cta::after {
 		display: none;
@@ -244,7 +248,8 @@
 
 // ================ MEDIA QUERIES ====================
 @media screen and (max-width: 800px) {
-	.events-page {
+	.events-page,
+	.past-events-page {
 		.secondary-heading,
 		.tertiary-heading {
 			margin-inline: 0;

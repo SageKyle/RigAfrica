@@ -105,3 +105,21 @@
 		width: 50%;
 	}
 }
+
+// =============== MEDIA QUERIES
+@media screen and (max-width: 800px) {
+	.search-form {
+		position: absolute;
+		right: $small;
+		top: $large;
+		z-index: 5;
+
+		.icon {
+			display: none;
+		}
+
+		.main-btn {
+			font-size: 1.8rem;
+		}
+	}
+}
