@@ -1360,6 +1360,13 @@ html.sr .load-hidden {
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.8);
 }
+.shop-page .merch-group {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.shop-page .merch-group .btn {
+  font-size: 1.6rem;
+  padding-inline: 0.5rem;
+}
 .shop-page .shop {
   width: 100%;
   text-align: center;
@@ -1381,7 +1388,6 @@ html.sr .load-hidden {
 }
 .shop-page .shop__card--heading {
   margin-bottom: 0;
-  font-weight: 500;
 }
 .shop-page .shop__card--img {
   width: 100%;
@@ -1396,7 +1402,7 @@ html.sr .load-hidden {
   -webkit-box-orient: vertical;
 }
 .shop-page .shop .card-price {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 .shop-page .shop .card-footer {
@@ -1408,7 +1414,7 @@ html.sr .load-hidden {
   margin-top: auto;
 }
 .shop-page .shop .card-footer .icon {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .shop-page .main-btn {
   text-transform: uppercase;
