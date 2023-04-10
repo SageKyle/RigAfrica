@@ -1811,16 +1811,18 @@ var navContainer = document.querySelector('.navbar');
 var mainContainer = document.querySelector('.main');
 
 // ================ SEARCH EVENTS ====================
-var searchIcon = document.querySelector('.toggle-form');
+var searchIcons = document.querySelectorAll('.toggle-form');
 var closeIcon = document.querySelector('.event-close');
 var searchInput = document.querySelector('.event-search');
 
 // ========= DISPLAY FORM INPUT ====================
-searchIcon.addEventListener('click', function () {
-  searchInput.classList.remove('hidden');
-  document.querySelector('.search-form__input').focus();
-  hideNavbar();
-  CloseOnKeyPress();
+searchIcons.forEach(function (searchIcon) {
+  searchIcon.addEventListener('click', function () {
+    searchInput.classList.remove('hidden');
+    document.querySelector('.search-form__input').focus();
+    hideNavbar();
+    CloseOnKeyPress();
+  });
 });
 
 // ========================= HIDE FORM INPUT FUNCTION ==================
@@ -1957,7 +1959,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49687" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53625" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

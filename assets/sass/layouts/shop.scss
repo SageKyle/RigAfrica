@@ -108,18 +108,20 @@
 
 // =============== MEDIA QUERIES
 @media screen and (max-width: 800px) {
-	.search-form {
-		position: absolute;
-		right: $small;
-		top: $large;
-		z-index: 5;
+	.shop-page {
+		.search-form {
+			position: absolute;
+			right: $small;
+			top: $large;
+			z-index: 5;
 
-		.icon {
-			display: none;
-		}
+			.icon {
+				display: none;
+			}
 
-		.main-btn {
-			font-size: 1.8rem;
+			.main-btn {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }

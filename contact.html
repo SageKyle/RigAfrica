@@ -59,18 +59,35 @@
 			</section>
 			<button class="btn btn-primary">donate</button>
 			<img
+				src="/assets/icons/icon-hamburger.svg"
+				alt=""
+				class="icon nav-toggle"
+			/>
+			<img
 				src="/assets/icons/search-icon.png"
 				alt="search"
 				title="Search"
 				class="icon search-icon toggle-form"
 			/>
-			<img
-				src="/assets/icons/icon-hamburger.svg"
-				alt=""
-				class="icon nav-toggle hidden"
-			/>
+
 			<!-- TODO add a search form here -->
 		</nav>
+		<form class="search-form">
+			<img
+				src="/assets/icons/search-icon.png"
+				aria-label="click to search"
+				alt="search"
+				class="icon toggle-form"
+			/>
+			<label class="search-form__label hidden event-search">
+				<span class="search-form__close event-close">x</span>
+				<input
+					class="search-form__input"
+					placeholder="Search Shop"
+					type="text"
+				/>
+			</label>
+		</form>
 		<main class="main">
 			<h1 class="secondary-heading title primary-color">contact us</h1>
 			<section class="top-bar">

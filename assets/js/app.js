@@ -9,17 +9,19 @@ const navContainer = document.querySelector('.navbar');
 const mainContainer = document.querySelector('.main');
 
 // ================ SEARCH EVENTS ====================
-const searchIcon = document.querySelector('.toggle-form');
+const searchIcons = document.querySelectorAll('.toggle-form');
 const closeIcon = document.querySelector('.event-close');
 const searchInput = document.querySelector('.event-search');
 
 // ========= DISPLAY FORM INPUT ====================
-searchIcon.addEventListener('click', () => {
-	searchInput.classList.remove('hidden');
-	document.querySelector('.search-form__input').focus();
-	hideNavbar();
+searchIcons.forEach((searchIcon) => {
+	searchIcon.addEventListener('click', () => {
+		searchInput.classList.remove('hidden');
+		document.querySelector('.search-form__input').focus();
+		hideNavbar();
 
-	CloseOnKeyPress();
+		CloseOnKeyPress();
+	});
 });
 
 // ========================= HIDE FORM INPUT FUNCTION ==================

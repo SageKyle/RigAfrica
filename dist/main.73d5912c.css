@@ -204,6 +204,7 @@ html.sr .load-hidden {
   }
   nav .navigation {
     background-color: #1e293b;
+    color: #fff;
     flex-direction: column;
     position: absolute;
     top: 6rem;
@@ -300,7 +301,6 @@ html.sr .load-hidden {
 }
 
 .header {
-  position: static;
   background-image: url("/hero-bg.fc0c277c.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -694,6 +694,7 @@ html.sr .load-hidden {
   padding: 4rem;
   margin-bottom: 6rem;
   position: relative;
+  overflow-x: hidden;
 }
 .testimonies::after {
   display: block;
@@ -913,9 +914,43 @@ html.sr .load-hidden {
   margin-bottom: 0;
 }
 .contact-page .main {
-  margin-top: 4rem;
+  margin-top: 6rem;
   margin-inline: auto;
   width: 80%;
+  position: relative;
+}
+.contact-page .search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: absolute;
+  right: 6rem;
+}
+.contact-page .search-form__label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(72, 84, 97, 0.2);
+  outline: 2px solid rgb(72, 84, 97);
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.contact-page .search-form__input, .contact-page .search-form__input:focus {
+  background-color: transparent;
+  border: unset;
+  outline: unset;
+  height: 100%;
+  padding: 1rem;
+}
+.contact-page .search-form__close {
+  display: inline-block;
+  color: #fff;
+  padding-inline: 1rem;
+  cursor: pointer;
+}
+.contact-page .search-form .toggle-form {
+  cursor: pointer;
+  filter: invert(80%);
 }
 .contact-page .events__nav {
   display: flex;
@@ -1007,7 +1042,7 @@ html.sr .load-hidden {
 .contact-page .rig-branch__group {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   gap: 4rem;
   align-items: center;
   margin-block: 2rem 6rem;
@@ -1022,6 +1057,29 @@ html.sr .load-hidden {
   cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+  .contact-page .top-bar {
+    flex-wrap: wrap;
+  }
+  .contact-page .tertiary-heading {
+    margin: 1rem 0;
+  }
+  .contact-page .contact-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact-page .contact-main .form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contact-page .contact-main .form {
+    width: 100%;
+  }
+  .contact-page .secondary-heading {
+    margin-inline: 0;
+  }
+}
 .navbar {
   width: 90%;
 }
@@ -1359,16 +1417,16 @@ html.sr .load-hidden {
 }
 
 @media screen and (max-width: 800px) {
-  .search-form {
+  .shop-page .search-form {
     position: absolute;
     right: 4rem;
     top: 10rem;
     z-index: 5;
   }
-  .search-form .icon {
+  .shop-page .search-form .icon {
     display: none;
   }
-  .search-form .main-btn {
+  .shop-page .search-form .main-btn {
     font-size: 1.8rem;
   }
 }
