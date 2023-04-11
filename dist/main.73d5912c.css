@@ -513,7 +513,7 @@ html.sr .load-hidden {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
   margin-bottom: 2rem;
   width: 100%;
   background-color: #fff;
@@ -551,9 +551,14 @@ html.sr .load-hidden {
   align-items: center;
   gap: 0.5rem;
 }
+@media screen and (max-width: 650px) {
+  .auth-page .main {
+    width: 90%;
+  }
+}
 
 .signup hr {
-  background-color: rgba(72, 84, 97, 0.4);
+  background-color: rgba(72, 84, 97, 0.2);
 }
 .signup .info {
   font-size: 1.4rem;
