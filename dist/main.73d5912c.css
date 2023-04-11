@@ -478,6 +478,79 @@ html.sr .load-hidden {
   gap: 2rem;
 }
 
+.auth-page .container {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("/shokunin_World_Map 3.0f40bd24.png");
+  background-position: center;
+  position: relative;
+}
+.auth-page .header {
+  width: 100%;
+  height: fit-content;
+  display: block;
+  background: unset;
+  position: relative;
+}
+.auth-page .main {
+  width: 45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 6rem;
+}
+.auth-page .main__img {
+  width: 100%;
+  display: inline-block;
+  margin-block: 8rem 4rem;
+}
+.auth-page .main a {
+  color: #ec992f;
+}
+.auth-page .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 82px 33px rgba(34, 41, 55, 0.01), 0px 46px 28px rgba(34, 41, 55, 0.03), 0px 20px 20px rgba(34, 41, 55, 0.04), 0px 5px 11px rgba(34, 41, 55, 0.05), 0px 0px 0px rgba(34, 41, 55, 0.05);
+  border-radius: 1rem;
+}
+.auth-page .form__item {
+  width: 100%;
+  display: flex;
+  padding-inline: 1rem;
+  gap: 1rem;
+  align-items: center;
+  outline: 2px solid rgba(72, 84, 97, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+}
+.auth-page .form__input, .auth-page .form__input:focus {
+  border: unset;
+  outline: unset;
+  background-color: transparent;
+  padding: 1rem;
+  width: 100%;
+}
+.auth-page .submit-btn {
+  width: 60%;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+.auth-page .pswd-icon {
+  cursor: pointer;
+}
+.auth-page .remember {
+  display: flex;
+  align-items: center;
+}
+
 .partners-page .header {
   background-image: url("/partner-page-bg.a79bf4db.png");
   background-color: rgba(255, 255, 255, 0.1);
