@@ -495,9 +495,6 @@ html.sr .load-hidden {
   margin: auto;
   height: 100%;
 }
-.partners-page .header .hero__logo {
-  width: 80%;
-}
 .partners-page .description {
   margin: 4rem;
   text-align: center;
@@ -513,6 +510,9 @@ html.sr .load-hidden {
   margin: 4rem auto;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 4rem;
+}
+.partners-page .partners__logo {
+  width: 80%;
 }
 .partners-page .partners__heading {
   font-family: "Gabriela", serif;
@@ -538,7 +538,7 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
 }
-.partners-page .partners__card--feature:not(:last-child) {
+.partners-page .partners__card--feature:not(:last-of-type) {
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   margin-bottom: 1rem;
 }
@@ -552,6 +552,9 @@ html.sr .load-hidden {
   font-size: 2rem;
   display: inline-block;
   margin-top: 2rem;
+}
+.partners-page .partners__card:nth-child(2) {
+  border: 2px solid #fff;
 }
 
 .welcome {
