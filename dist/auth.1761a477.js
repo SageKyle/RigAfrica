@@ -121,11 +121,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var pswdInput = document.querySelector('.pswd-input');
 var showPswd = document.querySelector('.show-pswd');
 var hidePswd = document.querySelector('.hide-pswd');
-showPswd.addEventListener('click', function (e) {
+
+// SHOW PASSWORD
+showPswd.addEventListener('click', function () {
+  pswdInput.type = 'text';
   hidePswd.classList.remove('hidden');
   showPswd.classList.add('hidden');
 });
-hidePswd.addEventListener('click', function (e) {
+
+// HIDE PASSWORD
+hidePswd.addEventListener('click', function () {
+  pswdInput.type = 'password';
   showPswd.classList.remove('hidden');
   hidePswd.classList.add('hidden');
 });

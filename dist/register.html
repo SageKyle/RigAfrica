@@ -19,7 +19,7 @@
 		<!-- SCROLLREVEAL -->
 		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
-	<body class="auth-page">
+	<body class="auth-page signup">
 		<section class="container">
 			<header class="header">
 				<!-- --------------- NAVBAR -------------------- -->
@@ -46,31 +46,53 @@
 
 			<main class="main">
 				<img src="/rig-partner-portal-logo.d33b06f8.png" alt="" class="logo main__img">
-				<h4 class="secondary-heading primary-color">welcome</h4>
-				<small class="paragraph">Login to your account to continue</small>
+				<h4 class="secondary-heading primary-color">Create an Account</h4>
+				<small class="paragraph">Sign up to partner with us</small>
 				<form class="auth__form form">
 					<label class="form__item">
-						<img src="/sms.892eede5.svg" alt="" aria-hidden="true" class="icon">
+						<input type="text" placeholder="Username" class="form__input">
+					</label>
+					<label class="form__item">
+						<input type="text" placeholder="First Name" class="form__input">
+					</label>
+					<label class="form__item">
+						<input type="text" placeholder="Last Name" class="form__input">
+					</label>
+					<label class="form__item">
 						<input type="email" placeholder="Email" class="form__input">
 					</label>
 					<label class="form__item">
-						<img src="/lock.69c1817b.png" alt="" aria-hidden="true" class="icon">
 						<input type="password" placeholder="Password" class="form__input pswd-input">
 						<img src="/eye-slash.4b172421.svg" alt="show password" class="icon pswd-icon show-pswd">
 						<img src="/eye.f41ec25f.png" alt="hide password" class="icon pswd-icon hide-pswd hidden">
 					</label>
-					<small class="remember">
-						<!-- TODO format this icon as a custom checkbox -->
-						<img src="/tick-square.12e328c2.png" alt="remember me" class="icon">
-						<span>Remember Me</span>
+					<small class="remember info">
+						<img src="/info.627b1781.png" alt="remember me" class="icon">
+						at least 6 letters including a number and a symbol
 					</small>
-					<button class="btn btn-primary submit-btn">login</button>
+					<hr>
+					<section class="partner-info">
+						<h4 class="secondary-heading">partnership summary</h4>
+						<p class="paragraph">
+							Your current selected partnership type:
+							<span id="partner-type">VIP</span>
+						</p>
+						<p class="paragraph">
+							Partnership Amount:
+							<span class="partnership-amount">10,000.00</span>
+						</p>
+						<p class="paragraph primary-color">
+							Monthly donation:
+							<span class="partnership-amount">10,000</span>/Monthly
+						</p>
+						<a href="#" class="change-partnership">Change Plan</a>
+					</section>
+					<button class="btn btn-primary submit-btn">Partner Now</button>
+					<p class="paragraph bottom-txt">
+						Already have an account?
+						<a href="/sign-in.html" class="primary-color">Login</a>
+					</p>
 				</form>
-				<a href="#" class="primary-color forgot-pswd">Forgot Password?</a>
-				<p class="paragraph">
-					Don't have an account?
-					<a href="/register.html" class="primary-color">Create an Account</a>
-				</p>
 			</main>
 		</section>
 		<!-- -------------- FOOTER --------------->

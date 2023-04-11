@@ -549,6 +549,36 @@ html.sr .load-hidden {
 .auth-page .remember {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.signup hr {
+  background-color: rgba(72, 84, 97, 0.4);
+}
+.signup .info {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+.signup .info .icon {
+  width: 1rem;
+}
+.signup .partner-info {
+  text-align: center;
+}
+.signup .partner-info .secondary-heading {
+  font-weight: normal;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+.signup .partner-info .change-partnership {
+  color: #1e293b;
+  text-decoration: underline;
+}
+.signup .bottom-txt {
+  margin-inline: auto;
+}
+.signup .bottom-txt a {
+  text-decoration: underline;
 }
 
 .partners-page .header {

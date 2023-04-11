@@ -88,5 +88,44 @@
 	.remember {
 		display: flex;
 		align-items: center;
+		gap: 0.5rem;
+	}
+}
+
+.signup {
+	hr {
+		background-color: rgba($accentColor, 0.4);
+	}
+
+	.info {
+		font-size: 1.4rem;
+		padding-left: 1rem;
+
+		.icon {
+			width: 1rem;
+		}
+	}
+
+	.partner-info {
+		text-align: center;
+
+		.secondary-heading {
+			font-weight: normal;
+			text-decoration: underline;
+			margin-bottom: $tiny;
+		}
+
+		.change-partnership {
+			color: $textColor;
+			text-decoration: underline;
+		}
+	}
+
+	.bottom-txt {
+		margin-inline: auto;
+
+		a {
+			text-decoration: underline;
+		}
 	}
 }
