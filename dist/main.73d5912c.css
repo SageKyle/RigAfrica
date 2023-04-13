@@ -217,6 +217,7 @@ html.sr .load-hidden {
   }
   nav .navbar__logo {
     width: 38%;
+    margin-right: 2rem;
   }
 }
 .btn {
@@ -268,10 +269,11 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
   justify-content: end;
+  flex-wrap: wrap;
   gap: 6rem;
   padding: 2rem 4rem;
   background-color: #fff;
-  height: 4rem;
+  height: 5rem;
   margin-bottom: 2rem;
   position: fixed;
   top: 0;
@@ -413,6 +415,12 @@ html.sr .load-hidden {
     padding: 0;
   }
   .newsline {
+    height: fit-content;
+    padding: 1rem 2rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .newsline__link--group {
     display: none;
   }
   .hero__txt {
