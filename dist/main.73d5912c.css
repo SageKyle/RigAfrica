@@ -1239,6 +1239,11 @@ html.sr .load-hidden {
 .rigx-page .contact__group .contact__email {
   text-decoration: underline;
 }
+@media screen and (max-width: 650px) {
+  .rigx-page .contact__group {
+    grid-template-columns: 1fr;
+  }
+}
 
 .navbar {
   width: 90%;

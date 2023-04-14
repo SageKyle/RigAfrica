@@ -6,8 +6,6 @@
 
 	.header {
 		background-image: url('/assets/images/rigx-bg.png');
-		// background-size: cover;
-		// height: 60rem;
 	}
 
 	.hero {
@@ -59,6 +57,14 @@
 			&__email {
 				text-decoration: underline;
 			}
+		}
+	}
+
+	// =============== MEDIA QUERIES ===================
+
+	@media screen and (max-width: 650px) {
+		.contact__group {
+			grid-template-columns: 1fr;
 		}
 	}
 }
