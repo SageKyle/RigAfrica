@@ -24,3 +24,9 @@
 	background-color: $primaryColor;
 	color: $backgroundColor;
 }
+
+@media screen and (max-width: 650px) {
+	.btn-primary {
+		font-size: 1.6rem;
+	}
+}

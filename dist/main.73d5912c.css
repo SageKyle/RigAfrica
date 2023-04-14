@@ -244,6 +244,11 @@ html.sr .load-hidden {
   color: #fff;
 }
 
+@media screen and (max-width: 650px) {
+  .btn-primary {
+    font-size: 1.6rem;
+  }
+}
 .icon {
   height: 2rem;
   aspect-ratio: 1/1;
@@ -445,6 +450,8 @@ html.sr .load-hidden {
 }
 .footer {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   padding: 2rem 6rem;
   background-color: #2f1f09;
   color: #fff;
@@ -481,11 +488,34 @@ html.sr .load-hidden {
 .footer .paragraph {
   font-size: 1.2rem;
 }
+.footer .nav-group {
+  display: flex;
+  gap: 1rem;
+}
 .footer__socials {
   display: flex;
   gap: 2rem;
 }
 
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 0;
+  }
+  .footer__main {
+    margin: 2rem;
+  }
+  .footer__links {
+    flex-direction: column-reverse;
+  }
+  .footer .navigation {
+    align-items: flex-start;
+    margin-block: 2rem;
+  }
+  .footer .nav-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .auth-page .container {
   min-height: 90vh;
   width: 100%;
@@ -804,7 +834,7 @@ html.sr .load-hidden {
   padding: 4rem;
   margin-bottom: 6rem;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .testimonies::after {
   display: block;

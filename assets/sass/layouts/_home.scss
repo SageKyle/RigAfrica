@@ -172,7 +172,7 @@
 	padding: $small;
 	margin-bottom: $medium;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	&::after {
 		display: block;
