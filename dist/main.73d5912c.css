@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gabriela&display=swap");
 html {
@@ -12,7 +12,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  font-family: "Rubik", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 *,
@@ -86,16 +86,6 @@ html.sr .load-hidden {
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 650px) {
-  .primary-heading {
-    font-size: 2rem;
-  }
-  .secondary-heading,
-  .tertiary-heading {
-    font-size: 1.8rem;
-    margin-inline: 2rem;
-  }
-}
 .grid {
   display: grid;
   width: 100%;
@@ -217,7 +207,6 @@ html.sr .load-hidden {
   }
   nav .navbar__logo {
     width: 38%;
-    margin-right: 2rem;
   }
 }
 .btn {
@@ -1225,6 +1214,7 @@ html.sr .load-hidden {
 }
 .rigx-page .header {
   background-image: url("/rigx-bg.89b3a959.png");
+  max-height: 56rem;
 }
 .rigx-page .hero {
   width: 80%;
@@ -1525,6 +1515,55 @@ html.sr .load-hidden {
     flex-wrap: wrap;
   }
 }
+.featured {
+  height: 45rem;
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.featured__img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  -o-object-fit: fill;
+}
+.featured__card {
+  background-color: #2f1f09;
+  color: white;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.featured__card .paragraph {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+.featured__card--title {
+  text-decoration: underline;
+}
+.featured__card--btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.featured__card .primary-heading {
+  text-transform: uppercase;
+  margin: 2rem 0;
+  padding: 0;
+}
+.featured__card .btn {
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+}
+
 .shop-page {
   background-color: rgba(72, 84, 97, 0.2);
 }
@@ -1596,11 +1635,11 @@ html.sr .load-hidden {
   line-clamp: 5;
   -webkit-box-orient: vertical;
 }
-.shop-page .shop .card-price {
+.shop-page .card-price {
   font-size: 1.8rem;
   font-weight: bold;
 }
-.shop-page .shop .card-footer {
+.shop-page .card-footer {
   width: 100%;
   display: flex;
   gap: 1rem;
@@ -1608,7 +1647,7 @@ html.sr .load-hidden {
   align-items: center;
   margin-top: auto;
 }
-.shop-page .shop .card-footer .icon {
+.shop-page .card-footer .icon {
   margin-right: 0.5rem;
 }
 .shop-page .main-btn {
@@ -1617,7 +1656,53 @@ html.sr .load-hidden {
   width: 50%;
 }
 
+.mini-card-section {
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+.mini-card-section .shop__card {
+  padding: 1.5rem;
+}
+.mini-card-section .shop__card .card-price {
+  font-size: 1.2rem;
+}
+.mini-card-section .btn {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.mini-card-section .btn .icon {
+  height: 1.5rem;
+}
+
+.mini-card-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 800px) {
+  .secondary-heading,
+  .primary-heading {
+    margin: 0;
+  }
+  .top-bar {
+    padding: 0;
+  }
+  .featured {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .featured__img {
+    height: 50%;
+  }
+  .featured__card {
+    width: 100%;
+    position: unset;
+    transform: unset;
+  }
+  .shop-page .shop {
+    padding: 0;
+    margin-top: 2rem;
+  }
   .shop-page .search-form {
     position: absolute;
     right: 4rem;
@@ -1629,6 +1714,29 @@ html.sr .load-hidden {
   }
   .shop-page .search-form .main-btn {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .featured .primary-heading {
+    font-size: 2rem;
+  }
+  .featured__card--btn-group {
+    flex-direction: column;
+  }
+  .mini-card-heading {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .mini-card-section .card-price {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .featured .primary-heading {
+    font-size: 1.8rem;
+  }
+  .mini-card-section {
+    grid-template-columns: 1fr;
   }
 }
 
