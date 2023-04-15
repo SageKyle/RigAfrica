@@ -6,7 +6,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>RIG Africa | About Us</title>
 		<link rel="stylesheet" href="assets/sass/main.scss" />
-		<script src="/assets/js/app.js" defer></script>
+		<!-- favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/icons/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="assets/icons/favicon/android-chrome-512x512.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="assets/icons/favicon/android-chrome-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/icons/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/icons/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="assets/icons/favicon/site.webmanifest" />
+		<!-- js -->
+		<script src="assets/js/app.js" defer></script>
+		<!-- SCROLLREVEAL -->
+		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
 	<body class="about-page">
 		<header class="header">
@@ -14,288 +48,231 @@
 				<!-- ----------------- NAVBAR----------------------------- -->
 				<nav class="navbar">
 					<a href="/index.html" class="navbar__logo">
-						<img src="/assets/icons/rig-nav-logo.png" alt="" class="logo" />
+						<img src="assets/icons/rig-nav-logo.png" alt="" class="logo" />
 					</a>
 					<section class="navigation main-nav hide-nav">
-						<a href="#" class="navigation__link">about us</a>
-						<a href="/partners.html" class="navigation__link">partner</a>
-						<a href="#" class="navigation__link">RIGX</a>
-						<a href="#" class="navigation__link">RIG school</a>
-						<a href="#" class="navigation__link">events</a>
-						<a href="#" class="navigation__link">shops</a>
+						<a href="about.html" class="navigation__link active">about us</a>
+						<a href="partners.html" class="navigation__link">partner</a>
+						<a href="rigx.html" class="navigation__link">RIGX</a>
+						<a href="contact.html" class="navigation__link">RIG school</a>
+						<a href="events.html" class="navigation__link">events</a>
+						<a href="shop-books.html" class="navigation__link">shops</a>
 						<a href="#" class="navigation__link">affiliate</a>
 					</section>
 					<button class="btn btn-primary">donate</button>
 					<img
-						src="/assets/icons/search-icon.png"
-						alt="search"
-						title="Search"
-						class="icon search-icon"
+						src="assets/icons/icon-hamburger.svg"
+						alt=""
+						class="icon nav-toggle"
 					/>
 					<img
-						src="/assets/icons/icon-hamburger.svg"
-						alt=""
-						class="icon nav-toggle hidden"
+						src="assets/icons/search-icon.png"
+						alt="search"
+						title="Search"
+						class="icon search-icon toggle-form"
 					/>
 				</nav>
+				<form class="search-form">
+					<label class="search-form__label hidden event-search">
+						<span class="search-form__close event-close">x</span>
+						<input
+							class="search-form__input"
+							placeholder="Search"
+							type="text"
+						/>
+					</label>
+				</form>
 				<!-- ------------------------ HERO SECTION -------------------- -->
 				<section class="hero">
 					<img
-						src="/assets/icons/rig-about-logo.png"
+						src="assets/images/rig-white.png"
 						alt=""
-						class="header__img main-img"
+						class="logo about__logo"
 					/>
 				</section>
 			</section>
 		</header>
-		<!-- <main class="main"> -->
-		<!-- ---------------- WELCOME SECTION -------------- -->
-		<section class="welcome split-2">
-			<article class="welcome__txt split-2__txt">
-				<h3 class="welcome__txt--title">welcome</h3>
-				<h4 class="welcome__txt--heading secondary-heading">
-					Rig Africa - a place where prophets a built
-				</h4>
-				<p class="paragraph welcome__txt-paragraph">
-					Rig Africa is a sub-organization under the Rig Nation umbrella, a
-					faith-based organization that seeks to spread the message of
-					Christianity globally. Rig Africa focuses specifically on evangelism
-					and support for Christians in Africa. Through training and development
-					programs, mission trips, and outreach events, Rig Africa aims to equip
-					Christians in Africa to become effective ministers of the gospel. The
-					organization is committed to serving the people of Africa and making a
-					positive impact in their communities, in line with the broader mission
-					of Rig Nation.
-				</p>
-			</article>
-			<div class="welcome__img split-2__img">
+		<main class="main">
+			<!-- --------------------- VISION SECTION -------------- -->
+			<section class="vision">
 				<img
-					src="/assets/images/Rig Africa map 1.png"
-					alt="Welcome to RIG Africa"
-					class="main-img"
+					src="assets/icons/rig-nav-logo.png"
+					alt="rig africa"
+					class="rig-logo"
 				/>
-			</div>
-		</section>
-		<!-- -------------- PARTNERS SECTION ------------ -->
-		<section class="partners__wrapper">
-			<div class="partners">
-				<h2 class="secondary-heading partners__heading">partner with us</h2>
-				<!-- -------- PARTNERS CARDS -------------- -->
-				<div class="grid col-3">
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/assets/icons/donate.svg" alt="donate" class="icon" />
-						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							online donation
-						</h4>
-						<p class="paragraph">Tithes, offerings or random giving.</p>
-					</div>
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/assets/icons/donate.svg" alt="donate" class="icon" />
-						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							become a partner
-						</h4>
-						<p class="paragraph">
-							Join our vision to raise 4000 active prophets.
-						</p>
-					</div>
-					<div class="card partners__card">
-						<div class="partners__card--logo">
-							<img src="/assets/icons/donate.svg" alt="donate" class="icon" />
-						</div>
-						<h4 class="secondary-heading partners__card--heading">
-							sponsor a project
-						</h4>
-						<p class="paragraph">
-							Give to any of our projects or programs we are working on.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ------------ UPCOMING EVENTS --------- -->
-		<section class="events">
-			<div class="events__txt">
-				<h4 class="tertiary-heading events__txt--heading">upcoming events</h4>
-				<button class="btn btn-primary">
-					<a href="#">view upcoming events</a>
-				</button>
-			</div>
-			<div class="grid col-3 events__wrapper">
-				<div class="card event__card">
-					<img
-						src="assets/images/event-img.png"
-						alt="upcoming event"
-						class="event"
-					/>
-				</div>
-				<div class="card event__card">
-					<img
-						src="assets/images/event-img.png"
-						alt="upcoming event"
-						class="event"
-					/>
-				</div>
-				<div class="card event__card">
-					<img
-						src="assets/images/event-img.png"
-						alt="upcoming event"
-						class="event"
-					/>
-				</div>
-			</div>
-		</section>
-		<!------------- FATHER BLESSINGS (PROPHECY) ----------->
-		<section class="prophecy-section split-2">
-			<div class="prophecy-section__img split-2__img">
-				<img
-					src="/assets/images/prophet.png"
-					alt="the father's blessing"
-					class="main-img"
-				/>
-			</div>
-			<div class="prophecy-section__txt split-2__txt">
-				<h4 class="secondary-heading">father's blessing</h4>
-				<p class="paragraph">
-					Whether you're seeking to deepen your faith, find meaning in your
-					life, or simply gain a new perspective on the world around you, the
-					teachings of Prophet Tomi Arayom are a must-listen. Tune in today and
-					experience the transformative power of his wisdom and guidance.
-				</p>
-				<button class="btn btn-primary"><a href="#">watch sermons</a></button>
-			</div>
-		</section>
-		<!-- ------------ ABOUT -------------- -->
-		<section class="about split-2">
-			<div class="about__txt split-2__txt">
-				<h5 class="tertiary-heading">
-					Training People to be prophets and prophets to be people
-				</h5>
-				<p class="paragraph">
+				<h2 class="secondary-heading">
+					TRAINING PEOPLE TO BE PROPHETS AND PROPHETS TO BE PEOPLE
+				</h2>
+				<p class="paragraph vision__txt">
 					RIG Nation was founded in 2007 by Tomi Arayomi with the vision to
 					restore the apostolic and prophetic ministry back into the Body of
 					Christ and to equip this generation to be in a position and condition
-					for use by God. RIG stands for Restoring Issachar’s Generation, a
-					mission formed by the scriptural Chronicles 12:32: “Of the sons of
+					for use by God.
+					<span class="primary-color"
+						>RIG stands for Restoring Issachar’s Generation</span
+					>, a mission formed by the scriptural
+					<span class="primary-color">Chronicles 12:32</span>: “Of the sons of
 					Issachar who had an understanding of the times to know what Israel
 					ought to do…” RIG Nation is headquartered in London, United Kingdom
 					and has a growing presence in Africa (Nigeria), Asia (Philippines),
 					North America (USA) and Europe (United Kingdom).
 				</p>
-			</div>
-			<div class="about__img split-2__img">
-				<img src="/assets/images/about-img.png" alt="" class="main-img" />
-			</div>
-		</section>
-		<!-- ------- TESTIMONIES -------------->
-		<section class="testimonies">
-			<h4 class="secondary-heading testimonies__heading">testimonies</h4>
-			<article class="grid col-3 testimonies__main">
-				<div class="testimonies__card">
+			</section>
+			<!-- ----------------- MISSION SECTION ------------------- -->
+			<section class="mission">
+				<h3 class="primary-heading">our mission</h3>
+				<div class="mission__img--wrapper">
 					<img
-						src="/assets/images/Avatar Image.png"
-						alt=""
-						class="testimonies__card--img"
+						src="assets/images/rig-apostles.png"
+						alt="rig has trained over 7000 apostles and prophets"
+						class="mission__img"
 					/>
-					<h5 class="secondary-heading testimonies__card--name">
-						mathew akoki
-					</h5>
-					<p class="paragraph testimonies__card--location">Nairobi, Kenya</p>
-
-					<p class="paragraph testimonies__card--info">
-						Growing up, I felt like something was missing in my life. But when I
-						walked through the doors of the church, I finally found the missing
-						piece - a relationship with God
-					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
-				</div>
-				<div class="testimonies__card">
 					<img
-						src="/assets/images/Avatar Image (1).png"
-						alt=""
-						class="testimonies__card--img"
+						src="assets/images/rig-continents.png"
+						alt="rig is present in six continents"
+						class="mission__img"
 					/>
-					<h5 class="secondary-heading testimonies__card--name">anabel joy</h5>
-					<p class="paragraph testimonies__card--location">Lagos, Nigeria</p>
-
-					<p class="paragraph testimonies__card--info">
-						I had hit rock bottom, but through prayer and the support of my
-						church family, I found the strength to turn my life around and start
-						fresh.
-					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
 				</div>
-				<div class="testimonies__card">
-					<img
-						src="/assets/images/Avatar Image (2).png"
-						alt=""
-						class="testimonies__card--img"
-					/>
-					<h5 class="secondary-heading testimonies__card--name">
-						jasmine okafor
-					</h5>
-					<p class="paragraph testimonies__card--location">Abuja, Nigeria</p>
-
-					<p class="paragraph testimonies__card--info">
-						I used to feel so alone in the world, but now I know that I am never
-						truly alone. God is always with me, and the church community is
-						always there to offer support and encouragement.
-					</p>
-					<p class="paragraph testimonies__card--date">11th June, 2022</p>
-				</div>
-			</article>
-		</section>
-
-		<!-- ----------- CALL-TO-ACTION ------------ -->
-		<section class="cta__wrapper">
-			<div class="cta">
-				<div class="cta__txt">
-					<h6 class="tertiary-heading cta__txt--heading">
-						Subscribe to our newsletter
-					</h6>
-					<p class="paragraph cta__txt--info">
-						Stay up-to-date with our latest events, offers and launches.
-					</p>
-					<form action="#" class="cta__form">
-						<input
-							type="email"
-							name="email"
-							id="email"
-							title="Enter Your Email Here"
-							class="cta__form--input"
-							placeholder="Email Address"
+			</section>
+			<section class="founder">
+				<h4 class="tertiary-heading display-on-mobile">Meet our founder</h4>
+				<div class="founder__info--wrapper">
+					<div class="founder__info">
+						<img
+							src="assets/images/rig-founder.png"
+							alt="Tomi Arayomi, founder of RIG"
+							class="founder__info--img"
 						/>
-						<button class="btn form-btn cta__form--btn">
-							<img src="assets/icons/send-white.png" alt="" class="icon" />
-						</button>
-					</form>
+						<div class="founder__social">
+							<a href="#">
+								<img
+									src="assets/icons/twitter-white.png"
+									alt="tomi's twitter page"
+									class="icon"
+								/>
+							</a>
+							<a href="#">
+								<img
+									src="assets/icons/youtube-white.png"
+									alt="tomi's youtube channel"
+									class="icon"
+								/>
+							</a>
+							<a href="#">
+								<img
+									src="assets/icons/instagram-white.png"
+									alt="tomi's instagram page"
+									class="icon"
+								/>
+							</a>
+							<a href="#">
+								<img
+									src="assets/icons/facebook-white.png"
+									alt="tomi's facebook page"
+									class="icon"
+								/>
+							</a>
+						</div>
+					</div>
+					<a href="#" class="display-on-desktop">
+						<button class="btn btn-primary">Book Tomi Arayomi</button>
+					</a>
 				</div>
-				<div class="cta__img">
-					<img src="assets/images/mobile-mockup.png" class="main-img" alt="" />
-				</div>
+				<article class="founder__txt">
+					<h4 class="tertiary-heading display-on-desktop">Meet our founder</h4>
+					<p class="paragraph">
+						Tomi Arayomi received the Lord Jesus at the age of 15 and began
+						ministry at 16 years old serving as a pastor under Foundation Faith
+						Church. He served there and planted over 10 churches on university
+						campuses UK wide whilst studying law at the University of
+						Hertfordshire. He was later recognised for his apostolic and
+						prophetic anointing and was commissioned under Christian
+						International by Dr. Bill Hamon and Dr Sharon Stone in November
+						2010. Tomi has since been featured on mainstream media including
+						BBC, Revelation TV, the Times Malawi, TBN, Channels TV where he has
+						been recognized for his national and personal prophetic accuracy.
+						Tomi is a governmental prophet and has had the privilege of
+						consulting prophetically with leaders of nations in their homes at
+						the United Nations and in Parliament. In 2019, a few months before
+						the UK went into lockdown, Tomi was led by the Lord to relaunch RIG
+						Nation which he had originally founded in 2007. RIG stands for
+						Restoring Issachar’s Generation, a mission based on 1 Chronicles
+						12:32: “The sons of Issachar who had an understanding of the times
+						to know what Israel ought to do.” The ministry’s vision is to
+						restore the apostolic and prophetic ministry back into the Body of
+						Christ and to equip this generation to be in a position and
+						condition for use by God. In April 2020, Tomi launched Pioneers
+						Church as an online church which together with other training and
+						social commentary programmes, has attracted an international
+						audience of over 100,000 subscribers on RIG Nation’s YouTube
+						channel. During the lockdown, Tomi filmed over 100 training videos
+						which now form the basis of the RIG Nation’s School of Apostles and
+						Prophets and in June 2021, launched apostolic centres in London and
+						Lagos. Tomi and his wife Tahmar have three beautiful sons, Harvey,
+						Perez and Silas. After hearing a word from the Lord, the family
+						recently relocated to Nigeria from the United Kingdom.
+					</p>
+				</article>
+			</section>
+			<div class="display-on-mobile founder__social">
+				<span class="founder__social--txt">Connect with the Prophet</span>
+				<a href="#">
+					<img
+						src="assets/icons/twitter-white.png"
+						alt="tomi's twitter page"
+						class="icon"
+					/>
+				</a>
+				<a href="#">
+					<img
+						src="assets/icons/youtube-white.png"
+						alt="tomi's youtube channel"
+						class="icon"
+					/>
+				</a>
+				<a href="#">
+					<img
+						src="assets/icons/instagram-white.png"
+						alt="tomi's instagram page"
+						class="icon"
+					/>
+				</a>
+				<a href="#">
+					<img
+						src="assets/icons/facebook-white.png"
+						alt="tomi's facebook page"
+						class="icon"
+					/>
+				</a>
 			</div>
-		</section>
-		<!-- </main> -->
+			<a href="#" class="display-on-mobile">
+				<button class="btn btn-primary">Book Tomi Arayomi</button>
+			</a>
+			<p class="paragraph primary-color">
+				Join the growing network of apostles and prophets
+			</p>
+			<a href="#" class="display-on-desktop">
+				<button class="btn btn-primary">join now</button>
+			</a>
+		</main>
 		<!-- -------------- FOOTER --------------->
 		<footer class="footer">
 			<div class="footer__logo">
-				<img src="assets/icons/rig-logo-with-txt.png" alt="" class="logo" />
+				<img src="assets/icons/rig-white.png" alt="" class="logo rig-logo" />
+				<img src="assets/icons/rig-text.png" alt="" class="logo rig-txt" />
 			</div>
 			<div class="footer__main">
 				<div class="footer__links">
 					<section class="navigation">
 						<div class="nav-group">
-							<a href="/about.html" class="navigation__link">about us</a>
-							<a href="#" class="navigation__link">partner</a>
-							<a href="#" class="navigation__link">RIGX</a>
+							<a href="about.html" class="navigation__link">about us</a>
+							<a href="partners.html" class="navigation__link">partner</a>
+							<a href="rigx.html" class="navigation__link">RIGX</a>
 							<a href="#" class="navigation__link">RIG school</a>
 						</div>
 						<div class="nav-group">
-							<a href="#" class="navigation__link">events</a>
-							<a href="#" class="navigation__link">shops</a>
+							<a href="events.html" class="navigation__link">events</a>
+							<a href="shop-books.html" class="navigation__link">shops</a>
 							<a href="#" class="navigation__link">affiliate</a>
 						</div>
 					</section>
@@ -304,28 +281,28 @@
 				<section class="footer__socials">
 					<a href="#" class="footer__socials--link">
 						<img
-							src="/assets/icons/twitter-white.png"
+							src="assets/icons/twitter-white.png"
 							alt="follow us on twitter"
 							class="icon socail-icon"
 						/>
 					</a>
 					<a href="#" class="footer__socials--link">
 						<img
-							src="/assets/icons/youtube-white.png"
+							src="assets/icons/youtube-white.png"
 							alt="subscribe to our channel"
 							class="icon social-icon"
 						/>
 					</a>
 					<a href="#" class="footer__socials--link">
 						<img
-							src="/assets/icons/instagram-white.png"
+							src="assets/icons/instagram-white.png"
 							alt="twitter"
 							class="icon social-icon"
 						/>
 					</a>
 					<a href="#" class="footer__socials--link">
 						<img
-							src="/assets/icons/facebook-white.png"
+							src="assets/icons/facebook-white.png"
 							alt="follow with us on facebook"
 							class="icon social-icon"
 						/>
