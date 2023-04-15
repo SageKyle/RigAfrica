@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>RIG Africa | Dashboard</title>
+		<title>RIG Africa | Profile</title>
 		<link rel="stylesheet" href="assets/sass/main.scss" />
 		<!-- favicon -->
 		<link
@@ -74,7 +74,7 @@
 			<aside class="sidebar">
 				<!-- ----------------- SIDEBAR NAV ------------- -->
 				<nav class="sidebar__nav">
-					<div class="sidebar__nav--item active-tab">
+					<div class="sidebar__nav--item">
 						<img
 							src="assets/icons/dashboard-primary.png"
 							alt="dashboard"
@@ -83,7 +83,7 @@
 						/>
 						<span class="secondary-heading primary-color">dashboard</span>
 					</div>
-					<div class="sidebar__nav--item">
+					<div class="sidebar__nav--item active-tab">
 						<img
 							src="assets/icons/profile-circle.png"
 							alt="profile"
@@ -116,9 +116,8 @@
 				</div>
 			</aside>
 			<!-- ---------- MAIN DASHBOARD SECTION --------- -->
-			<main class="main">
+			<main class="main profile-section">
 				<div class="topbar">
-					<button class="btn btn-primary" id="partner-type">VIP Partner</button>
 					<!-- -------------- TOPBAR PROFILE CARD -------------- -->
 					<div class="profile-card">
 						<div class="user-info">
@@ -131,69 +130,70 @@
 						</div>
 						<p class="profile-card--email">Ubuntu_Poppins@gmail.com</p>
 					</div>
+					<button class="btn btn-primary" id="partner-type">
+						update avatar
+					</button>
 				</div>
 				<!-- --------------- MAIN CONTENT SECTION ---------- -->
-				<section class="main-card">
-					<!-- ------------- DASHBOARD CARDS ------- -->
-					<div class="dashboard grid">
-						<!-- -------------- AMOUNT -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">amount</h4>
-							<h2 class="secondary-heading" id="amount">10,000</h2>
-						</div>
-						<!-- -------------- PAYMENT DATE ---------- -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">upcoming payment</h4>
-							<h2
-								class="secondary-heading primary-color"
-								id="next-payment-date"
-							>
-								24 April, 2023
-							</h2>
-						</div>
-						<!-- -------------- PREVIOUS PAYMENT DATE ---------- -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">previous payment</h4>
-							<h2
-								class="secondary-heading primary-color"
-								id="previous-payment-date"
-							>
-								23 March, 2023
-							</h2>
-						</div>
-					</div>
-					<!-- ------------- PAYMENT HISTORY --------- -->
-					<div class="dashboard-history">
-						<h4 class="tertiary-heading primary-color">Transaction History</h4>
-						<div class="history__wrapper">
-							<div class="history__heading--wrapper">
-								<h3 class="secondary-heading">amount</h3>
-								<h3 class="secondary-heading">date</h3>
-							</div>
-							<!-- --------- HISTORY ITEMS ------------ -->
-							<div class="history">
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-							</div>
-							<!-- TODO PAGINATION HERE -->
-							<div class="pagination-wrapper"></div>
-						</div>
-					</div>
-				</section>
+				<form class="main-card form">
+					<h2 class="secondary-heading">profile details</h2>
+					<label class="form__item">
+						<span class="label">username</span>
+						<input
+							type="text"
+							value="Ubuntu"
+							placeholder="Username"
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="label">email</span>
+						<input
+							type="email"
+							value="Ubuntu_Poppins@gmail.com"
+							placeholder="Email"
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="label">first name</span>
+						<input
+							type="text"
+							value="Ubuntu"
+							placeholder="First Name"
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="label">last name</span>
+						<input
+							type="text"
+							value="Poppins"
+							placeholder="Last Name"
+							class="form__item--input"
+						/>
+					</label>
+					<hr />
+					<h2 class="secondary-heading">change password</h2>
+					<label class="form__item">
+						<span class="label">old password</span>
+						<input
+							type="text"
+							value="Ubuntu"
+							placeholder="Old Password"
+							class="form__item--input"
+						/>
+					</label>
+					<label class="form__item">
+						<span class="label">new password</span>
+						<input
+							type="text"
+							placeholder="New Password"
+							class="form__item--input"
+						/>
+					</label>
+					<button class="btn btn-primary submit-btn">save and continue</button>
+				</form>
 			</main>
 		</section>
 		<!-- -------------- FOOTER --------------->
