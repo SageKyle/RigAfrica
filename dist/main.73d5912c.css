@@ -768,6 +768,172 @@ html.sr .load-hidden {
   text-decoration: underline;
 }
 
+.dashboard-page {
+  background-color: #f7f8fa;
+}
+.dashboard-page .profile-card {
+  display: flex;
+  flex-direction: column;
+  padding-block: 1rem;
+}
+.dashboard-page .profile-card .user-info {
+  display: flex;
+  gap: 0.5rem;
+}
+.dashboard-page .profile-card .user-info__avatar {
+  max-width: 6rem;
+  border-radius: 50%;
+}
+.dashboard-page .profile-card--email {
+  font-size: 1.2rem;
+}
+.dashboard-page .dashboard-wrapper {
+  grid-template-columns: 20rem auto;
+  gap: 4rem;
+  margin-top: 6rem;
+  padding: 12rem 4rem 4rem;
+  position: relative;
+}
+.dashboard-page .sidebar {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  padding-bottom: 6rem;
+  position: sticky;
+  width: inherit;
+  height: 70vh;
+  height: 70dvh;
+}
+.dashboard-page .sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2rem;
+  margin-bottom: auto;
+}
+.dashboard-page .sidebar__nav--item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.dashboard-page .sidebar__nav .active-tab {
+  background-color: #f7f8fa;
+}
+.dashboard-page .sidebar__nav .active-tab .icon {
+  filter: invert(73%) sepia(27%) saturate(2131%) hue-rotate(338deg) brightness(97%) contrast(91%);
+}
+.dashboard-page .sidebar .profile-card {
+  background-color: rgba(72, 84, 97, 0.1);
+  margin: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.dashboard-page .sidebar .profile-card .user-info__avatar {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+.dashboard-page .sidebar .profile-card .user-info__name {
+  font-size: 1.6rem;
+}
+.dashboard-page .sidebar .profile-card--email {
+  margin-bottom: 2rem;
+}
+.dashboard-page .main .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-page .main .topbar .profile-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.dashboard-page .main .topbar .profile-card .user-info {
+  flex-direction: column;
+}
+.dashboard-page .main .topbar .profile-card .user-info__name {
+  margin: 0;
+}
+.dashboard-page .main .topbar .profile-card .user-info__avatar {
+  width: 4rem;
+  margin: 0;
+}
+.dashboard-page .main .main-card {
+  width: 100%;
+  padding-right: 4rem;
+}
+.dashboard-page .main .dashboard {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+  border-bottom: 2px solid rgba(72, 84, 97, 0.1);
+  margin-bottom: 4rem;
+}
+.dashboard-page .main .dashboard__card {
+  background-color: #fff;
+  border: 2px solid rgba(72, 84, 97, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-page .main .dashboard__card .tertiary-heading {
+  font-size: 1.6rem;
+}
+.dashboard-page .main .dashboard__card:nth-of-type(2) {
+  border: 3px solid #ec992f;
+  scale: 1.1;
+}
+.dashboard-page .main .form {
+  margin-block: 4rem;
+  padding: 0;
+}
+.dashboard-page .main .form__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-block: 2rem;
+  width: 100%;
+}
+.dashboard-page .main .form__item {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-page .main .form__item .label {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: rgba(72, 84, 97, 0.8);
+  display: inline-block;
+  margin: 0.5rem 1rem;
+}
+.dashboard-page .main .form__item--input {
+  width: 100%;
+  height: 4rem;
+  border: unset;
+  outline: 2px solid rgba(72, 84, 97, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.dashboard-page .main .form hr {
+  border: 1px solid rgba(72, 84, 97, 0.1);
+  margin-bottom: 4rem;
+}
+.dashboard-page .main .form .btn {
+  margin: 4rem auto;
+}
+.dashboard-page .profile-section {
+  width: 90%;
+}
+
 .partners-page .header {
   background-image: url("/partner-page-bg.a79bf4db.png");
   background-color: rgba(255, 255, 255, 0.1);

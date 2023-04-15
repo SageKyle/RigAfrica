@@ -1,0 +1,211 @@
+// STYLES FOR THE PARTNERS DASHBOARD PAGE
+@use '../abstracts/variables' as *;
+
+.dashboard-page {
+	background-color: #f7f8fa;
+
+	.profile-card {
+		display: flex;
+		flex-direction: column;
+		padding-block: 1rem;
+
+		.user-info {
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		.user-info__avatar {
+			max-width: 6rem;
+			border-radius: 50%;
+		}
+
+		&--email {
+			font-size: 1.2rem;
+		}
+	}
+
+	// ==================== DASHBOARD CONTAINER =================
+	.dashboard-wrapper {
+		grid-template-columns: 20rem auto;
+		gap: $small;
+		margin-top: $medium;
+		padding: 12rem $small $small;
+		position: relative;
+	}
+
+	// ======================= SIDEBAR ====================
+	.sidebar {
+		background-color: $backgroundColor;
+		display: flex;
+		flex-direction: column;
+		margin-top: $small;
+		padding-bottom: $medium;
+		position: sticky;
+		width: inherit;
+		height: 70vh;
+		height: 70dvh;
+
+		// SIDEBAR NAV
+		&__nav {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding-left: $tiny;
+			margin-bottom: auto;
+
+			&--item {
+				display: flex;
+				gap: $tiny;
+				align-items: center;
+				justify-content: flex-start;
+				margin-top: 0.5rem;
+				padding: 1rem;
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+			}
+
+			.active-tab {
+				background-color: #f7f8fa;
+
+				.icon {
+					filter: invert(73%) sepia(27%) saturate(2131%) hue-rotate(338deg)
+						brightness(97%) contrast(91%);
+				}
+			}
+		}
+
+		// SIDEBAR PROFILE CARD
+		.profile-card {
+			background-color: rgba($accentColor, 0.1);
+			margin: $tiny;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+
+			.user-info {
+				&__avatar {
+					width: 2rem;
+					aspect-ratio: 1/1;
+				}
+
+				&__name {
+					font-size: 1.6rem;
+				}
+			}
+
+			&--email {
+				margin-bottom: $tiny;
+			}
+		}
+	}
+
+	// ================ MAIN CONTAINER ==============
+	.main {
+		.topbar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.profile-card {
+				flex-direction: row;
+				align-items: center;
+				gap: 1rem;
+
+				.user-info {
+					flex-direction: column;
+
+					&__name {
+						margin: 0;
+					}
+
+					&__avatar {
+						width: $small;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.main-card {
+			width: 100%;
+			padding-right: $small;
+		}
+
+		.dashboard {
+			grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+			gap: $tiny;
+			padding: $small 0;
+			border-bottom: 2px solid rgba($accentColor, 0.1);
+			margin-bottom: $small;
+
+			&__card {
+				background-color: $backgroundColor;
+				border: 2px solid rgba($accentColor, 0.1);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				.tertiary-heading {
+					font-size: 1.6rem;
+				}
+			}
+
+			&__card:nth-of-type(2) {
+				border: 3px solid $primaryColor;
+				scale: 1.1;
+			}
+		}
+
+		// ============ UPDATE PROFILE FORM ==============
+		.form {
+			margin-block: $small;
+			padding: 0;
+
+			&__group {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: $tiny;
+				margin-block: $tiny;
+				width: 100%;
+			}
+
+			&__item {
+				width: 48%;
+				display: flex;
+				flex-direction: column;
+
+				.label {
+					text-transform: capitalize;
+					font-size: 1.4rem;
+					color: rgba($accentColor, 0.8);
+					display: inline-block;
+					margin: 0.5rem 1rem;
+				}
+
+				&--input {
+					width: 100%;
+					height: $small;
+					border: unset;
+					outline: 2px solid rgba($accentColor, 0.1);
+					border-radius: 0.5rem;
+					padding: 1rem;
+					background-color: rgba($backgroundColor, 0.4);
+				}
+			}
+
+			hr {
+				border: 1px solid rgba($accentColor, 0.1);
+				margin-bottom: $small;
+			}
+
+			.btn {
+				margin: $small auto;
+			}
+		}
+	}
+
+	.profile-section {
+		width: 90%;
+	}
+}
