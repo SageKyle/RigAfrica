@@ -1,8 +1,10 @@
 // STYLES FOR THE PARTNERS DASHBOARD PAGE
 @use '../abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 .dashboard-page {
 	background-color: #f7f8fa;
+	@include desktop-display;
 
 	.profile-card {
 		display: flex;
@@ -24,12 +26,18 @@
 		}
 	}
 
+	.main {
+		padding: 0;
+		margin: 14rem $tiny 0;
+		position: relative;
+	}
+
 	// ==================== DASHBOARD CONTAINER =================
 	.dashboard-wrapper {
 		grid-template-columns: 20rem auto;
 		gap: $small;
-		margin-top: $medium;
-		padding: 12rem $small $small;
+		// margin-top: $medium;
+		padding: $small;
 		position: relative;
 	}
 
@@ -42,8 +50,8 @@
 		padding-bottom: $medium;
 		position: sticky;
 		width: inherit;
-		height: 70vh;
-		height: 70dvh;
+		height: 65vh;
+		height: 65dvh;
 
 		// SIDEBAR NAV
 		&__nav {
@@ -99,7 +107,7 @@
 	}
 
 	// ================ MAIN CONTAINER ==============
-	.main {
+	.main-content {
 		.topbar {
 			display: flex;
 			align-items: center;
@@ -162,16 +170,14 @@
 			padding: 0;
 
 			&__group {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
+				grid-template-columns: repeat(2, 1fr);
 				gap: $tiny;
 				margin-block: $tiny;
 				width: 100%;
 			}
 
 			&__item {
-				width: 48%;
+				width: inherit;
 				display: flex;
 				flex-direction: column;
 
@@ -207,5 +213,87 @@
 
 	.profile-section {
 		width: 90%;
+	}
+
+	// ================= MEDIA QUERIES =============
+
+	@media screen and (max-width: 850px) {
+		.profile-section {
+			width: 100%;
+		}
+
+		.dashboard-wrapper {
+			padding-inline: $tiny;
+		}
+
+		.topbar {
+			.btn-primary {
+				font-size: 1.6rem;
+				padding: 1rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 650px) {
+		@include mobile-display;
+
+		.hide-sidebar {
+			display: none !important;
+		}
+
+		.mobile-nav-toggle {
+			width: 100%;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+
+			.secondary-heading {
+				width: 100%;
+				background-color: rgba($backgroundColor, 1);
+				padding: 1rem;
+			}
+		}
+
+		.sidebar {
+			position: fixed;
+			left: 0;
+			top: 14rem;
+			padding: 0;
+			height: 71vh;
+			height: 71dvh;
+			max-width: 50%;
+			z-index: 5;
+		}
+
+		.dashboard-wrapper {
+			grid-template-columns: 1fr;
+			// padding-inline: $tiny;
+		}
+
+		.profile-section {
+			width: 80%;
+			margin-inline: auto;
+		}
+
+		.main-content {
+			.topbar {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.form__group {
+				grid-template-columns: 1fr;
+			}
+
+			hr {
+				margin-top: $small;
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.profile-section {
+			width: 100%;
+		}
 	}
 }

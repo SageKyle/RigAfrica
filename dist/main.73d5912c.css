@@ -771,6 +771,12 @@ html.sr .load-hidden {
 .dashboard-page {
   background-color: #f7f8fa;
 }
+.dashboard-page .display-on-mobile {
+  display: none !important;
+}
+.dashboard-page .display-on-desktop {
+  display: flex !important;
+}
 .dashboard-page .profile-card {
   display: flex;
   flex-direction: column;
@@ -787,11 +793,15 @@ html.sr .load-hidden {
 .dashboard-page .profile-card--email {
   font-size: 1.2rem;
 }
+.dashboard-page .main {
+  padding: 0;
+  margin: 14rem 2rem 0;
+  position: relative;
+}
 .dashboard-page .dashboard-wrapper {
   grid-template-columns: 20rem auto;
   gap: 4rem;
-  margin-top: 6rem;
-  padding: 12rem 4rem 4rem;
+  padding: 4rem;
   position: relative;
 }
 .dashboard-page .sidebar {
@@ -802,8 +812,8 @@ html.sr .load-hidden {
   padding-bottom: 6rem;
   position: sticky;
   width: inherit;
-  height: 70vh;
-  height: 70dvh;
+  height: 65vh;
+  height: 65dvh;
 }
 .dashboard-page .sidebar__nav {
   display: flex;
@@ -844,38 +854,38 @@ html.sr .load-hidden {
 .dashboard-page .sidebar .profile-card--email {
   margin-bottom: 2rem;
 }
-.dashboard-page .main .topbar {
+.dashboard-page .main-content .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.dashboard-page .main .topbar .profile-card {
+.dashboard-page .main-content .topbar .profile-card {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-.dashboard-page .main .topbar .profile-card .user-info {
+.dashboard-page .main-content .topbar .profile-card .user-info {
   flex-direction: column;
 }
-.dashboard-page .main .topbar .profile-card .user-info__name {
+.dashboard-page .main-content .topbar .profile-card .user-info__name {
   margin: 0;
 }
-.dashboard-page .main .topbar .profile-card .user-info__avatar {
+.dashboard-page .main-content .topbar .profile-card .user-info__avatar {
   width: 4rem;
   margin: 0;
 }
-.dashboard-page .main .main-card {
+.dashboard-page .main-content .main-card {
   width: 100%;
   padding-right: 4rem;
 }
-.dashboard-page .main .dashboard {
+.dashboard-page .main-content .dashboard {
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 2rem;
   padding: 4rem 0;
   border-bottom: 2px solid rgba(72, 84, 97, 0.1);
   margin-bottom: 4rem;
 }
-.dashboard-page .main .dashboard__card {
+.dashboard-page .main-content .dashboard__card {
   background-color: #fff;
   border: 2px solid rgba(72, 84, 97, 0.1);
   display: flex;
@@ -883,38 +893,36 @@ html.sr .load-hidden {
   align-items: center;
   justify-content: center;
 }
-.dashboard-page .main .dashboard__card .tertiary-heading {
+.dashboard-page .main-content .dashboard__card .tertiary-heading {
   font-size: 1.6rem;
 }
-.dashboard-page .main .dashboard__card:nth-of-type(2) {
+.dashboard-page .main-content .dashboard__card:nth-of-type(2) {
   border: 3px solid #ec992f;
   scale: 1.1;
 }
-.dashboard-page .main .form {
+.dashboard-page .main-content .form {
   margin-block: 4rem;
   padding: 0;
 }
-.dashboard-page .main .form__group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.dashboard-page .main-content .form__group {
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-block: 2rem;
   width: 100%;
 }
-.dashboard-page .main .form__item {
-  width: 48%;
+.dashboard-page .main-content .form__item {
+  width: inherit;
   display: flex;
   flex-direction: column;
 }
-.dashboard-page .main .form__item .label {
+.dashboard-page .main-content .form__item .label {
   text-transform: capitalize;
   font-size: 1.4rem;
   color: rgba(72, 84, 97, 0.8);
   display: inline-block;
   margin: 0.5rem 1rem;
 }
-.dashboard-page .main .form__item--input {
+.dashboard-page .main-content .form__item--input {
   width: 100%;
   height: 4rem;
   border: unset;
@@ -923,15 +931,81 @@ html.sr .load-hidden {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.4);
 }
-.dashboard-page .main .form hr {
+.dashboard-page .main-content .form hr {
   border: 1px solid rgba(72, 84, 97, 0.1);
   margin-bottom: 4rem;
 }
-.dashboard-page .main .form .btn {
+.dashboard-page .main-content .form .btn {
   margin: 4rem auto;
 }
 .dashboard-page .profile-section {
   width: 90%;
+}
+@media screen and (max-width: 850px) {
+  .dashboard-page .profile-section {
+    width: 100%;
+  }
+  .dashboard-page .dashboard-wrapper {
+    padding-inline: 2rem;
+  }
+  .dashboard-page .topbar .btn-primary {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .dashboard-page .display-on-desktop {
+    display: none !important;
+  }
+  .dashboard-page .display-on-mobile {
+    display: flex !important;
+  }
+  .dashboard-page .hide-sidebar {
+    display: none !important;
+  }
+  .dashboard-page .mobile-nav-toggle {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .dashboard-page .mobile-nav-toggle .secondary-heading {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+  }
+  .dashboard-page .sidebar {
+    position: fixed;
+    left: 0;
+    top: 14rem;
+    padding: 0;
+    height: 71vh;
+    height: 71dvh;
+    max-width: 50%;
+    z-index: 5;
+  }
+  .dashboard-page .dashboard-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-page .profile-section {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .dashboard-page .main-content .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard-page .main-content .form__group {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-page .main-content hr {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .dashboard-page .profile-section {
+    width: 100%;
+  }
 }
 
 .partners-page .header {
