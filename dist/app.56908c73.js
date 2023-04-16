@@ -1808,7 +1808,7 @@ _scrollreveal.default.debug = true;
 var navBar = document.querySelector('.main-nav');
 var toggle = document.querySelector('.nav-toggle');
 var navContainer = document.querySelector('.navbar');
-var mainContainer = document.querySelector('.main');
+var header = document.querySelector('.header__wrapper');
 
 // ================ SEARCH EVENTS ====================
 var searchIcons = document.querySelectorAll('.toggle-form');
@@ -1854,23 +1854,19 @@ toggle.addEventListener('click', function (e) {
 
 // ============= INTERSECTION OBSERVER ================
 var options = {
-  root: document.querySelector('body'),
   rootMargin: '0px',
-  threshold: 0.5
+  threshold: 0.2
 };
-var observer = new IntersectionObserver(function (entries, observer) {
+var observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
-    if (entry.intersectionRatio !== 1) {
-      // navContainer.classList.add('primary-bg');
-      console.log('color added');
+    if (entry.isIntersecting) {
+      navContainer.classList.remove('header-bg');
     } else {
-      // navContainer.style.backgroundColor = 'green';
-      console.log('color removed');
-      // navContainer.classList.remove('primary-bg');
+      navContainer.classList.add('header-bg');
     }
   });
 }, options);
-observer.observe(mainContainer);
+observer.observe(header);
 
 // ============= CONTACT PAGE ANIMATION =============
 (0, _scrollreveal.default)().reveal('.center-img', {

@@ -251,6 +251,11 @@ html.sr .load-hidden {
   background-color: #ec992f;
 }
 
+.header-bg {
+  background-color: rgba(72, 84, 97, 0.8);
+  color: #e0dfdf;
+}
+
 .hidden {
   display: none !important;
 }

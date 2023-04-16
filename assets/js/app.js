@@ -6,7 +6,7 @@ ScrollReveal.debug = true;
 const navBar = document.querySelector('.main-nav');
 const toggle = document.querySelector('.nav-toggle');
 const navContainer = document.querySelector('.navbar');
-const mainContainer = document.querySelector('.main');
+const header = document.querySelector('.header__wrapper');
 
 // ================ SEARCH EVENTS ====================
 const searchIcons = document.querySelectorAll('.toggle-form');
@@ -55,25 +55,21 @@ toggle.addEventListener('click', (e) => {
 
 // ============= INTERSECTION OBSERVER ================
 const options = {
-	root: document.querySelector('body'),
 	rootMargin: '0px',
-	threshold: 0.5,
+	threshold: 0.2,
 };
 
-let observer = new IntersectionObserver((entries, observer) => {
+let observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
-		if (entry.intersectionRatio !== 1) {
-			// navContainer.classList.add('primary-bg');
-			console.log('color added');
+		if (entry.isIntersecting) {
+			navContainer.classList.remove('header-bg');
 		} else {
-			// navContainer.style.backgroundColor = 'green';
-			console.log('color removed');
-			// navContainer.classList.remove('primary-bg');
+			navContainer.classList.add('header-bg');
 		}
 	});
 }, options);
 
-observer.observe(mainContainer);
+observer.observe(header);
 
 // ============= CONTACT PAGE ANIMATION =============
 ScrollReveal().reveal('.center-img', {
