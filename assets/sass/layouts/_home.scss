@@ -1,5 +1,6 @@
 // =============== LANDING PAGE STYLES =========
 @use '../abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 // ================ WELCOME SECTION ==============
 .welcome {
@@ -92,20 +93,23 @@
 // ================= UPCOMING EVENTS SECTION ===============
 .events {
 	width: 80%;
-	margin-block: $big $large;
+	margin-block: $big 14rem;
 	margin-inline: auto;
 
-	// &__txt {
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	align-items: center;
-	// 	padding-inline: $tiny;
-	// 	margin-block: $small;
-	// }
+	@include desktop-display;
+
+	&__txt {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		width: 100%;
+		// padding-inline: $tiny;
+		margin-block: $small;
+	}
 
 	&__heading {
-		padding-inline: $tiny;
-		margin-block: $small;
+		font-size: 2rem;
+		margin: 0 auto 0 0;
 	}
 
 	.card {
@@ -324,10 +328,14 @@
 	}
 
 	// ============ UPCOMING EVENTS =======
-	.events__txt {
-		flex-direction: column;
-		gap: $tiny;
-		margin-bottom: $tiny;
+	.events {
+		@include mobile-display;
+
+		&__txt {
+			flex-direction: column;
+			gap: $tiny;
+			margin-bottom: $tiny;
+		}
 	}
 
 	.about {
@@ -424,9 +432,15 @@
 		text-align: center;
 	}
 
-	.welcome__title,
-	.welcome__txt--heading {
-		margin-left: $small;
+	.welcome {
+		.welcome__txt--title,
+		.welcome__txt--heading {
+			margin-inline: $small;
+		}
+
+		.welcome__main {
+			margin-top: $small;
+		}
 	}
 
 	.about {

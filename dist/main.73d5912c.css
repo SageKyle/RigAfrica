@@ -1231,12 +1231,25 @@ html.sr .load-hidden {
 
 .events {
   width: 80%;
-  margin-block: 8rem 10rem;
+  margin-block: 8rem 14rem;
   margin-inline: auto;
 }
-.events__heading {
-  padding-inline: 2rem;
+.events .display-on-mobile {
+  display: none !important;
+}
+.events .display-on-desktop {
+  display: flex !important;
+}
+.events__txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
   margin-block: 4rem;
+}
+.events__heading {
+  font-size: 2rem;
+  margin: 0 auto 0 0;
 }
 .events .card {
   padding: 0;
@@ -1416,6 +1429,12 @@ html.sr .load-hidden {
     order: -1;
     margin-top: 0;
   }
+  .events .display-on-desktop {
+    display: none !important;
+  }
+  .events .display-on-mobile {
+    display: flex !important;
+  }
   .events__txt {
     flex-direction: column;
     gap: 2rem;
@@ -1488,9 +1507,12 @@ html.sr .load-hidden {
   .hero {
     text-align: center;
   }
-  .welcome__title,
-  .welcome__txt--heading {
-    margin-left: 4rem;
+  .welcome .welcome__txt--title,
+  .welcome .welcome__txt--heading {
+    margin-inline: 4rem;
+  }
+  .welcome .welcome__main {
+    margin-top: 4rem;
   }
   .about .tertiary-heading {
     margin-inline: 4rem;
