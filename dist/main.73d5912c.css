@@ -1983,6 +1983,9 @@ html.sr .load-hidden {
   background-color: transparent;
   padding: 1rem;
 }
+.modal .pswd-icon {
+  cursor: pointer;
+}
 .modal .submit-btn {
   width: 80%;
 }
