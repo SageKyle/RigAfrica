@@ -1241,11 +1241,20 @@ html.sr .load-hidden {
 .events .card {
   padding: 0;
 }
-.events__card {
+.events .event {
+  flex-direction: column;
+}
+.events .event__img {
   width: 100%;
 }
-.events .event {
+.events .event__txt {
   width: 100%;
+}
+.events .event__date {
+  display: flex;
+}
+.events .event__date .icon {
+  margin-right: 0.5rem;
 }
 .events__btn {
   margin: 4rem auto;
@@ -1392,10 +1401,9 @@ html.sr .load-hidden {
   height: 100%;
 }
 .cta__img {
-  width: 35%;
-  position: absolute;
+  width: 30%;
   right: 4rem;
-  bottom: 0;
+  align-self: flex-end;
   z-index: 2;
 }
 .cta__img .main-img {
