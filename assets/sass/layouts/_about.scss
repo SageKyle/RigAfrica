@@ -11,6 +11,10 @@
 	.header {
 		background-image: url('/assets/images/about-bg.png');
 		max-height: 56rem;
+
+		&__wrapper {
+			background: rgba(236, 153, 47, 0.2);
+		}
 	}
 
 	.hero {

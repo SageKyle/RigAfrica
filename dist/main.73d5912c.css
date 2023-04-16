@@ -523,6 +523,9 @@ html.sr .load-hidden {
   background-image: url("/about-bg.9e70c1ad.png");
   max-height: 56rem;
 }
+.about-page .header__wrapper {
+  background: rgba(236, 153, 47, 0.2);
+}
 .about-page .hero {
   width: 80%;
   margin: auto;
