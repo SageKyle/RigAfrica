@@ -1863,6 +1863,12 @@ html.sr .load-hidden {
   font-size: 1.4rem;
   background-color: rgba(72, 84, 97, 0.2);
 }
+.past-events-page .display-on-mobile {
+  display: none !important;
+}
+.past-events-page .display-on-desktop {
+  display: flex !important;
+}
 .past-events-page .navbar {
   background-color: rgba(72, 84, 97, 0.6);
   color: #fff;
@@ -1927,6 +1933,34 @@ html.sr .load-hidden {
   width: 100%;
   gap: 0.5rem;
 }
+.past-events-page .pagination {
+  display: flex;
+  gap: 2px;
+  margin: 0 auto;
+}
+.past-events-page .pagination__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  width: 100%;
+}
+.past-events-page .pagination .btn {
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+.past-events-page .pagination .btn .icon {
+  height: 1rem;
+  filter: invert(80%);
+}
+.past-events-page .pagination .btn .previous {
+  transform: rotateY(180deg);
+}
+.past-events-page .pagination-btn-group {
+  gap: 1rem;
+}
+.past-events-page .pagination-btn-group .active-btn {
+  background-color: #ec992f;
+}
 .past-events-page .cta__wrapper {
   width: 100%;
 }
@@ -1976,6 +2010,14 @@ html.sr .load-hidden {
   .events-page .events .event__date,
   .past-events-page .events .event__date {
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px) {
+  .past-events-page .display-on-desktop {
+    display: none !important;
+  }
+  .past-events-page .display-on-mobile {
+    display: flex !important;
   }
 }
 .featured {
