@@ -101,17 +101,39 @@
 					<h1 class="primary-heading">unreleased rig apparel</h1>
 					<p class="featured__card--title paragraph">Pre-order</p>
 					<div class="featured__card--btn-group">
-						<button class="btn">i am prophet</button>
-						<button class="btn">i am apostle</button>
+						<button class="btn">
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-prophet-tracksuit-unisex"
+								target="_blank"
+								rel="noopener noreferrer"
+								>i am prophet</a
+							>
+						</button>
+						<button class="btn">
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-apostle-tracksuit-unisex"
+								target="_blank"
+								rel="noopener noreferrer"
+								>i am apostle</a
+							>
+						</button>
 					</div>
 				</div>
 			</section>
 
-			<select name="shop" class="shop-category" id="shop">
-				<option selected class="shop-category__item" value="books">
+			<!-- SHOP NAVIGATION -->
+			<select
+				name="shop"
+				class="shop-category"
+				onchange="location = this.value"
+				id="shop"
+			>
+				<option class="shop-category__item" selected value="shop-books.html">
 					Books
 				</option>
-				<option class="shop-category__item" value="books">Merch</option>
+				<option class="shop-category__item" value="shop-merch.html">
+					Merch
+				</option>
 			</select>
 
 			<!-- ------------ SHOP (BOOKS) --------- -->
