@@ -1807,8 +1807,6 @@ _scrollreveal.default.debug = true;
 // ========== NAVIGATION TOGGLE =============
 var navBar = document.querySelector('.main-nav');
 var toggle = document.querySelector('.nav-toggle');
-var navContainer = document.querySelector('.navbar');
-var header = document.querySelector('.header__wrapper');
 
 // ================ SEARCH EVENTS ====================
 var searchIcons = document.querySelectorAll('.toggle-form');
@@ -1851,22 +1849,6 @@ toggle.addEventListener('click', function (e) {
   navBar.classList.toggle('hide-nav');
   hideSearchBar();
 });
-
-// ============= INTERSECTION OBSERVER ================
-var options = {
-  rootMargin: '0px',
-  threshold: 0.2
-};
-var observer = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      navContainer.classList.remove('header-bg');
-    } else {
-      navContainer.classList.add('header-bg');
-    }
-  });
-}, options);
-observer.observe(header);
 
 // ============= CONTACT PAGE ANIMATION =============
 (0, _scrollreveal.default)().reveal('.center-img', {
