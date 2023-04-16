@@ -38,7 +38,7 @@
 		/>
 		<link rel="manifest" href="assets/icons/favicon/site.webmanifest" />
 		<!-- js -->
-		<!-- <script src="/assets/js/event.js" defer></script> -->
+		<script src="/assets/js/dashboard.js" defer></script>
 		<script src="/assets/js/app.js" defer></script>
 	</head>
 	<body class="dashboard-page">
@@ -69,133 +69,182 @@
 				class="icon search-icon toggle-form"
 			/>
 		</nav>
-		<section class="grid dashboard-wrapper">
-			<!-- ------------- SIDEBAR ------------------- -->
-			<aside class="sidebar">
-				<!-- ----------------- SIDEBAR NAV ------------- -->
-				<nav class="sidebar__nav">
-					<a href="dashboard.html" class="sidebar__nav--item active-tab">
-						<img
-							src="assets/icons/dashboard-icon.png"
-							alt="dashboard"
-							aria-hidden="true"
-							class="icon"
-						/>
-						<span class="secondary-heading primary-color">dashboard</span>
-					</a>
-					<a href="profile.html" class="sidebar__nav--item">
-						<img
-							src="assets/icons/profile-circle.png"
-							alt="profile"
-							aria-hidden="true"
-							class="icon"
-						/>
-						<span class="secondary-heading">profile</span>
-					</a>
-					<a href="#" class="sidebar__nav--item">
-						<img
-							src="assets/icons/card-payment.png"
-							alt="payments"
-							aria-hidden="true"
-							class="icon"
-						/>
-						<span class="secondary-heading">payments</span>
-					</a>
-				</nav>
-				<!-- -------------- SIDEBAR PROFILE CARD -------------- -->
-				<div class="profile-card">
-					<div class="user-info">
-						<img
-							src="assets/icons/avatar.png"
-							alt="profile picture"
-							class="user-info__avatar"
-						/>
-						<h3 class="secondary-heading user-info__name">Ubuntu Poppins</h3>
-					</div>
-					<p class="profile-card--email">Ubuntu_Poppins@gmail.com</p>
-				</div>
-			</aside>
-			<!-- ---------- MAIN DASHBOARD SECTION --------- -->
-			<main class="main">
-				<div class="topbar">
-					<button class="btn btn-primary" id="partner-type">VIP Partner</button>
-					<!-- -------------- TOPBAR PROFILE CARD -------------- -->
+		<main class="main">
+			<div class="display-on-mobile mobile-nav-toggle">
+				<img
+					src="assets/icons/icon-hamburger.svg"
+					alt=""
+					class="icon sidebar-toggle"
+				/>
+				<h2 class="secondary-heading primary-color">Dashboard</h2>
+			</div>
+
+			<section class="grid dashboard-wrapper">
+				<!-- ------------- SIDEBAR ------------------- -->
+				<aside class="sidebar hide-sidebar">
+					<!-- ----------------- SIDEBAR NAV ------------- -->
+					<nav class="sidebar__nav">
+						<a href="dashboard.html" class="sidebar__nav--item active-tab">
+							<img
+								src="assets/icons/dashboard-icon.png"
+								alt="dashboard"
+								aria-hidden="true"
+								class="icon"
+							/>
+							<span class="secondary-heading primary-color">dashboard</span>
+						</a>
+						<a href="profile.html" class="sidebar__nav--item">
+							<img
+								src="assets/icons/profile-circle.png"
+								alt="profile"
+								aria-hidden="true"
+								class="icon"
+							/>
+							<span class="secondary-heading">profile</span>
+						</a>
+						<a href="#" class="sidebar__nav--item">
+							<img
+								src="assets/icons/card-payment.png"
+								alt="payments"
+								aria-hidden="true"
+								class="icon"
+							/>
+							<span class="secondary-heading">payments</span>
+						</a>
+					</nav>
+					<!-- -------------- SIDEBAR PROFILE CARD -------------- -->
 					<div class="profile-card">
-						<img
-							src="assets/icons/avatar.png"
-							alt="profile picture"
-							class="user-info__avatar"
-						/>
 						<div class="user-info">
+							<img
+								src="assets/icons/avatar.png"
+								alt="profile picture"
+								class="user-info__avatar"
+							/>
 							<h3 class="secondary-heading user-info__name">Ubuntu Poppins</h3>
-							<p class="profile-card--email">Ubuntu_Poppins@gmail.com</p>
 						</div>
+						<p class="profile-card--email">Ubuntu_Poppins@gmail.com</p>
 					</div>
-				</div>
-				<!-- --------------- MAIN CONTENT SECTION ---------- -->
-				<section class="main-card">
-					<!-- ------------- DASHBOARD CARDS ------- -->
-					<div class="dashboard grid col-3">
-						<!-- -------------- AMOUNT -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">amount</h4>
-							<h2 class="secondary-heading" id="amount">10,000</h2>
-						</div>
-						<!-- -------------- PAYMENT DATE ---------- -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">upcoming payment</h4>
-							<h2
-								class="secondary-heading primary-color"
-								id="next-payment-date"
-							>
-								24 April, 2023
-							</h2>
-						</div>
-						<!-- -------------- PREVIOUS PAYMENT DATE ---------- -->
-						<div class="card dashboard__card">
-							<h4 class="tertiary-heading">previous payment</h4>
-							<h2
-								class="secondary-heading primary-color"
-								id="previous-payment-date"
-							>
-								23 March, 2023
-							</h2>
-						</div>
-					</div>
-					<!-- ------------- PAYMENT HISTORY --------- -->
-					<div class="dashboard-history">
-						<h4 class="tertiary-heading primary-color">Transaction History</h4>
-						<div class="history__wrapper">
-							<div class="history__heading--wrapper">
-								<h3 class="secondary-heading">amount</h3>
-								<h3 class="secondary-heading">date</h3>
+				</aside>
+				<!-- ---------- MAIN DASHBOARD SECTION --------- -->
+				<main class="main-content">
+					<div class="topbar">
+						<button class="btn btn-primary">VIP Partner</button>
+						<!-- -------------- TOPBAR PROFILE CARD -------------- -->
+						<div class="profile-card">
+							<img
+								src="assets/icons/avatar.png"
+								alt="profile picture"
+								class="user-info__avatar"
+							/>
+							<div class="user-info">
+								<h3 class="secondary-heading user-info__name">
+									Ubuntu Poppins
+								</h3>
+								<p class="profile-card--email">Ubuntu_Poppins@gmail.com</p>
 							</div>
-							<!-- --------- HISTORY ITEMS ------------ -->
-							<div class="history">
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
+						</div>
+					</div>
+					<!-- --------------- MAIN CONTENT SECTION ---------- -->
+					<section class="main-card">
+						<!-- ------------- DASHBOARD CARDS ------- -->
+						<div class="dashboard grid">
+							<!-- -------------- AMOUNT -->
+							<div class="card dashboard__card">
+								<h4 class="tertiary-heading">amount</h4>
+								<h2 class="secondary-heading" id="amount">10,000</h2>
+							</div>
+							<!-- -------------- PAYMENT DATE ---------- -->
+							<div class="card dashboard__card">
+								<h4 class="tertiary-heading">upcoming payment</h4>
+								<h2
+									class="secondary-heading primary-color"
+									id="next-payment-date"
+								>
+									24 April, 2023
+								</h2>
+							</div>
+							<!-- -------------- PREVIOUS PAYMENT DATE ---------- -->
+							<div class="card dashboard__card">
+								<h4 class="tertiary-heading">previous payment</h4>
+								<h2
+									class="secondary-heading primary-color"
+									id="previous-payment-date"
+								>
+									23 March, 2023
+								</h2>
+							</div>
+						</div>
+						<!-- ------------- PAYMENT HISTORY --------- -->
+						<section class="dashboard-history">
+							<h4 class="tertiary-heading primary-color">
+								Transaction History
+							</h4>
+							<div class="history__wrapper">
+								<div class="history__heading--wrapper">
+									<h3 class="secondary-heading">amount</h3>
+									<h3 class="secondary-heading">date</h3>
 								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
-								</div>
-								<div class="history__item">
-									<span class="amount">N10,000</span>
-									<span class="date">23rd March, 2023</span>
+								<!-- --------- HISTORY ITEMS ------------ -->
+								<div class="history">
+									<div class="history__item">
+										<span class="amount">N10,000</span>
+										<span class="date">23rd March, 2023</span>
+									</div>
+									<div class="history__item">
+										<span class="amount">N10,000</span>
+										<span class="date">23rd March, 2023</span>
+									</div>
+									<div class="history__item">
+										<span class="amount">N10,000</span>
+										<span class="date">23rd March, 2023</span>
+									</div>
+									<div class="history__item">
+										<span class="amount">N10,000</span>
+										<span class="date">23rd March, 2023</span>
+									</div>
 								</div>
 							</div>
 							<!-- TODO PAGINATION HERE -->
-							<div class="pagination-wrapper"></div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</section>
+							<div class="pagination__wrapper">
+								<div class="pagination">
+									<!-- previous btn -->
+									<button class="btn pagination-btn previous-btn">
+										<img
+											src="assets/icons/right-arrow.svg"
+											alt="previous"
+											class="icon previous"
+										/>
+									</button>
+
+									<button class="btn pagination-btn">1</button>
+									<button class="btn pagination-btn">2</button>
+									<button class="btn pagination-btn">3</button>
+									<button class="btn pagination-btn">...</button>
+									<button class="btn pagination-btn">8</button>
+									<button class="btn pagination-btn">9</button>
+									<button class="btn pagination-btn">10</button>
+
+									<!-- next btn -->
+									<button class="btn pagination-btn next-btn">
+										<img
+											src="assets/icons/right-arrow.svg"
+											alt="next"
+											class="icon"
+										/>
+									</button>
+								</div>
+								<div class="display-on-desktop pagination-btn-group">
+									<button class="btn previous-btn inactive-btn">
+										Previous
+									</button>
+									<button class="btn next-btn active-btn">Next</button>
+								</div>
+							</div>
+						</section>
+					</section>
+				</main>
+			</section>
+		</main>
 		<!-- -------------- FOOTER --------------->
 		<footer class="footer">
 			<div class="footer__logo">

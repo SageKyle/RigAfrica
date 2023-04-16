@@ -139,7 +139,7 @@
 		}
 
 		.dashboard {
-			grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+			grid-template-columns: 30% 36% 32%;
 			gap: $tiny;
 			padding: $small 0;
 			border-bottom: 2px solid rgba($accentColor, 0.1);
@@ -152,6 +152,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				padding: 1rem 0;
 
 				.tertiary-heading {
 					font-size: 1.6rem;
@@ -161,6 +162,30 @@
 			&__card:nth-of-type(2) {
 				border: 3px solid $primaryColor;
 				scale: 1.1;
+			}
+		}
+
+		// PAYMENT HISTORY SECTION
+		.history__heading--wrapper {
+			display: flex;
+			justify-content: space-between;
+			padding: 1rem $small;
+			margin-right: $small;
+		}
+
+		.history {
+			&__wrapper {
+				background-color: $backgroundColor;
+				padding: $tiny;
+				border-radius: 1rem;
+			}
+
+			&__item {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 2px solid rgba($accentColor, 0.1);
+				width: 100%;
+				padding: 1rem $small;
 			}
 		}
 
@@ -211,6 +236,42 @@
 		}
 	}
 
+	// PREVIOUS PAYMENT PAGINATION
+	.pagination {
+		display: flex;
+		gap: 2px;
+		margin: 0 auto;
+
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin: $tiny 0;
+			width: 100%;
+		}
+
+		.btn {
+			font-size: 1.2rem;
+			border-radius: 0;
+
+			.icon {
+				height: 1rem;
+				filter: invert(80%);
+			}
+
+			.previous {
+				transform: rotateY(180deg);
+			}
+		}
+
+		&-btn-group {
+			gap: 1rem;
+
+			.active-btn {
+				background-color: $primaryColor;
+			}
+		}
+	}
+
 	.profile-section {
 		width: 90%;
 	}
@@ -222,13 +283,31 @@
 			width: 100%;
 		}
 
+		.main-content {
+			.main-card {
+				padding: 0;
+			}
+
+			.dashboard {
+				gap: 1rem;
+
+				.secondary-heading,
+				.tertiary-heading {
+					font-size: 1.2rem;
+					text-align: center;
+				}
+			}
+		}
+
 		.dashboard-wrapper {
 			padding-inline: $tiny;
 		}
 
 		.topbar {
+			gap: 1rem;
+
 			.btn-primary {
-				font-size: 1.6rem;
+				font-size: 1.4rem;
 				padding: 1rem;
 			}
 		}
@@ -267,26 +346,34 @@
 
 		.dashboard-wrapper {
 			grid-template-columns: 1fr;
-			// padding-inline: $tiny;
+		}
+
+		.topbar {
+			flex-direction: row-reverse;
 		}
 
 		.profile-section {
 			width: 80%;
 			margin-inline: auto;
-		}
 
-		.main-content {
 			.topbar {
 				flex-direction: column;
 				align-items: flex-start;
 			}
+		}
 
+		.main-content {
 			.form__group {
 				grid-template-columns: 1fr;
 			}
 
 			hr {
 				margin-top: $small;
+			}
+
+			.history__heading--wrapper,
+			.history__item {
+				padding-inline: 1rem;
 			}
 		}
 	}
