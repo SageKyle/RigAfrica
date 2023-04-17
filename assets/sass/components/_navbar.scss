@@ -5,8 +5,8 @@
 	height: $medium;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	padding: $tiny;
+	justify-content: center;
+	padding: $tiny 1rem;
 	margin: $tiny auto;
 	border-radius: 1rem;
 	background: rgba(217, 217, 217, 0.2);
@@ -22,7 +22,7 @@
 		display: inline-block;
 		margin-right: auto;
 		justify-self: start;
-		width: 15%;
+		width: 12%;
 	}
 
 	.logo {
@@ -32,11 +32,11 @@
 
 .navigation {
 	display: flex;
-	gap: $tiny;
+	gap: 1rem;
 	text-transform: capitalize;
 	font-size: 1.5rem;
 	margin-inline: $tiny;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 }
 
 .search-icon {
@@ -70,6 +70,7 @@
 			flex-direction: column;
 			position: absolute;
 			top: $medium;
+			right: 0;
 			padding: $tiny $small;
 			border-radius: 1rem;
 			z-index: 60;
@@ -80,7 +81,7 @@
 		}
 
 		.navbar__logo {
-			width: 38%;
+			width: 30%;
 		}
 	}
 }

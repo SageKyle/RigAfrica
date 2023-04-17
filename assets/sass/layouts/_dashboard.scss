@@ -71,14 +71,14 @@
 				border-top-left-radius: 1rem;
 				border-bottom-left-radius: 1rem;
 			}
+		}
 
-			.active-tab {
-				background-color: #f7f8fa;
+		.active-tab {
+			background-color: #f7f8fa;
 
-				.icon {
-					filter: invert(73%) sepia(27%) saturate(2131%) hue-rotate(338deg)
-						brightness(97%) contrast(91%);
-				}
+			.icon {
+				filter: invert(73%) sepia(27%) saturate(2131%) hue-rotate(338deg)
+					brightness(97%) contrast(91%);
 			}
 		}
 
@@ -279,6 +279,10 @@
 	// ================= MEDIA QUERIES =============
 
 	@media screen and (max-width: 850px) {
+		.navbar {
+			background-color: rgba($backgroundColor, 0.4);
+		}
+
 		.profile-section {
 			width: 100%;
 		}
@@ -334,18 +338,26 @@
 		}
 
 		.sidebar {
-			position: fixed;
+			// position: absolute;
 			left: 0;
-			top: 14rem;
+			height: fit-content;
+			margin: 0;
+			top: 0;
 			padding: 0;
-			height: 71vh;
-			height: 71dvh;
-			max-width: 50%;
+			// height: 71vh;
+			// height: 71dvh;
+			// max-width: 50%;
 			z-index: 5;
+			transition: all ease-in-out 2s;
+
+			.active-tab {
+				background-color: unset;
+			}
 		}
 
 		.dashboard-wrapper {
 			grid-template-columns: 1fr;
+			padding: $tiny;
 		}
 
 		.topbar {

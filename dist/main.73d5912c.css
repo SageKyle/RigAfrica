@@ -139,8 +139,8 @@ html.sr .load-hidden {
   height: 6rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 2rem;
+  justify-content: center;
+  padding: 2rem 1rem;
   margin: 2rem auto;
   border-radius: 1rem;
   background: rgba(217, 217, 217, 0.2);
@@ -156,7 +156,7 @@ html.sr .load-hidden {
   display: inline-block;
   margin-right: auto;
   justify-self: start;
-  width: 15%;
+  width: 12%;
 }
 .navbar .logo {
   width: 100%;
@@ -164,11 +164,10 @@ html.sr .load-hidden {
 
 .navigation {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   text-transform: capitalize;
   font-size: 1.5rem;
   margin-inline: 2rem;
-  flex-wrap: wrap;
 }
 
 .search-icon {
@@ -198,6 +197,7 @@ html.sr .load-hidden {
     flex-direction: column;
     position: absolute;
     top: 6rem;
+    right: 0;
     padding: 2rem 4rem;
     border-radius: 1rem;
     z-index: 60;
@@ -206,7 +206,7 @@ html.sr .load-hidden {
     width: fit-content;
   }
   nav .navbar__logo {
-    width: 38%;
+    width: 30%;
   }
 }
 .btn {
@@ -1018,10 +1018,10 @@ html.sr .load-hidden {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
-.dashboard-page .sidebar__nav .active-tab {
+.dashboard-page .sidebar .active-tab {
   background-color: #f7f8fa;
 }
-.dashboard-page .sidebar__nav .active-tab .icon {
+.dashboard-page .sidebar .active-tab .icon {
   filter: invert(73%) sepia(27%) saturate(2131%) hue-rotate(338deg) brightness(97%) contrast(91%);
 }
 .dashboard-page .sidebar .profile-card {
@@ -1175,6 +1175,9 @@ html.sr .load-hidden {
   width: 90%;
 }
 @media screen and (max-width: 850px) {
+  .dashboard-page .navbar {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
   .dashboard-page .profile-section {
     width: 100%;
   }
@@ -1222,17 +1225,20 @@ html.sr .load-hidden {
     padding: 1rem;
   }
   .dashboard-page .sidebar {
-    position: fixed;
     left: 0;
-    top: 14rem;
+    height: fit-content;
+    margin: 0;
+    top: 0;
     padding: 0;
-    height: 71vh;
-    height: 71dvh;
-    max-width: 50%;
     z-index: 5;
+    transition: all ease-in-out 2s;
+  }
+  .dashboard-page .sidebar .active-tab {
+    background-color: unset;
   }
   .dashboard-page .dashboard-wrapper {
     grid-template-columns: 1fr;
+    padding: 2rem;
   }
   .dashboard-page .topbar {
     flex-direction: row-reverse;
