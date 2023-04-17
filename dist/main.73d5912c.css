@@ -2010,11 +2010,14 @@ html.sr .load-hidden {
 
 .donation__wrapper {
   position: fixed;
-  height: 100vh;
   z-index: 20;
-  top: 4rem;
+  height: 100vh;
+  height: 100svh;
+  top: 2rem;
   bottom: 0;
-  background-color: rgba(72, 84, 97, 0.1);
+  left: 0;
+  right: 0;
+  background-color: rgba(72, 84, 97, 0.2);
 }
 .donation__wrapper .donation__container {
   max-width: 85%;
@@ -2028,13 +2031,21 @@ html.sr .load-hidden {
   background-repeat: no-repeat;
   background-position: left;
   background-color: rgba(236, 153, 47, 0.8);
+  position: relative;
+}
+.donation__wrapper .donation__container::before {
+  content: "";
+  display: block;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: #ec992f;
 }
 .donation__wrapper .donation {
   background-color: rgba(236, 153, 47, 0.8);
   width: 100%;
   height: 100%;
   padding: 4rem;
-  box-shadow: inset;
   border-radius: 2rem;
 }
 .donation__wrapper .donation__group {
@@ -2042,7 +2053,6 @@ html.sr .load-hidden {
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  flex-wrap: wrap;
 }
 .donation__wrapper .donation__card {
   margin-top: 2rem;
@@ -2064,6 +2074,24 @@ html.sr .load-hidden {
 .donation__wrapper .donation .icon {
   height: 4rem;
   margin-left: 1rem;
+}
+@media screen and (max-width: 650px) {
+  .donation__wrapper {
+    height: 80vh;
+    height: 80svh;
+    top: unset;
+  }
+  .donation__wrapper .donation__container {
+    height: auto;
+    margin-top: 4rem;
+  }
+  .donation__wrapper .donation__group {
+    flex-direction: column;
+    gap: 0;
+  }
+  .donation__wrapper .donation__card {
+    height: fit-content;
+  }
 }
 
 .partners-page .header {

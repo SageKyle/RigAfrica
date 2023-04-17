@@ -86,11 +86,14 @@
 // OUTER WRAPPER
 .donation__wrapper {
 	position: fixed;
-	height: 100vh;
 	z-index: 20;
-	top: $small;
+	height: 100vh;
+	height: 100svh;
+	top: $tiny;
 	bottom: 0;
-	background-color: rgba($accentColor, 0.1);
+	left: 0;
+	right: 0;
+	background-color: rgba($accentColor, 0.2);
 
 	// INNER CONTAINER (CONTENT WRAPPER)
 	.donation__container {
@@ -105,6 +108,16 @@
 		background-repeat: no-repeat;
 		background-position: left;
 		background-color: rgba($primaryColor, 0.8);
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 100%;
+			z-index: 1;
+			position: absolute;
+			background-color: $primaryColor;
+		}
 	}
 
 	// MODAL (MAIN CONTENT)
@@ -113,7 +126,6 @@
 		width: 100%;
 		height: 100%;
 		padding: $small;
-		box-shadow: inset;
 		border-radius: $tiny;
 
 		// CARD GROUP
@@ -122,7 +134,7 @@
 			align-items: center;
 			justify-content: space-between;
 			gap: $small;
-			flex-wrap: wrap;
+			// flex-wrap: wrap;
 		}
 		// DONATION CARD
 		&__card {
@@ -153,6 +165,29 @@
 		.icon {
 			height: $small;
 			margin-left: 1rem;
+		}
+	}
+
+	// ================= MEDIA QUERIES =================
+	@media screen and (max-width: 650px) {
+		height: 80vh;
+		height: 80svh;
+		top: unset;
+
+		.donation__container {
+			height: auto;
+			margin-top: $small;
+		}
+
+		.donation {
+			&__group {
+				flex-direction: column;
+				gap: 0;
+			}
+
+			&__card {
+				height: fit-content;
+			}
 		}
 	}
 }
