@@ -1912,6 +1912,21 @@ var partnersCard = document.querySelectorAll('.partners__card');
   origin: 'left',
   interval: 200
 });
+
+// ==================== TOGGLE DONATION MODAL =================
+var showDonation = document.querySelector('.show-modal');
+var closeDonation = document.querySelector('.close-donation');
+var donationWrapper = document.querySelector('.donation__wrapper');
+
+// show modal
+showDonation.addEventListener('click', function () {
+  donationWrapper.classList.toggle('hidden');
+});
+
+// hide modal
+closeDonation.addEventListener('click', function () {
+  donationWrapper.classList.add('hidden');
+});
 },{"scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1937,7 +1952,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49714" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53794" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

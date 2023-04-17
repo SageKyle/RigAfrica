@@ -120,3 +120,18 @@ ScrollReveal().reveal(partnersCard, {
 	origin: 'left',
 	interval: 200,
 });
+
+// ==================== TOGGLE DONATION MODAL =================
+const showDonation = document.querySelector('.show-modal');
+const closeDonation = document.querySelector('.close-donation');
+const donationWrapper = document.querySelector('.donation__wrapper');
+
+// show modal
+showDonation.addEventListener('click', () => {
+	donationWrapper.classList.toggle('hidden');
+});
+
+// hide modal
+closeDonation.addEventListener('click', () => {
+	donationWrapper.classList.add('hidden');
+});
