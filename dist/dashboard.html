@@ -32,7 +32,7 @@
 				<a href="/events.html" class="navigation__link">events</a>
 				<a href="/shop-books.html" class="navigation__link">shops</a>
 				<a href="#" class="navigation__link">affiliate</a>
-				<a href="#" class="navigation__link">donation</a>
+				<span class="navigation__link show-modal">donation</span>
 			</section>
 			<button class="btn btn-primary"><a href="/sign-in.html">login</a></button>
 			<img src="/icon-hamburger.7419e5e5.svg" alt="" class="icon nav-toggle">
@@ -42,6 +42,39 @@
 				<img src="/icon-hamburger.7419e5e5.svg" alt="" class="icon sidebar-toggle">
 				<h2 class="secondary-heading primary-color">Dashboard</h2>
 			</div>
+			<!-- --------------------- DONATE MODAL ---------------- -->
+			<dialog class="backdrop donation__wrapper hidden">
+				<div class="donation__container">
+					<div class="modal donation">
+						<span class="modal__close close-donation">
+							<img src="/close-circle.bc7f0126.png" alt="" class="icon">
+						</span>
+						<h4 class="secondary-heading">donate to rig africa</h4>
+						<div class="donation__group">
+							<a href="#" target="_blank" class="card donation__card">
+								<div class="donation__card--logo">
+									<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+								</div>
+								<h4 class="secondary-heading donation__card--heading">
+									online donation
+								</h4>
+								<p class="paragraph">Tithes, offerings or random giving.</p>
+							</a>
+							<a href="/partners.html" class="card donation__card">
+								<div class="donation__card--logo">
+									<img src="/donate.86f5a75e.svg" alt="donate" class="icon">
+								</div>
+								<h4 class="secondary-heading donation__card--heading">
+									become a partner
+								</h4>
+								<p class="paragraph">
+									Join our vision to raise 4000 active prophets.
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</dialog>
 
 			<section class="grid dashboard-wrapper">
 				<!-- ------------- SIDEBAR ------------------- -->

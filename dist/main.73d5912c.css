@@ -2046,6 +2046,7 @@ html.sr .load-hidden {
   bottom: 0;
   left: 0;
   right: 0;
+  border: unset;
   background-color: rgba(72, 84, 97, 0.2);
 }
 .donation__wrapper .donation__container {
