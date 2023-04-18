@@ -1763,12 +1763,20 @@ html.sr .load-hidden {
   isolation: isolate;
   animation: loopHorizontal 15s linear infinite;
 }
+.testimonies .swiper {
+  width: 100%;
+}
+.testimonies .slide-content {
+  max-width: 112rem;
+  width: 100%;
+  padding: 4rem 0;
+  overflow: hidden;
+}
 .testimonies__heading {
   font-size: 2.5rem;
 }
 .testimonies__main {
-  margin: 4rem auto;
-  width: 90%;
+  margin-block: 4rem;
 }
 .testimonies__card {
   display: flex;
@@ -1782,6 +1790,9 @@ html.sr .load-hidden {
 .testimonies__card--name {
   margin-bottom: 0;
   font-weight: 500;
+}
+.testimonies .swiper-pagination-bullet {
+  background-color: #ec992f;
 }
 
 .cta {
