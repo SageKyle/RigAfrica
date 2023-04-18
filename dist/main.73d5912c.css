@@ -739,7 +739,36 @@ html.sr .load-hidden {
 .auth-page .remember {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+.auth-page input[type=checkbox] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #ec992f;
+  height: 2rem;
+  width: 2rem;
+  outline: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.auth-page input[type=checkbox]::after {
+  content: url("/tick-square.12e328c2.png");
+  display: none;
+  margin: 0;
+  height: 2rem;
+  width: 2rem;
+}
+.auth-page input[type=checkbox]:hover {
+  background-color: #ffb266;
+}
+.auth-page input[type=checkbox]:checked {
+  background-color: #fff;
+}
+.auth-page input[type=checkbox]:checked::after {
+  display: inline-block;
 }
 @media screen and (max-width: 650px) {
   .auth-page .main {

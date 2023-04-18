@@ -88,7 +88,41 @@
 	.remember {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 1rem;
+	}
+
+	input[type='checkbox'] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		appearance: none;
+		-webkit-appearance: none;
+		background-color: $primaryColor;
+		height: $tiny;
+		width: $tiny;
+		outline: none;
+		border-radius: 0.6rem;
+		cursor: pointer;
+
+		&::after {
+			content: url('/assets/icons/tick-square.png');
+			display: none;
+			margin: 0;
+			height: $tiny;
+			width: $tiny;
+		}
+	}
+
+	input[type='checkbox']:hover {
+		background-color: $paleOrange;
+	}
+
+	input[type='checkbox']:checked {
+		background-color: $backgroundColor;
+	}
+
+	input[type='checkbox']:checked::after {
+		display: inline-block;
 	}
 
 	// =============== MEDIA QUERIES =======================
