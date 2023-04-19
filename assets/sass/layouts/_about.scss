@@ -117,6 +117,14 @@
 			justify-content: center;
 			gap: 1rem;
 			margin-top: 1rem;
+
+			.icon {
+				transition: all ease-in-out 0.2s;
+			}
+
+			.icon:hover {
+				scale: 1.15;
+			}
 		}
 
 		&__txt {
@@ -184,6 +192,11 @@
 		.main {
 			.icon {
 				filter: invert(90%);
+				transition: all ease-in-out 0.2s;
+			}
+
+			.icon:active {
+				scale: 1.15;
 			}
 		}
 	}

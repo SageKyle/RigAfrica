@@ -40,6 +40,12 @@
 
 	&__link {
 		height: $tiny;
+		transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+	}
+
+	&__link:hover {
+		scale: 1.15;
+		// rotate: 10deg;
 	}
 }
 

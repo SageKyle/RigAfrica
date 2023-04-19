@@ -95,6 +95,9 @@
 	right: 0;
 	border: unset;
 	background-color: rgba($accentColor, 0.2);
+	animation-name: popIn;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
 
 	// INNER CONTAINER (CONTENT WRAPPER)
 	.donation__container {

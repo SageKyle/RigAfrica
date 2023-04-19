@@ -67,6 +67,14 @@
 	&__socials {
 		display: flex;
 		gap: $tiny;
+
+		.icon {
+			transition: all ease-in-out 0.2s;
+		}
+
+		.icon:hover {
+			scale: 1.15;
+		}
 	}
 }
 

@@ -69,3 +69,19 @@ html.sr .load-hidden {
 		transform: rotate(-360deg);
 	}
 }
+
+@keyframes popIn {
+	0% {
+		scale: 0;
+		translate: 100%;
+	}
+
+	50% {
+		scale: 1.1;
+		translate: 0;
+	}
+
+	100% {
+		scale: 1;
+	}
+}

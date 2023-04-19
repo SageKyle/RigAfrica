@@ -58,6 +58,19 @@ html.sr .load-hidden {
     transform: rotate(-360deg);
   }
 }
+@keyframes popIn {
+  0% {
+    scale: 0;
+    translate: 100%;
+  }
+  50% {
+    scale: 1.1;
+    translate: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
 .primary-heading {
   font-size: 2.5rem;
   line-height: 1;
@@ -161,6 +174,9 @@ html.sr .load-hidden {
 .navbar .logo {
   width: 100%;
 }
+.navbar .btn-primary {
+  transform-origin: right;
+}
 
 .navigation {
   display: flex;
@@ -168,6 +184,10 @@ html.sr .load-hidden {
   text-transform: capitalize;
   font-size: 1.5rem;
   margin-inline: 2rem;
+}
+.navigation__link {
+  cursor: pointer;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
 }
 
 .search-icon {
@@ -231,6 +251,32 @@ html.sr .load-hidden {
   text-transform: capitalize;
   background-color: #ec992f;
   color: #fff;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+  transform-origin: left;
+}
+
+.btn-primary:hover {
+  background-color: #ec6a20;
+  scale: 1.05;
+}
+
+.btn-primary:active {
+  translate: 1rem;
+  scale: 1.05;
+}
+
+.btn-secondary {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 2px solid #ec992f;
+  color: #fff;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+}
+
+.btn-secondary:hover {
+  border: 2px solid #ec6a20;
 }
 
 @media screen and (max-width: 650px) {
@@ -299,6 +345,10 @@ html.sr .load-hidden {
 }
 .newsline__link {
   height: 2rem;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+}
+.newsline__link:hover {
+  scale: 1.15;
 }
 
 .header {
@@ -501,6 +551,12 @@ html.sr .load-hidden {
   display: flex;
   gap: 2rem;
 }
+.footer__socials .icon {
+  transition: all ease-in-out 0.2s;
+}
+.footer__socials .icon:hover {
+  scale: 1.15;
+}
 
 @media screen and (max-width: 800px) {
   .footer {
@@ -639,6 +695,12 @@ html.sr .load-hidden {
   gap: 1rem;
   margin-top: 1rem;
 }
+.about-page .founder__social .icon {
+  transition: all ease-in-out 0.2s;
+}
+.about-page .founder__social .icon:hover {
+  scale: 1.15;
+}
 .about-page .founder__txt {
   width: 50%;
 }
@@ -693,6 +755,10 @@ html.sr .load-hidden {
   }
   .about-page .main .icon {
     filter: invert(90%);
+    transition: all ease-in-out 0.2s;
+  }
+  .about-page .main .icon:active {
+    scale: 1.15;
   }
 }
 
@@ -2093,6 +2159,9 @@ html.sr .load-hidden {
   right: 0;
   border: unset;
   background-color: rgba(72, 84, 97, 0.2);
+  animation-name: popIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 .donation__wrapper .donation__container {
   max-width: 85%;

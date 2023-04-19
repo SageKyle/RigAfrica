@@ -28,6 +28,10 @@
 	.logo {
 		width: 100%;
 	}
+
+	.btn-primary {
+		transform-origin: right;
+	}
 }
 
 .navigation {
@@ -37,6 +41,11 @@
 	font-size: 1.5rem;
 	margin-inline: $tiny;
 	// flex-wrap: wrap;
+
+	&__link {
+		cursor: pointer;
+		transition: cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+	}
 }
 
 .search-icon {

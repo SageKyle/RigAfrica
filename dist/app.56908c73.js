@@ -1885,31 +1885,40 @@ var eventCards = document.querySelectorAll('.event');
 });
 
 // ============ LANDING PAGE ANIMATIONS ==============
-// welcome section partners__card
+// welcome section
 var welcomeText = document.querySelector('.welcome__txt');
 var welcomeImg = document.querySelector('.welcome__img');
 (0, _scrollreveal.default)().reveal(welcomeText, {
   duration: 800,
   distance: '150%',
-  // reset: true,
   delay: 100,
   origin: 'left'
 });
 (0, _scrollreveal.default)().reveal(welcomeImg, {
   duration: 900,
   distance: '150%',
-  // reset: true,
   delay: 200,
   origin: 'right'
 });
 
-// welcome section partners__card prophecy-section__img
+//  partners__card (landing page)
 var partnersCard = document.querySelectorAll('.partners__card');
 (0, _scrollreveal.default)().reveal(partnersCard, {
   duration: 900,
   distance: '150%',
   delay: 100,
   origin: 'left',
+  interval: 200
+});
+
+// ============ RIGX PAGE ANIMATIONS ==============
+// contact cards
+var rigXCard = document.querySelectorAll('.contact');
+(0, _scrollreveal.default)().reveal(rigXCard, {
+  duration: 900,
+  distance: '150%',
+  delay: 100,
+  origin: 'bottom',
   interval: 200
 });
 

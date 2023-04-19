@@ -90,14 +90,13 @@ ScrollReveal().reveal(eventCards, {
 });
 
 // ============ LANDING PAGE ANIMATIONS ==============
-// welcome section partners__card
+// welcome section
 const welcomeText = document.querySelector('.welcome__txt');
 const welcomeImg = document.querySelector('.welcome__img');
 
 ScrollReveal().reveal(welcomeText, {
 	duration: 800,
 	distance: '150%',
-	// reset: true,
 	delay: 100,
 	origin: 'left',
 });
@@ -105,12 +104,11 @@ ScrollReveal().reveal(welcomeText, {
 ScrollReveal().reveal(welcomeImg, {
 	duration: 900,
 	distance: '150%',
-	// reset: true,
 	delay: 200,
 	origin: 'right',
 });
 
-// welcome section partners__card prophecy-section__img
+//  partners__card (landing page)
 const partnersCard = document.querySelectorAll('.partners__card');
 
 ScrollReveal().reveal(partnersCard, {
@@ -118,6 +116,18 @@ ScrollReveal().reveal(partnersCard, {
 	distance: '150%',
 	delay: 100,
 	origin: 'left',
+	interval: 200,
+});
+
+// ============ RIGX PAGE ANIMATIONS ==============
+// contact cards
+const rigXCard = document.querySelectorAll('.contact');
+
+ScrollReveal().reveal(rigXCard, {
+	duration: 900,
+	distance: '150%',
+	delay: 100,
+	origin: 'bottom',
 	interval: 200,
 });
 
