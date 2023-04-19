@@ -5,62 +5,51 @@ ScrollReveal.debug = true;
 // ========== NAVIGATION TOGGLE =============
 const navBar = document.querySelector('.main-nav');
 const toggle = document.querySelector('.nav-toggle');
-const navContainer = document.querySelector('.navbar');
-const mainContainer = document.querySelector('.main');
 
 // ================ SEARCH EVENTS ====================
-const searchIcon = document.querySelector('.toggle-form');
+const searchIcons = document.querySelectorAll('.toggle-form');
 const closeIcon = document.querySelector('.event-close');
 const searchInput = document.querySelector('.event-search');
 
 // ========= DISPLAY FORM INPUT ====================
-searchIcon.addEventListener('click', () => {
-	searchInput.classList.remove('hidden');
-	document.querySelector('.search-form__input').focus();
+searchIcons.forEach((searchIcon) => {
+	searchIcon.addEventListener('click', () => {
+		searchInput.classList.remove('hidden');
+		document.querySelector('.search-form__input').focus();
+		hideNavbar();
 
-	CloseOnKeyPress();
+		CloseOnKeyPress();
+	});
 });
 
 // ========================= HIDE FORM INPUT FUNCTION ==================
 function CloseOnKeyPress() {
 	// HIDE FORM BY CLICKING X
 	closeIcon.addEventListener('click', () => {
-		searchInput.classList.add('hidden');
+		hideSearchBar();
 	});
 
 	// HIDE FORM WITH ESC KEY
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape') {
-			searchInput.classList.add('hidden');
+			hideSearchBar();
 		}
 	});
 }
 
-// ============= INTERSECTION OBSERVER ================
+function hideSearchBar() {
+	searchInput.classList.add('hidden');
+}
+
+function hideNavbar() {
+	navBar.classList.add('hide-nav');
+}
+
+// NAVBAR TOGGLE
 toggle.addEventListener('click', (e) => {
 	navBar.classList.toggle('hide-nav');
+	hideSearchBar();
 });
-
-const options = {
-	root: document.querySelector('body'),
-	rootMargin: '0px',
-	threshold: 0.5,
-};
-
-let observer = new IntersectionObserver((entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.intersectionRatio !== 1) {
-			// navContainer.classList.add('primary-bg');
-			console.log('color added');
-		} else {
-			// navContainer.style.backgroundColor = 'green';
-			console.log('color removed');
-			// navContainer.classList.remove('primary-bg');
-		}
-	});
-}, options);
-
-observer.observe(mainContainer);
 
 // ============= CONTACT PAGE ANIMATION =============
 ScrollReveal().reveal('.center-img', {
@@ -101,14 +90,13 @@ ScrollReveal().reveal(eventCards, {
 });
 
 // ============ LANDING PAGE ANIMATIONS ==============
-// welcome section partners__card
+// welcome section
 const welcomeText = document.querySelector('.welcome__txt');
 const welcomeImg = document.querySelector('.welcome__img');
 
 ScrollReveal().reveal(welcomeText, {
 	duration: 800,
 	distance: '150%',
-	// reset: true,
 	delay: 100,
 	origin: 'left',
 });
@@ -116,12 +104,11 @@ ScrollReveal().reveal(welcomeText, {
 ScrollReveal().reveal(welcomeImg, {
 	duration: 900,
 	distance: '150%',
-	// reset: true,
 	delay: 200,
 	origin: 'right',
 });
 
-// welcome section partners__card prophecy-section__img
+//  partners__card (landing page)
 const partnersCard = document.querySelectorAll('.partners__card');
 
 ScrollReveal().reveal(partnersCard, {
@@ -130,4 +117,31 @@ ScrollReveal().reveal(partnersCard, {
 	delay: 100,
 	origin: 'left',
 	interval: 200,
+});
+
+// ============ RIGX PAGE ANIMATIONS ==============
+// contact cards
+const rigXCard = document.querySelectorAll('.contact');
+
+ScrollReveal().reveal(rigXCard, {
+	duration: 900,
+	distance: '150%',
+	delay: 100,
+	origin: 'bottom',
+	interval: 200,
+});
+
+// ==================== TOGGLE DONATION MODAL =================
+const showDonation = document.querySelector('.show-modal');
+const closeDonation = document.querySelector('.close-donation');
+const donationWrapper = document.querySelector('.donation__wrapper');
+
+// show modal
+showDonation.addEventListener('click', () => {
+	donationWrapper.classList.toggle('hidden');
+});
+
+// hide modal
+closeDonation.addEventListener('click', () => {
+	donationWrapper.classList.add('hidden');
 });

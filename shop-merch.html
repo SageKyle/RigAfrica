@@ -49,24 +49,28 @@
 			</a>
 			<section class="navigation main-nav hide-nav">
 				<a href="about.html" class="navigation__link">about us</a>
+				<a href="contact.html" class="navigation__link">contact us</a>
 				<a href="partners.html" class="navigation__link">partner</a>
-				<a href="#" class="navigation__link">RIGX</a>
+				<a href="rigx.html" class="navigation__link">RIGX</a>
 				<a href="#" class="navigation__link">RIG school</a>
 				<a href="events.html" class="navigation__link">events</a>
-				<a href="shop-books.html" class="navigation__link">shops</a>
+				<a href="shop-books.html" class="navigation__link active">shops</a>
 				<a href="#" class="navigation__link">affiliate</a>
+				<span class="navigation__link show-modal">donation</span>
 			</section>
-			<button class="btn btn-primary">donate</button>
+			<button class="btn btn-primary">
+				<a href="sign-in.html">login</a>
+			</button>
+			<img
+				src="/assets/icons/icon-hamburger.svg"
+				alt=""
+				class="icon nav-toggle"
+			/>
 			<img
 				src="/assets/icons/search-icon.png"
 				alt="search"
 				title="Search"
-				class="icon search-icon"
-			/>
-			<img
-				src="/assets/icons/icon-hamburger.svg"
-				alt=""
-				class="icon nav-toggle hidden"
+				class="icon search-icon toggle-form"
 			/>
 		</nav>
 		<main class="main">
@@ -91,130 +95,86 @@
 				</form>
 			</section>
 
-			<select name="shop" class="shop-category" id="shop">
-				<option class="shop-category__item" value="books">Books</option>
-				<option class="shop-category__item" selected value="books">
+			<section class="featured">
+				<img
+					src="assets/images/ROG-merch-hero.png"
+					alt="limited edition"
+					class="featured__img"
+				/>
+				<div class="featured__card card">
+					<p class="paragraph">Limited Stock</p>
+					<h1 class="primary-heading">unreleased rig apparel</h1>
+					<p class="featured__card--title paragraph">Pre-order</p>
+					<div class="featured__card--btn-group">
+						<button class="btn">
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-prophet-tracksuit-unisex"
+								target="_blank"
+								rel="noopener noreferrer"
+								>i am prophet</a
+							>
+						</button>
+						<button class="btn">
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-apostle-tracksuit-unisex"
+								target="_blank"
+								rel="noopener noreferrer"
+								>i am apostle</a
+							>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- SHOP NAVIGATION -->
+			<select
+				name="shop"
+				class="shop-category"
+				onchange="location = this.value"
+				id="shop"
+			>
+				<option class="shop-category__item" value="shop-books.html">
+					Books
+				</option>
+				<option class="shop-category__item" selected value="shop-merch.html">
 					Merch
 				</option>
 			</select>
 
-			<!-- ------------ SHOP (BOOKS) --------- -->
-			<section class="grid col-3 shop">
+			<!-- ------------ SHOP (MERCH) --------- -->
+			<section class="grid col-3 shop mini-card-section">
 				<div class="shop__card">
 					<img
-						src="/assets/images/shop/book1.png"
-						alt=""
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee7055df9df.jpg?v=1676570752&width=600"
+						alt="Goshenite Tee 002"
 						class="shop__card--img"
 					/>
-					<h4 class="tertiary-heading shop__card--heading">
-						The Cosmopolitan Christian
-					</h4>
-					<p class="shop__card--info">
-						"The Cosmopolitan Christian" challenges Christians to disrupt and
-						transform culture through Christ-centered action beyond traditional
-						salvation-oriented beliefs, emphasizing the need for the church to
-						evolve and for a new generation to carry present truth.
-					</p>
-					<div class="card-footer">
-						<h5 class="card-price">12.99</h5>
-						<button class="btn btn-primary">
-							<img
-								src="/assets/icons/shopping-cart.svg"
-								alt="buy now"
-								class="icon"
-							/>
-							<a href="#">buy now</a>
-						</button>
-					</div>
-				</div>
-				<div class="shop__card">
-					<img
-						src="/assets/images/shop/book2.png"
-						alt=""
-						class="shop__card--img"
-					/>
-					<h4 class="tertiary-heading shop__card--heading">
-						Eat, Sleep Prophesy, Repeat
-					</h4>
-					<p class="shop__card--info">
-						"Eat, Sleep, Prophesy, Repeat" is a practical guide for Christians
-						seeking to improve their ability to hear the voice of God and
-						navigate the prophetic landscape, answering common questions and
-						providing personal revelations and stories.
-					</p>
-					<div class="card-footer">
-						<h5 class="card-price">12.99</h5>
-						<button class="btn btn-primary">
-							<img
-								src="/assets/icons/shopping-cart.svg"
-								alt="buy now"
-								class="icon"
-							/>
-							<a href="#">buy now</a>
-						</button>
-					</div>
-				</div>
-				<div class="shop__card">
-					<img
-						src="/assets/images/shop/book3.png"
-						alt=""
-						class="shop__card--img"
-					/>
-					<h4 class="tertiary-heading shop__card--heading">Kingdom Secrets</h4>
-					<p class="shop__card--info">
-						"Kingdom Secrets" is an intelligent study guide that challenges
-						Christians to re-evaluate their understanding of the Kingdom, money,
-						and purpose, providing Biblically sound reasons for prosperity and
-						debunking the idea that poverty is humility.
-					</p>
-					<div class="card-footer">
-						<h5 class="card-price">12.99</h5>
-						<button class="btn btn-primary">
-							<img
-								src="/assets/icons/shopping-cart.svg"
-								alt="buy now"
-								class="icon"
-							/>
-							<a href="#">buy now</a>
-						</button>
-					</div>
-				</div>
-			</section>
+					<h4 class="tertiary-heading mini-card-heading">Goshenite Tee 002</h4>
 
-			<h2 class="secondary-heading section-title">
-				rig school prophetic academy workbooks
-			</h2>
-			<section class="grid col-3 shop">
-				<div class="shop__card">
-					<img
-						src="/assets/images/shop/book4.png"
-						alt=""
-						class="shop__card--img"
-					/>
-					<h4 class="tertiary-heading shop__card--heading">
-						Prophetic Foundation
-					</h4>
 					<div class="card-footer">
 						<h5 class="card-price">12.99</h5>
 						<button class="btn btn-primary">
 							<img
-								src="/assets/icons/shopping-cart.svg"
+								src="assets/icons/shopping-cart.svg"
 								alt="buy now"
 								class="icon"
 							/>
-							<a href="#">buy now</a>
+							<a
+								href="https://tammerch.myshopify.com/products/goshenite-tee-002"
+								target="_blank"
+								>buy now</a
+							>
 						</button>
 					</div>
 				</div>
 				<div class="shop__card">
 					<img
-						src="/assets/images/shop/book5.png"
-						alt=""
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-white-left-front-63ee7103e4278.jpg?v=1676570902&width=360"
+						alt="Boaz Not Yoaz 002"
 						class="shop__card--img"
 					/>
-					<h4 class="tertiary-heading shop__card--heading">
-						Prophetic Encounter
-					</h4>
+					<h4 class="tertiary-heading mini-card-heading">Boaz Not Yoaz 002</h4>
+
 					<div class="card-footer">
 						<h5 class="card-price">12.99</h5>
 						<button class="btn btn-primary">
@@ -223,19 +183,51 @@
 								alt="buy now"
 								class="icon"
 							/>
-							<a href="#">buy now</a>
+							<a
+								href="https://tammerch.myshopify.com/products/boaz-not-yoaz-002"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee6c505b4bc.jpg?v=1676571566&width=600"
+						alt="I'm Not Ghosting You"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading">
+						I'm Not Ghosting You
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/im-not-ghosting-you"
+								target="_blank"
+								>buy now</a
+							>
 						</button>
 					</div>
 				</div>
 				<div class="shop__card">
 					<img
-						src="/assets/images/shop/book6.png"
-						alt=""
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-white-front-63ee6b4cee524.jpg?v=1676570638&width=600"
+						alt="Goshenite Tee 001"
 						class="shop__card--img"
 					/>
-					<h4 class="tertiary-heading shop__card--heading">
-						Prophetic Stewardship
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Goshenite Tee 001
 					</h4>
+
 					<div class="card-footer">
 						<h5 class="card-price">12.99</h5>
 						<button class="btn btn-primary">
@@ -244,61 +236,354 @@
 								alt="buy now"
 								class="icon"
 							/>
-							<a href="#">buy now</a>
+							<a
+								href="https://tammerch.myshopify.com/products/goshenite-definition-tee"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee6e93d1d7f.jpg?v=1676570299&width=600"
+						alt="Prophet to Pharaoh"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Prophet to Pharaoh
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/prophet-to-pharaoh"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-white-front-63ee71c3e97e2.jpg?v=1676571084&width=360"
+						alt="No Wed, No Bed"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						No Wed, No Bed
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/no-wed-no-bed"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-white-left-front-63ee7103e4278.jpg?v=1676570902&width=360"
+						alt=""
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading">Boaz Not Yoaz 002</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/boaz-not-yoaz-002"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee6e0bebb6a.jpg?v=1676570135&width=360"
+						alt="Female Not Freemale"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Female Not Freemale
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/female-not-freemale-1"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-white-front-63ee7180ea8f3.jpg?v=1676571021&width=360"
+						alt="No Wed, No Bed 001"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						No Wed, No Bed 001
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/no-wed-no-bed-001"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee6e0bebb6a.jpg?v=1676570135&width=360"
+						alt="Female Not Freemale"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Female Not Freemale
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/female-not-freemale-1"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-basic-softstyle-t-shirt-black-front-63ee6a979e545.jpg?v=1676569256&width=360"
+						alt="Ruth, Not Ruthless Tee"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Ruth, Not Ruthless Tee
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/ruth-not-ruthless-tee"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/unisex-premium-hoodie-black-front-63ee91e5b9fe9.jpg?v=1676579319&width=600"
+						alt="Prophet to Pharaoh Hoodie"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						Prophet to Pharaoh Hoodie
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/prophet-to-pharaoh-hoodie"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/Screenshot2023-03-24at8.50.08AM.png?v=1679668044&width=600"
+						alt="I AM PROPHET - TRACKSUIT 
+						- UNISEX"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						I AM PROPHET - TRACKSUIT - UNISEX
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-prophet-tracksuit-unisex"
+								target="_blank"
+								>buy now</a
+							>
+						</button>
+					</div>
+				</div>
+				<div class="shop__card">
+					<img
+						src="https://cdn.shopify.com/s/files/1/0689/9872/5939/products/Screenshot2023-03-24at9.00.15AM.png?v=1679668022&width=600"
+						alt="I AM APOSTLE - TRACKSUIT 
+						- UNISEX"
+						class="shop__card--img"
+					/>
+					<h4 class="tertiary-heading mini-card-heading shop__card--heading">
+						I AM APOSTLE - TRACKSUIT - UNISEX
+					</h4>
+
+					<div class="card-footer">
+						<h5 class="card-price">12.99</h5>
+						<button class="btn btn-primary">
+							<img
+								src="/assets/icons/shopping-cart.svg"
+								alt="buy now"
+								class="icon"
+							/>
+							<a
+								href="https://tammerch.myshopify.com/products/i-am-apostle-tracksuit-unisex"
+								target="_blank"
+								>buy now</a
+							>
 						</button>
 					</div>
 				</div>
 			</section>
-			<button class="btn btn-primary main-btn">
-				<a href="#">view collection on amazon</a>
-			</button>
 		</main>
 		<!-- -------------- FOOTER --------------->
 		<footer class="footer">
-			<div class="footer__logo">
-				<img src="/assets/icons/rig-white.png" alt="" class="logo rig-logo" />
-				<img src="/assets/icons/rig-text.png" alt="" class="logo rig-txt" />
+			<div class="footer__logo display-on-desktop">
+				<img src="assets/icons/rig-white.png" alt="" class="logo rig-logo" />
+				<img src="assets/icons/rig-text.png" alt="" class="logo rig-txt" />
 			</div>
 			<div class="footer__main">
 				<div class="footer__links">
 					<section class="navigation">
 						<div class="nav-group">
-							<a href="/about.html" class="navigation__link">about us</a>
-							<a href="#" class="navigation__link">partner</a>
-							<a href="#" class="navigation__link">RIGX</a>
+							<a href="contact.html" class="navigation__link">contact us</a>
+							<a href="about.html" class="navigation__link">about us</a>
+
+							<a href="rigx.html" class="navigation__link">RIGX</a>
 							<a href="#" class="navigation__link">RIG school</a>
 						</div>
 						<div class="nav-group">
-							<a href="#" class="navigation__link">events</a>
-							<a href="#" class="navigation__link">shops</a>
+							<a href="partners.html" class="navigation__link">partner</a>
+							<a href="events.html" class="navigation__link">events</a>
+							<a href="shop-books.html" class="navigation__link">shops</a>
 							<a href="#" class="navigation__link">affiliate</a>
 						</div>
 					</section>
-					<button class="btn btn-primary">donate</button>
+					<div class="footer__btn-group">
+						<div class="footer__logo display-on-mobile">
+							<img
+								src="assets/icons/rig-white.png"
+								alt=""
+								class="logo rig-logo"
+							/>
+							<img
+								src="assets/icons/rig-text.png"
+								alt=""
+								class="logo rig-txt"
+							/>
+						</div>
+						<button class="btn btn-secondary show-modal">donate</button>
+						<button class="btn btn-primary">
+							<a href="sign-in.html">login</a>
+						</button>
+					</div>
 				</div>
 				<section class="footer__socials">
-					<a href="#" class="footer__socials--link">
+					<!-- <a href="#" class="footer__socials--link">
 						<img
 							src="/assets/icons/twitter-white.png"
 							alt="follow us on twitter"
 							class="icon socail-icon"
 						/>
-					</a>
-					<a href="#" class="footer__socials--link">
+					</a> -->
+					<a
+						href="https://www.youtube.com/channel/UCHSYRA0DZMOglkhKXxUBFHQ"
+						target="_blank"
+						class="footer__socials--link"
+					>
 						<img
 							src="/assets/icons/youtube-white.png"
 							alt="subscribe to our channel"
 							class="icon social-icon"
 						/>
 					</a>
-					<a href="#" class="footer__socials--link">
+					<a
+						href="https://www.instagram.com/rignationafrica/"
+						target="_blank"
+						class="footer__socials--link"
+					>
 						<img
 							src="/assets/icons/instagram-white.png"
-							alt="twitter"
+							alt="foolow us on instagram"
 							class="icon social-icon"
 						/>
 					</a>
-					<a href="#" class="footer__socials--link">
+					<a
+						href="https://www.facebook.com/rigafrica1/?_rdc=1&_rdr"
+						target="_blank"
+						class="footer__socials--link"
+					>
 						<img
 							src="/assets/icons/facebook-white.png"
 							alt="follow with us on facebook"
@@ -309,5 +594,38 @@
 				<p class="paragraph copyright">&copy; Copyright 2023 - RIG Africa</p>
 			</div>
 		</footer>
+		<!-- --------------------- DONATE MODAL ---------------- -->
+		<dialog class="backdrop donation__wrapper hidden">
+			<div class="donation__container">
+				<div class="modal donation">
+					<span class="modal__close close-donation">
+						<img src="assets/icons/close-circle.png" alt="" class="icon" />
+					</span>
+					<h4 class="secondary-heading">donate to rig africa</h4>
+					<div class="donation__group">
+						<a href="#" target="_blank" class="card donation__card">
+							<div class="donation__card--logo">
+								<img src="/assets/icons/donate.svg" alt="donate" class="icon" />
+							</div>
+							<h4 class="secondary-heading donation__card--heading">
+								online donation
+							</h4>
+							<p class="paragraph">Tithes, offerings or random giving.</p>
+						</a>
+						<a href="partners.html" class="card donation__card">
+							<div class="donation__card--logo">
+								<img src="/assets/icons/donate.svg" alt="donate" class="icon" />
+							</div>
+							<h4 class="secondary-heading donation__card--heading">
+								become a partner
+							</h4>
+							<p class="paragraph">
+								Join our vision to raise 4000 active prophets.
+							</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</dialog>
 	</body>
 </html>

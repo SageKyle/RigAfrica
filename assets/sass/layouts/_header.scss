@@ -5,10 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: end;
+	flex-wrap: wrap;
 	gap: $medium;
 	padding: $tiny $small;
 	background-color: $backgroundColor;
-	height: $small;
+	height: 5rem;
 	margin-bottom: $tiny;
 	position: fixed;
 	top: 0;
@@ -39,14 +40,21 @@
 
 	&__link {
 		height: $tiny;
+		transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+	}
+
+	&__link:hover {
+		scale: 1.15;
+		// rotate: 10deg;
 	}
 }
 
 .header {
-	position: static;
+	// position: static;
 	background-image: url('/assets/images/hero-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	background-blend-mode: screen;
 	background-color: rgb(8, 23, 39);
 	height: 100vh;
@@ -69,8 +77,8 @@
 		align-items: center;
 		position: fixed;
 		top: 15rem;
-		left: 50%;
-		z-index: 50;
+		margin-right: $big;
+		z-index: 20;
 
 		&__label {
 			display: flex;
@@ -163,25 +171,26 @@
 }
 
 // ================ MEDIA QUERIES ======================
-@media screen and (max-width: 650px) {
-	.header {
-		.hide-nav {
-			display: none !important;
-			height: 0;
-		}
-
-		&__wrapper {
-			padding: 0;
-		}
-
-		.nav-toggle.hidden {
-			display: block;
-			filter: invert(100%);
-			margin-left: $tiny;
-		}
+@media screen and (max-width: 800px) {
+	.hide-nav {
+		display: none !important;
+		height: 0;
 	}
+
+	.header__wrapper {
+		padding: 0;
+	}
+
 	.newsline {
-		display: none;
+		height: fit-content;
+		padding: 1rem $tiny;
+		justify-content: center;
+		// position: static;
+		width: 100%;
+
+		&__link--group {
+			display: none;
+		}
 	}
 
 	.hero__txt {
@@ -189,15 +198,15 @@
 		margin-block: auto $medium;
 	}
 
+	.hero__logo {
+		display: none;
+	}
+
 	.hero__info {
 		margin: $small 1rem;
 		gap: $small;
 		flex-direction: column;
 		align-items: flex-end;
-
-		.logo {
-			height: $medium;
-		}
 
 		&--stats {
 			align-self: center;

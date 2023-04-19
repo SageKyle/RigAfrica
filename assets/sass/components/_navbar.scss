@@ -5,8 +5,8 @@
 	height: $medium;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	padding: $tiny;
+	justify-content: center;
+	padding: $tiny 1rem;
 	margin: $tiny auto;
 	border-radius: 1rem;
 	background: rgba(217, 217, 217, 0.2);
@@ -22,21 +22,30 @@
 		display: inline-block;
 		margin-right: auto;
 		justify-self: start;
-		width: 15%;
+		width: 12%;
 	}
 
 	.logo {
 		width: 100%;
 	}
+
+	.btn-primary {
+		transform-origin: right;
+	}
 }
 
 .navigation {
 	display: flex;
-	gap: $tiny;
+	gap: 1rem;
 	text-transform: capitalize;
 	font-size: 1.5rem;
 	margin-inline: $tiny;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
+
+	&__link {
+		cursor: pointer;
+		transition: cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+	}
 }
 
 .search-icon {
@@ -45,9 +54,19 @@
 	cursor: pointer;
 }
 
+.nav-toggle {
+	display: none;
+	filter: invert(80%);
+	margin-left: $tiny;
+}
+
 // ==================== MEDIA QUERIES ================
-@media screen and (max-width: 650px) {
-	.header {
+@media screen and (max-width: 800px) {
+	.nav-toggle {
+		display: inline-block;
+	}
+
+	nav {
 		.navbar {
 			position: relative;
 			left: 0;
@@ -56,15 +75,22 @@
 
 		.navigation {
 			background-color: $textColor;
+			color: $backgroundColor;
 			flex-direction: column;
 			position: absolute;
 			top: $medium;
+			right: 0;
 			padding: $tiny $small;
 			border-radius: 1rem;
+			z-index: 60;
+
+			&__link {
+				width: fit-content;
+			}
 		}
 
 		.navbar__logo {
-			width: 38%;
+			width: 30%;
 		}
 	}
 }

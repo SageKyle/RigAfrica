@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RIG Africa | Login</title>
+		<link rel="stylesheet" href="assets/sass/main.scss" />
+		<!-- favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/icons/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="assets/icons/favicon/android-chrome-512x512.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="assets/icons/favicon/android-chrome-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/icons/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/icons/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="assets/icons/favicon/site.webmanifest" />
+		<!-- js -->
+		<script src="/assets/js/app.js" defer></script>
+		<script src="/assets/js/auth.js" defer></script>
+	</head>
+	<body class="auth-page">
+		<section class="container">
+			<header class="header">
+				<!-- --------------- NAVBAR -------------------- -->
+				<nav class="navbar">
+					<div class="navbar__logo">
+						<img src="/assets/icons/rig-nav-logo.png" alt="" class="logo" />
+					</div>
+
+					<button class="btn btn-primary">
+						<a href="register.html">Create Account</a>
+					</button>
+					<img
+						src="/assets/icons/icon-hamburger.svg"
+						alt=""
+						class="icon nav-toggle"
+					/>
+				</nav>
+			</header>
+
+			<!-- -------------- MAIN SECTION ------------ -->
+
+			<main class="main">
+				<img
+					src="/assets/images/rig-partner-portal-logo.png"
+					alt=""
+					class="logo main__img"
+				/>
+				<h4 class="secondary-heading primary-color">welcome</h4>
+				<small class="paragraph">Login to your account to continue</small>
+				<form class="auth__form form">
+					<label class="form__item">
+						<img
+							src="/assets/icons/sms.svg"
+							alt=""
+							aria-hidden="true"
+							class="icon"
+						/>
+						<input type="email" placeholder="Email" class="form__input" />
+					</label>
+					<label class="form__item">
+						<img
+							src="/assets/icons/lock.png"
+							alt=""
+							aria-hidden="true"
+							class="icon"
+						/>
+						<input
+							type="password"
+							placeholder="Password"
+							class="form__input pswd-input"
+						/>
+						<img
+							src="/assets/icons/eye-slash.svg"
+							alt="show password"
+							class="icon pswd-icon show-pswd"
+						/>
+						<img
+							src="/assets/icons/eye.png"
+							alt="hide password"
+							class="icon pswd-icon hide-pswd hidden"
+						/>
+					</label>
+					<!-- REMEMBER ME CHECKBOX -->
+					<label class="remember">
+						<input type="checkbox" name="remember" id="remember" />
+						<span>Remember Me</span>
+					</label>
+					<button class="btn btn-primary submit-btn">login</button>
+				</form>
+				<a href="forgot-password.html" class="primary-color forgot-pswd"
+					>Forgot Password?</a
+				>
+				<p class="paragraph">
+					Don't have an account?
+					<a href="register.html" class="primary-color">Create an Account</a>
+				</p>
+			</main>
+		</section>
+	</body>
+</html>

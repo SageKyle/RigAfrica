@@ -1,5 +1,6 @@
 // ================== EVENTS PAGE STYLES =======
 @use '../abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 .navbar {
 	width: 90%;
@@ -66,6 +67,12 @@
 	text-transform: capitalize;
 }
 
+.date,
+.online {
+	display: flex;
+	align-items: flex-end;
+}
+
 .events-page {
 	background-color: rgba($accentColor, 0.2);
 
@@ -111,6 +118,7 @@
 
 		.event {
 			display: flex;
+			flex-direction: row;
 			background-color: rgba($backgroundColor, 0.8);
 			align-items: center;
 			margin-bottom: $tiny;
@@ -135,20 +143,11 @@
 				width: 100%;
 				gap: 0.5rem;
 			}
-			// .online {
-			// 	display: flex;
-			// 	align-items: center;
-			// }
 		}
+	}
 
-		// .empty-event {
-		// 	width: 100%;
-		// 	display: flex;
-		// 	align-items: center;
-		// 	justify-content: center;
-		// 	gap: 1rem;
-		// 	text-transform: capitalize;
-		// }
+	.cta__wrapper {
+		width: 100%;
 	}
 
 	// hide moving text in the CTA
@@ -161,6 +160,8 @@
 .past-events-page {
 	font-size: 1.4rem;
 	background-color: rgba($accentColor, 0.2);
+
+	@include desktop-display;
 
 	.navbar {
 		background-color: rgba($accentColor, 0.6);
@@ -207,6 +208,7 @@
 		.event {
 			display: flex;
 			align-items: center;
+			flex-direction: row;
 			margin-bottom: $tiny;
 			padding: 1rem;
 			border-bottom: 2px solid rgba($accentColor, 0.2);
@@ -239,8 +241,155 @@
 		}
 	}
 
+	.pagination {
+		display: flex;
+		gap: 2px;
+		margin: 0 auto;
+
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin: $tiny 0;
+			width: 100%;
+		}
+
+		.btn {
+			font-size: 1.2rem;
+			border-radius: 0;
+
+			.icon {
+				height: 1rem;
+				filter: invert(80%);
+			}
+
+			.previous {
+				transform: rotateY(180deg);
+			}
+		}
+
+		&-btn-group {
+			gap: 1rem;
+
+			.active-btn {
+				background-color: $primaryColor;
+			}
+		}
+	}
+
+	.cta__wrapper {
+		width: 100%;
+	}
+
 	// hide moving text in the CTA
 	.cta::after {
 		display: none;
+	}
+}
+
+// ================ MEDIA QUERIES ====================
+@media screen and (max-width: 800px) {
+	//  top-bar padding for event pages
+	.past-events-page,
+	.events-page {
+		.top-bar {
+			padding: 0 1rem;
+		}
+	}
+
+	.past-events-page {
+		.main {
+			width: 85%;
+		}
+
+		.events {
+			// width: 80%;
+
+			.event {
+				align-items: stretch;
+
+				&__img {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.events-page {
+		.events {
+			// width: 80%;
+
+			.event {
+				flex-direction: column;
+
+				&__img {
+					width: 100%;
+					// height: auto;
+				}
+
+				&__txt {
+					width: 100%;
+				}
+
+				&__date {
+					flex-wrap: wrap;
+				}
+			}
+		}
+	}
+
+	.past-events-page {
+		@include mobile-display;
+	}
+}
+@media screen and (max-width: 550px) {
+	.events-page,
+	.past-events-page {
+		.secondary-heading,
+		.tertiary-heading {
+			margin-inline: 0;
+		}
+
+		.main {
+			width: 80%;
+		}
+
+		.top-bar {
+			background-color: transparent;
+			padding-inline: 0;
+
+			.toggle-form {
+				display: none;
+			}
+		}
+
+		.search-form {
+			position: absolute;
+			right: $small;
+			top: $large;
+			z-index: 5;
+		}
+
+		.events {
+			// width: 80%;
+
+			.event {
+				flex-direction: column;
+
+				&__img {
+					width: 100%;
+					// height: auto;
+				}
+
+				&__txt {
+					width: 100%;
+				}
+
+				&__date {
+					flex-wrap: wrap;
+				}
+			}
+		}
 	}
 }

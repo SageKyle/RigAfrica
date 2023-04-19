@@ -1807,58 +1807,48 @@ _scrollreveal.default.debug = true;
 // ========== NAVIGATION TOGGLE =============
 var navBar = document.querySelector('.main-nav');
 var toggle = document.querySelector('.nav-toggle');
-var navContainer = document.querySelector('.navbar');
-var mainContainer = document.querySelector('.main');
 
 // ================ SEARCH EVENTS ====================
-var searchIcon = document.querySelector('.toggle-form');
+var searchIcons = document.querySelectorAll('.toggle-form');
 var closeIcon = document.querySelector('.event-close');
 var searchInput = document.querySelector('.event-search');
 
 // ========= DISPLAY FORM INPUT ====================
-searchIcon.addEventListener('click', function () {
-  searchInput.classList.remove('hidden');
-  document.querySelector('.search-form__input').focus();
-  CloseOnKeyPress();
+searchIcons.forEach(function (searchIcon) {
+  searchIcon.addEventListener('click', function () {
+    searchInput.classList.remove('hidden');
+    document.querySelector('.search-form__input').focus();
+    hideNavbar();
+    CloseOnKeyPress();
+  });
 });
 
 // ========================= HIDE FORM INPUT FUNCTION ==================
 function CloseOnKeyPress() {
   // HIDE FORM BY CLICKING X
   closeIcon.addEventListener('click', function () {
-    searchInput.classList.add('hidden');
+    hideSearchBar();
   });
 
   // HIDE FORM WITH ESC KEY
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      searchInput.classList.add('hidden');
+      hideSearchBar();
     }
   });
 }
+function hideSearchBar() {
+  searchInput.classList.add('hidden');
+}
+function hideNavbar() {
+  navBar.classList.add('hide-nav');
+}
 
-// ============= INTERSECTION OBSERVER ================
+// NAVBAR TOGGLE
 toggle.addEventListener('click', function (e) {
   navBar.classList.toggle('hide-nav');
+  hideSearchBar();
 });
-var options = {
-  root: document.querySelector('body'),
-  rootMargin: '0px',
-  threshold: 0.5
-};
-var observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio !== 1) {
-      // navContainer.classList.add('primary-bg');
-      console.log('color added');
-    } else {
-      // navContainer.style.backgroundColor = 'green';
-      console.log('color removed');
-      // navContainer.classList.remove('primary-bg');
-    }
-  });
-}, options);
-observer.observe(mainContainer);
 
 // ============= CONTACT PAGE ANIMATION =============
 (0, _scrollreveal.default)().reveal('.center-img', {
@@ -1895,25 +1885,23 @@ var eventCards = document.querySelectorAll('.event');
 });
 
 // ============ LANDING PAGE ANIMATIONS ==============
-// welcome section partners__card
+// welcome section
 var welcomeText = document.querySelector('.welcome__txt');
 var welcomeImg = document.querySelector('.welcome__img');
 (0, _scrollreveal.default)().reveal(welcomeText, {
   duration: 800,
   distance: '150%',
-  // reset: true,
   delay: 100,
   origin: 'left'
 });
 (0, _scrollreveal.default)().reveal(welcomeImg, {
   duration: 900,
   distance: '150%',
-  // reset: true,
   delay: 200,
   origin: 'right'
 });
 
-// welcome section partners__card prophecy-section__img
+//  partners__card (landing page)
 var partnersCard = document.querySelectorAll('.partners__card');
 (0, _scrollreveal.default)().reveal(partnersCard, {
   duration: 900,
@@ -1921,6 +1909,32 @@ var partnersCard = document.querySelectorAll('.partners__card');
   delay: 100,
   origin: 'left',
   interval: 200
+});
+
+// ============ RIGX PAGE ANIMATIONS ==============
+// contact cards
+var rigXCard = document.querySelectorAll('.contact');
+(0, _scrollreveal.default)().reveal(rigXCard, {
+  duration: 900,
+  distance: '150%',
+  delay: 100,
+  origin: 'bottom',
+  interval: 200
+});
+
+// ==================== TOGGLE DONATION MODAL =================
+var showDonation = document.querySelector('.show-modal');
+var closeDonation = document.querySelector('.close-donation');
+var donationWrapper = document.querySelector('.donation__wrapper');
+
+// show modal
+showDonation.addEventListener('click', function () {
+  donationWrapper.classList.toggle('hidden');
+});
+
+// hide modal
+closeDonation.addEventListener('click', function () {
+  donationWrapper.classList.add('hidden');
 });
 },{"scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -1947,7 +1961,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53794" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
