@@ -10,7 +10,7 @@
 
 - `npm install`: Install dev dependencies
 - `npm run dev`: Run development live server
-- `npm build`: Compile code for production
+- `npm run build`: Compile code for production
 
 #
 
