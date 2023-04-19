@@ -21,52 +21,52 @@
 		position: relative;
 	}
 
-	.search-form {
-		display: flex;
-		align-items: center;
-		margin-left: auto;
-		position: absolute;
-		right: $medium;
-		// top: 0;
+	// .search-form {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	margin-left: auto;
+	// 	position: absolute;
+	// 	right: $medium;
+	// 	// top: 0;
 
-		&__label {
-			display: flex;
-			align-items: center;
-			height: 100%;
-			background-color: rgba($accentColor, 0.2);
-			outline: 2px solid $accentColor;
-			border-radius: 0.5rem;
-			margin-left: 1rem;
-		}
+	// 	&__label {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		height: 100%;
+	// 		background-color: rgba($accentColor, 0.2);
+	// 		outline: 2px solid $accentColor;
+	// 		border-radius: 0.5rem;
+	// 		margin-left: 1rem;
+	// 	}
 
-		&__input,
-		&__input:focus {
-			background-color: transparent;
-			border: unset;
-			outline: unset;
-			height: 100%;
-			padding: 1rem;
-		}
+	// 	&__input,
+	// 	&__input:focus {
+	// 		background-color: transparent;
+	// 		border: unset;
+	// 		outline: unset;
+	// 		height: 100%;
+	// 		padding: 1rem;
+	// 	}
 
-		&__close {
-			display: inline-block;
-			color: $backgroundColor;
-			padding-inline: 1rem;
-			cursor: pointer;
-		}
+	// 	&__close {
+	// 		display: inline-block;
+	// 		color: $backgroundColor;
+	// 		padding-inline: 1rem;
+	// 		cursor: pointer;
+	// 	}
 
-		.toggle-form {
-			cursor: pointer;
-			filter: invert(80%);
-		}
-	}
+	// 	.toggle-form {
+	// 		cursor: pointer;
+	// 		filter: invert(80%);
+	// 	}
+	// }
 
-	.events__nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-block: $small;
-	}
+	// .events__nav {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: space-between;
+	// 	margin-block: $small;
+	// }
 
 	.top-bar {
 		margin: 0;
@@ -77,6 +77,18 @@
 		.social-icon {
 			margin-right: 1rem;
 			filter: invert(90%);
+			transition: all ease-in-out 0.2s;
+		}
+
+		.social-icon:hover {
+			scale: 1.1;
+			rotate: 10deg;
+			// filter: drop-shadow(0 0 1rem $primaryColor);
+		}
+
+		.social-icon:active {
+			scale: 1.1;
+			rotate: -10deg;
 		}
 	}
 
@@ -178,6 +190,15 @@
 	.rig-branch {
 		width: 100%;
 		display: inline-block;
+		transition: all ease-in-out 0.2s;
+	}
+
+	.rig-branch:hover {
+		transform: translateY(-1rem);
+	}
+
+	.rig-branch:active {
+		transform: translateY(1rem);
 	}
 
 	.rig-img {

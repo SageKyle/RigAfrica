@@ -822,45 +822,6 @@ html.sr .load-hidden {
   width: 80%;
   position: relative;
 }
-.contact-page .search-form {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  position: absolute;
-  right: 6rem;
-}
-.contact-page .search-form__label {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  background-color: rgba(72, 84, 97, 0.2);
-  outline: 2px solid rgb(72, 84, 97);
-  border-radius: 0.5rem;
-  margin-left: 1rem;
-}
-.contact-page .search-form__input, .contact-page .search-form__input:focus {
-  background-color: transparent;
-  border: unset;
-  outline: unset;
-  height: 100%;
-  padding: 1rem;
-}
-.contact-page .search-form__close {
-  display: inline-block;
-  color: #fff;
-  padding-inline: 1rem;
-  cursor: pointer;
-}
-.contact-page .search-form .toggle-form {
-  cursor: pointer;
-  filter: invert(80%);
-}
-.contact-page .events__nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-block: 4rem;
-}
 .contact-page .top-bar {
   margin: 0;
   padding: 1rem;
@@ -870,6 +831,15 @@ html.sr .load-hidden {
 .contact-page .top-bar .social-icon {
   margin-right: 1rem;
   filter: invert(90%);
+  transition: all ease-in-out 0.2s;
+}
+.contact-page .top-bar .social-icon:hover {
+  scale: 1.1;
+  rotate: 10deg;
+}
+.contact-page .top-bar .social-icon:active {
+  scale: 1.1;
+  rotate: -10deg;
 }
 .contact-page .contact-main {
   margin-block: 2rem;
@@ -953,6 +923,13 @@ html.sr .load-hidden {
 .contact-page .rig-branch {
   width: 100%;
   display: inline-block;
+  transition: all ease-in-out 0.2s;
+}
+.contact-page .rig-branch:hover {
+  transform: translateY(-1rem);
+}
+.contact-page .rig-branch:active {
+  transform: translateY(1rem);
 }
 .contact-page .rig-img {
   width: inherit;
