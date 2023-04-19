@@ -3,7 +3,7 @@ const swiper = new Swiper('.slide-content', {
 	direction: 'horizontal',
 	loop: true,
 	grabCursor: true,
-	slidesPerView: 3,
+	slidesPerView: 'auto',
 	spaceBetween: 25,
 	centeredSlides: true,
 	fade: true,

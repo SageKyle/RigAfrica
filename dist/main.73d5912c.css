@@ -451,6 +451,12 @@ html.sr .load-hidden {
   color: #fff;
   position: relative;
 }
+.footer .display-on-mobile {
+  display: none !important;
+}
+.footer .display-on-desktop {
+  display: flex !important;
+}
 .footer__logo {
   position: relative;
   display: flex;
@@ -486,6 +492,11 @@ html.sr .load-hidden {
   display: flex;
   gap: 1rem;
 }
+.footer__btn-group {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
 .footer__socials {
   display: flex;
   gap: 2rem;
@@ -493,10 +504,26 @@ html.sr .load-hidden {
 
 @media screen and (max-width: 800px) {
   .footer {
-    padding: 0;
+    padding: 4rem;
+    justify-content: flex-start;
+  }
+  .footer .display-on-desktop {
+    display: none !important;
+  }
+  .footer .display-on-mobile {
+    display: flex !important;
   }
   .footer__main {
     margin: 2rem;
+  }
+  .footer__logo {
+    margin-right: auto;
+  }
+  .footer__logo .rig-logo {
+    height: 2rem;
+  }
+  .footer__logo .rig-txt {
+    height: 4rem;
   }
   .footer__links {
     flex-direction: column-reverse;
@@ -504,6 +531,7 @@ html.sr .load-hidden {
   .footer .navigation {
     align-items: flex-start;
     margin-block: 2rem;
+    gap: 4rem;
   }
   .footer .nav-group {
     flex-direction: column;
