@@ -120,6 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"assets/js/observer.js":[function(require,module,exports) {
 var navContainer = document.querySelector('.navbar');
 var header = document.querySelector('.header__wrapper');
+var newsline = document.querySelector('.newsline');
 
 // ============= INTERSECTION OBSERVER ================
 var options = {
@@ -130,8 +131,12 @@ var observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       navContainer.classList.remove('header-bg');
+      newsline.classList.remove('hidden');
+      navContainer.style.top = 'inherit';
     } else {
       navContainer.classList.add('header-bg');
+      newsline.classList.add('hidden');
+      navContainer.style.top = 0;
     }
   });
 }, options);
@@ -161,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61646" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

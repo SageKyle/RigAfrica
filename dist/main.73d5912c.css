@@ -72,7 +72,7 @@ html.sr .load-hidden {
   }
 }
 .primary-heading {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
   line-height: 1;
   margin: 2rem;
   text-transform: capitalize;
@@ -120,9 +120,7 @@ html.sr .load-hidden {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4rem;
   gap: 2rem;
-  width: 90%;
   margin: 2rem auto;
 }
 .split-2__txt {
@@ -313,7 +311,7 @@ html.sr .load-hidden {
 .newsline {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 6rem;
   padding: 2rem 4rem;
@@ -496,7 +494,7 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2rem 6rem;
+  padding: 6rem;
   background-color: #2f1f09;
   color: #fff;
   position: relative;
@@ -546,6 +544,10 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
   gap: 4rem;
+}
+.footer__btn-group .btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.8rem;
 }
 .footer__socials {
   display: flex;
@@ -1699,17 +1701,17 @@ html.sr .load-hidden {
 }
 .welcome {
   margin-top: 6rem;
+  margin-inline: auto;
+  max-width: 90%;
 }
 .welcome__txt--title {
   font-family: "Sacramento", cursive;
   color: #ec992f;
-  margin-left: 8rem;
   font-size: 8rem;
   font-weight: 400;
 }
 .welcome__txt--heading {
   margin-block: 0 2rem;
-  margin-left: 8rem;
 }
 .welcome__main {
   padding-top: 0;
@@ -1814,6 +1816,8 @@ html.sr .load-hidden {
   background-color: #2f1f09;
   color: #fff;
   margin: 8rem 0;
+  height: 40rem;
+  padding-right: 4rem;
   width: 100%;
   position: relative;
 }
@@ -1826,9 +1830,12 @@ html.sr .load-hidden {
 
 .about {
   margin-bottom: 6rem;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 90%;
 }
 .about .tertiary-heading {
-  margin-left: 8rem;
+  margin-bottom: -2rem;
   width: 50%;
 }
 .about__main {
@@ -1836,12 +1843,11 @@ html.sr .load-hidden {
   padding-top: 0;
 }
 .about__txt {
-  align-self: flex-start;
+  width: 70%;
 }
 .about__img {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 25%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .testimonies {
@@ -1849,6 +1855,7 @@ html.sr .load-hidden {
   text-align: center;
   padding: 4rem;
   margin-bottom: 6rem;
+  margin-inline: auto;
   position: relative;
   overflow: hidden;
 }
@@ -1868,6 +1875,7 @@ html.sr .load-hidden {
 }
 .testimonies .slide-content {
   max-width: 112rem;
+  margin-inline: auto;
   width: 100%;
   padding: 4rem 0;
   overflow: hidden;
@@ -1914,13 +1922,10 @@ html.sr .load-hidden {
   font-size: 5rem;
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
-  width: 100%;
   top: 8rem;
-  left: 2rem;
-  right: 2rem;
+  right: 25%;
   position: absolute;
   z-index: 1;
-  animation: loopHorizontal 15s linear infinite;
 }
 .cta__wrapper {
   width: 80%;
@@ -1962,7 +1967,7 @@ html.sr .load-hidden {
   height: 100%;
 }
 .cta__img {
-  width: 30%;
+  width: 25%;
   right: 4rem;
   align-self: flex-end;
   z-index: 2;
@@ -1971,6 +1976,14 @@ html.sr .load-hidden {
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .prophecy-section.split-2 {
+    height: 25rem;
+  }
+  .about .tertiary-heading {
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 800px) {
   .welcome__img {
     width: 60%;
@@ -1989,7 +2002,9 @@ html.sr .load-hidden {
     margin-bottom: 2rem;
   }
   .about .tertiary-heading {
-    width: fit-content;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
   }
   .about__txt, .about__img {
     width: 80%;
@@ -2010,6 +2025,7 @@ html.sr .load-hidden {
   }
   .prophecy-section.split-2 {
     flex-direction: column;
+    height: unset;
   }
   .prophecy-section.split-2 .main-img {
     margin-top: -12rem;
@@ -2028,7 +2044,7 @@ html.sr .load-hidden {
     justify-content: space-between;
   }
   .cta__txt {
-    width: 60%;
+    width: 70%;
   }
   .cta__txt--info {
     margin-block: 1rem;
@@ -2049,6 +2065,10 @@ html.sr .load-hidden {
   }
   .cta__img {
     display: none;
+  }
+  .cta::after {
+    right: 0;
+    top: 4rem;
   }
 }
 @media screen and (max-width: 450px) {
