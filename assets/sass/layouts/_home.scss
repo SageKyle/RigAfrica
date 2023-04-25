@@ -5,18 +5,19 @@
 // ================ WELCOME SECTION ==============
 .welcome {
 	margin-top: $medium;
+	margin-inline: auto;
+	max-width: 90%;
 
 	&__txt--title {
 		font-family: 'Sacramento', cursive;
 		color: $primaryColor;
-		margin-left: $big;
 		font-size: 8rem;
 		font-weight: 400;
 	}
 
 	&__txt--heading {
 		margin-block: 0 $tiny;
-		margin-left: $big;
+		// margin-left: $medium;
 	}
 
 	&__main {
@@ -147,6 +148,8 @@
 	background-color: $secondaryColor;
 	color: $backgroundColor;
 	margin: $big 0;
+	height: 40rem;
+	padding-right: $small;
 	width: 100%;
 	position: relative;
 
@@ -161,9 +164,12 @@
 // ==================== ABOUT ============
 .about {
 	margin-bottom: $medium;
+	align-items: center;
+	margin-inline: auto;
+	max-width: 90%;
 
 	.tertiary-heading {
-		margin-left: $big;
+		margin-bottom: -$tiny;
 		width: 50%;
 	}
 
@@ -173,13 +179,12 @@
 	}
 
 	&__txt {
-		align-self: flex-start;
+		width: 70%;
 	}
 
 	&__img {
-		box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-		-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		width: 25%;
+		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -189,6 +194,7 @@
 	text-align: center;
 	padding: $small;
 	margin-bottom: $medium;
+	margin-inline: auto;
 	position: relative;
 	overflow: hidden;
 
@@ -211,6 +217,7 @@
 	// MAIN SWIPER CONTENT WRAPPER
 	.slide-content {
 		max-width: 112rem;
+		margin-inline: auto;
 		width: 100%;
 		padding: $small 0;
 		overflow: hidden;
@@ -265,13 +272,11 @@
 		font-size: 5rem;
 		color: transparent;
 		-webkit-text-stroke: 2px rgba($backgroundColor, 0.4);
-		width: 100%;
 		top: $big;
-		left: $tiny;
-		right: $tiny;
+		right: 25%;
 		position: absolute;
 		z-index: 1;
-		animation: loopHorizontal 15s linear infinite;
+		// animation: loopHorizontal 15s linear infinite;
 	}
 
 	// CTA CONTAINER
@@ -323,7 +328,7 @@
 	}
 
 	&__img {
-		width: 30%;
+		width: 25%;
 		// position: absolute;
 		right: $small;
 		align-self: flex-end;
@@ -336,6 +341,18 @@
 }
 
 // ==================== MEDIA QUERIES ==================
+@media screen and (max-width: 1024px) {
+	.prophecy-section.split-2 {
+		height: 25rem;
+	}
+
+	.about {
+		.tertiary-heading {
+			margin-bottom: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.welcome__img {
 		width: 60%;
@@ -356,7 +373,9 @@
 
 	.about {
 		.tertiary-heading {
-			width: fit-content;
+			text-align: center;
+			margin-bottom: $tiny;
+			width: 100%;
 		}
 
 		&__txt,
@@ -387,6 +406,7 @@
 	// =============== FATHER'S BLESSING ==============
 	.prophecy-section.split-2 {
 		flex-direction: column;
+		height: unset;
 
 		.main-img {
 			margin-top: -12rem;
@@ -412,7 +432,7 @@
 		justify-content: space-between;
 
 		&__txt {
-			width: 60%;
+			width: 70%;
 
 			&--info {
 				margin-block: 1rem;
@@ -439,6 +459,11 @@
 
 		&__img {
 			display: none;
+		}
+
+		&::after {
+			right: 0;
+			top: $small;
 		}
 	}
 }
