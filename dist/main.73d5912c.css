@@ -563,7 +563,6 @@ html.sr .load-hidden {
 @media screen and (max-width: 800px) {
   .footer {
     padding: 4rem;
-    justify-content: flex-start;
   }
   .footer .display-on-desktop {
     display: none !important;
@@ -635,7 +634,7 @@ html.sr .load-hidden {
   align-items: center;
   gap: 2rem;
 }
-.about-page .rig-logo {
+.about-page .vision .rig-logo {
   height: 4rem;
 }
 .about-page .mission {
@@ -667,10 +666,11 @@ html.sr .load-hidden {
 }
 .about-page .founder {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   margin: 6rem auto;
   gap: 2rem;
+  padding: 4rem;
 }
 .about-page .founder .tertiary-heading {
   margin-bottom: 2rem;
@@ -680,7 +680,7 @@ html.sr .load-hidden {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-  width: 40%;
+  width: 25%;
 }
 .about-page .founder__info {
   background-color: #143143;
@@ -704,7 +704,7 @@ html.sr .load-hidden {
   scale: 1.15;
 }
 .about-page .founder__txt {
-  width: 50%;
+  width: 70%;
 }
 .about-page .founder__txt .paragraph {
   font-size: 1.4rem;
