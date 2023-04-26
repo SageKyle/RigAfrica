@@ -72,7 +72,7 @@ html.sr .load-hidden {
   }
 }
 .primary-heading {
-  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  font-size: clamp(2rem, 2vw + 0.5rem, 4rem);
   line-height: 1;
   margin: 2rem;
   text-transform: capitalize;
@@ -940,6 +940,7 @@ html.sr .load-hidden {
 .contact-page .contact-main {
   margin-block: 2rem;
   display: flex;
+  justify-content: space-between;
   gap: 4rem;
 }
 .contact-page .contact-main .form {
@@ -2417,7 +2418,8 @@ html.sr .load-hidden {
   position: absolute;
   z-index: 5;
   top: 50%;
-  transform: translate(50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .featured__card .paragraph {
   font-size: 1.2rem;
@@ -2440,6 +2442,10 @@ html.sr .load-hidden {
 .featured__card .btn {
   text-transform: uppercase;
   padding: 1rem 2rem;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+.featured__card .btn:hover {
+  color: #ec992f;
 }
 
 .shop-page {
@@ -2535,7 +2541,7 @@ html.sr .load-hidden {
 }
 
 .mini-card-section {
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 .mini-card-section .shop__card {
   padding: 1.5rem;

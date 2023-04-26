@@ -21,53 +21,6 @@
 		position: relative;
 	}
 
-	// .search-form {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	margin-left: auto;
-	// 	position: absolute;
-	// 	right: $medium;
-	// 	// top: 0;
-
-	// 	&__label {
-	// 		display: flex;
-	// 		align-items: center;
-	// 		height: 100%;
-	// 		background-color: rgba($accentColor, 0.2);
-	// 		outline: 2px solid $accentColor;
-	// 		border-radius: 0.5rem;
-	// 		margin-left: 1rem;
-	// 	}
-
-	// 	&__input,
-	// 	&__input:focus {
-	// 		background-color: transparent;
-	// 		border: unset;
-	// 		outline: unset;
-	// 		height: 100%;
-	// 		padding: 1rem;
-	// 	}
-
-	// 	&__close {
-	// 		display: inline-block;
-	// 		color: $backgroundColor;
-	// 		padding-inline: 1rem;
-	// 		cursor: pointer;
-	// 	}
-
-	// 	.toggle-form {
-	// 		cursor: pointer;
-	// 		filter: invert(80%);
-	// 	}
-	// }
-
-	// .events__nav {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: space-between;
-	// 	margin-block: $small;
-	// }
-
 	.top-bar {
 		margin: 0;
 		padding: 1rem;
@@ -83,7 +36,6 @@
 		.social-icon:hover {
 			scale: 1.1;
 			rotate: 10deg;
-			// filter: drop-shadow(0 0 1rem $primaryColor);
 		}
 
 		.social-icon:active {
@@ -95,6 +47,7 @@
 	.contact-main {
 		margin-block: $tiny;
 		display: flex;
+		justify-content: space-between;
 		gap: $small;
 
 		.form {
