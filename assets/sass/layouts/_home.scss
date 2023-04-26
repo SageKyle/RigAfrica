@@ -44,6 +44,7 @@
 	&__wrapper {
 		height: calc($large * 4);
 		background-image: url('/assets/images/partners-bg.svg');
+		clip-path: polygon(0 43%, 100% 0, 100% 100%, 0% 100%);
 		background-size: cover;
 		background-repeat: no-repeat;
 		display: flex;
@@ -396,6 +397,7 @@
 		&__wrapper {
 			height: auto;
 			padding-block: $small;
+			clip-path: none;
 
 			&::after {
 				clip-path: none;
