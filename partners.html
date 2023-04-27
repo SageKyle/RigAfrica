@@ -45,55 +45,37 @@
 		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
 	<body class="partners-page">
-		<header class="header">
-			<section class="header__wrapper">
-				<!-- ----------------- NAVBAR----------------------------- -->
-				<nav class="navbar">
-					<a href="/index.html" class="navbar__logo">
-						<img src="/assets/icons/rig-nav-logo.png" alt="" class="logo" />
-					</a>
-					<section class="navigation main-nav hide-nav">
-						<a href="about.html" class="navigation__link">about us</a>
-						<a href="contact.html" class="navigation__link">contact us</a>
-						<a href="partners.html" class="navigation__link active">partner</a>
-						<a href="rigx.html" class="navigation__link">RIGX</a>
-						<a href="rig-school.html" class="navigation__link">RIG school</a>
-						<a href="events.html" class="navigation__link">events</a>
-						<a href="shop-books.html" class="navigation__link">shops</a>
-						<a href="#" class="navigation__link">affiliate</a>
-						<span class="navigation__link show-modal">donation</span>
-					</section>
-					<button class="btn btn-primary">
-						<a href="sign-in.html">login</a>
-					</button>
-					<img
-						src="/assets/icons/icon-hamburger.svg"
-						alt=""
-						class="icon nav-toggle"
-					/>
-				</nav>
-				<!-- SEARCH FORM -->
-				<!-- <form class="search-form">
-					<label class="search-form__label hidden event-search">
-						<span class="search-form__close event-close">x</span>
-						<input
-							class="search-form__input"
-							placeholder="Search"
-							type="text"
-						/>
-					</label>
-				</form> -->
-				<!-- ------------------------ HERO SECTION -------------------- -->
-				<section class="hero">
-					<img
-						src="/assets/images/rig-partner-programme-logo.png"
-						alt=""
-						class="logo partners__logo"
-					/>
-				</section>
-			</section>
-		</header>
 		<main class="main">
+			<!-- ----------------- NAVBAR----------------------------- -->
+			<nav class="navbar">
+				<a href="/index.html" class="navbar__logo">
+					<img src="/assets/icons/rig-nav-logo.png" alt="" class="logo" />
+				</a>
+				<section class="navigation main-nav hide-nav">
+					<a href="about.html" class="navigation__link">about us</a>
+					<a href="contact.html" class="navigation__link">contact us</a>
+					<a href="partners.html" class="navigation__link active">partner</a>
+					<a href="rigx.html" class="navigation__link">RIGX</a>
+					<a href="rig-school.html" class="navigation__link">RIG school</a>
+					<a href="events.html" class="navigation__link">events</a>
+					<a href="shop-books.html" class="navigation__link">shops</a>
+					<a href="#" class="navigation__link">affiliate</a>
+					<span class="navigation__link show-modal">donation</span>
+				</section>
+				<button class="btn btn-primary">
+					<a href="sign-in.html">login</a>
+				</button>
+				<img
+					src="/assets/icons/icon-hamburger.svg"
+					alt=""
+					class="icon nav-toggle"
+				/>
+			</nav>
+			<img
+				src="/assets/images/rig-partner-programme-logo.png"
+				alt=""
+				class="logo partners__logo"
+			/>
 			<p class="description paragraph">
 				RIG Nation has an exciting programme that allows its Partners to be
 				actively involved in our vision to raise up 7,000 apostles and prophets
@@ -105,10 +87,8 @@
 			<section class="partners__container">
 				<h4 class="partners__heading">Become a Partner</h4>
 				<article class="grid col-3 partners">
-					<div class="partners__card">
-						<h5 class="primary-color partners__type">VIP</h5>
-						<h5 class="secondary-heading partners__card--amount">N10,000.00</h5>
-						<p class="paragraph partners__card--info">Monthly payment</p>
+					<div class="partners__card vip">
+						<h5 class="partners__type">VIP</h5>
 
 						<p class="paragraph partners__card--feature">
 							<img
@@ -130,12 +110,15 @@
 							Access to the Partners’ Portal which includes the latest news on
 							the ministry and events coming up.
 						</p>
-						<a href="dashboard.html" class="signup-link">sign up</a>
-					</div>
-					<div class="partners__card">
-						<h5 class="primary-color partners__type">Executive</h5>
-						<h5 class="secondary-heading partners__card--amount">N30,000.00</h5>
+						<h5 class="secondary-heading partners__card--amount">N10,000.00</h5>
 						<p class="paragraph partners__card--info">Monthly payment</p>
+						<button class="btn">
+							<a href="sign-in.html" class="signup-link">sign up</a>
+						</button>
+					</div>
+
+					<div class="partners__card executive">
+						<h5 class="primary-color partners__type">Executive</h5>
 
 						<p class="paragraph partners__card--feature">
 							<img
@@ -175,14 +158,15 @@
 							/>
 							Access to Propheticost, our monthly prophetic ministry event.
 						</p>
-						<a href="#" class="signup-link">sign up</a>
-					</div>
-					<div class="partners__card">
-						<h5 class="primary-color partners__type">Ambassador</h5>
-						<h5 class="secondary-heading partners__card--amount">
-							N150,000.00
-						</h5>
+						<h5 class="secondary-heading partners__card--amount">N30,000.00</h5>
 						<p class="paragraph partners__card--info">Monthly payment</p>
+						<button class="btn">
+							<a href="sign-in.html" class="signup-link">sign up</a>
+						</button>
+					</div>
+
+					<div class="partners__card ambassador">
+						<h5 class="partners__type">Ambassador</h5>
 
 						<p class="paragraph partners__card--feature">
 							<img
@@ -250,7 +234,13 @@
 							/>
 							Exclusive meetings with Prophet Tomi Arayomi.
 						</p>
-						<a href="#" class="signup-link">sign up</a>
+						<h5 class="secondary-heading partners__card--amount">
+							N150,000.00
+						</h5>
+						<p class="paragraph partners__card--info">Monthly payment</p>
+						<button class="btn">
+							<a href="sign-in.html" class="signup-link">sign up</a>
+						</button>
 					</div>
 				</article>
 			</section>
