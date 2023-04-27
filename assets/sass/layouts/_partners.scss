@@ -2,14 +2,18 @@
 @use '../abstracts/variables' as *;
 
 .partners-page {
-	background-color: rgba($accentColor, 0.4);
+	background-color: rgba($accentColor, 0.2);
+
+	.navbar {
+		background-color: hsl(207, 7%, 75%);
+	}
 
 	.main {
 		margin-block: 16rem $small;
 	}
 
 	.description {
-		margin: $small auto;
+		margin: $small auto 0;
 		width: 60%;
 		text-align: center;
 	}
@@ -23,7 +27,7 @@
 	.partners {
 		width: 80%;
 		margin: $small auto;
-		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		// grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 		gap: $small;
 
 		// Partners image (top image)
@@ -33,18 +37,26 @@
 			margin: $big auto $small;
 		}
 
-		&__heading {
-			font-family: 'Gabriela', serif;
-			font-size: 6rem;
-			font-weight: normal;
-			color: transparent;
-			-webkit-text-stroke: 2px rgba($backgroundColor, 0.8);
-		}
+		// &__heading {
+		// 	font-family: 'Gabriela', serif;
+		// 	font-size: 6rem;
+		// 	font-weight: normal;
+		// 	color: transparent;
+		// 	-webkit-text-stroke: 2px rgba($backgroundColor, 0.8);
+		// }
 
 		&__type {
 			font-family: 'Gabriela', sans-serif;
 			font-size: clamp(2rem, 1.5vw + 0.5rem, 3rem);
-			line-height: 4rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 1rem;
+			margin-bottom: $tiny;
+
+			&--img {
+				width: $small;
+			}
 		}
 
 		&__card {
@@ -73,16 +85,17 @@
 				width: 100%;
 				display: flex;
 				align-items: center;
+
+				.icon {
+					width: 1.6rem;
+					margin-right: 1rem;
+					filter: invert(80%);
+				}
 			}
 
 			&--feature:not(:last-of-type) {
 				border-bottom: 2px solid rgba($backgroundColor, 0.4);
 				margin-bottom: 1rem;
-			}
-
-			.icon {
-				width: 1.6rem;
-				margin-right: 1rem;
 			}
 
 			.btn {
@@ -93,7 +106,7 @@
 			}
 
 			.btn:hover {
-				scale: 1.1;
+				scale: 1.05;
 			}
 
 			.signup-link {
@@ -107,7 +120,8 @@
 		.vip {
 			border: 1px solid hsl(0, 0%, 41%);
 
-			.partners__card--amount {
+			.partners__card--amount,
+			.partners__type {
 				color: $textColor;
 			}
 
@@ -115,12 +129,17 @@
 				background-color: hsl(0, 0%, 82%);
 				color: $textColor;
 			}
+
+			.btn:hover {
+				background-color: hsl(0, 1%, 62%);
+			}
 		}
 
 		.executive {
 			border: 1px solid $primaryColor;
 
-			.partners__card--amount {
+			.partners__card--amount,
+			.partners__type {
 				color: $primaryColor;
 			}
 
@@ -128,12 +147,17 @@
 				background-color: hsl(35, 100%, 94%);
 				color: $primaryColor;
 			}
+
+			.btn:hover {
+				background-color: hsl(36, 94%, 87%);
+			}
 		}
 
 		.ambassador {
 			border: 1px solid hsl(214, 100%, 21%);
 
-			.partners__card--amount {
+			.partners__card--amount,
+			.partners__type {
 				color: hsl(214, 100%, 21%);
 			}
 
@@ -141,6 +165,18 @@
 				background-color: hsl(206, 14%, 69%);
 				color: hsl(214, 100%, 21%);
 			}
+
+			.btn:hover {
+				background-color: hsl(207, 25%, 67%);
+			}
+		}
+	}
+
+	// ==================== MEDIA QUERIES ==========================
+	@media screen and (max-width: 650px) {
+		.partners__logo,
+		.description {
+			width: 80%;
 		}
 	}
 }

@@ -2398,13 +2398,16 @@ html.sr .load-hidden {
 }
 
 .partners-page {
-  background-color: rgba(72, 84, 97, 0.4);
+  background-color: rgba(72, 84, 97, 0.2);
+}
+.partners-page .navbar {
+  background-color: hsl(207, 7%, 75%);
 }
 .partners-page .main {
   margin-block: 16rem 4rem;
 }
 .partners-page .description {
-  margin: 4rem auto;
+  margin: 4rem auto 0;
   width: 60%;
   text-align: center;
 }
@@ -2416,7 +2419,6 @@ html.sr .load-hidden {
 .partners-page .partners {
   width: 80%;
   margin: 4rem auto;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 4rem;
 }
 .partners-page .partners__logo {
@@ -2424,17 +2426,17 @@ html.sr .load-hidden {
   display: block;
   margin: 8rem auto 4rem;
 }
-.partners-page .partners__heading {
-  font-family: "Gabriela", serif;
-  font-size: 6rem;
-  font-weight: normal;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
-}
 .partners-page .partners__type {
   font-family: "Gabriela", sans-serif;
   font-size: clamp(2rem, 1.5vw + 0.5rem, 3rem);
-  line-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.partners-page .partners__type--img {
+  width: 4rem;
 }
 .partners-page .partners__card {
   background-image: linear-gradient(222.92deg, rgba(255, 255, 255, 0.16) 0%, rgba(248, 248, 248, 0) 100%);
@@ -2457,13 +2459,14 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
 }
+.partners-page .partners__card--feature .icon {
+  width: 1.6rem;
+  margin-right: 1rem;
+  filter: invert(80%);
+}
 .partners-page .partners__card--feature:not(:last-of-type) {
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   margin-bottom: 1rem;
-}
-.partners-page .partners__card .icon {
-  width: 1.6rem;
-  margin-right: 1rem;
 }
 .partners-page .partners__card .btn {
   min-width: 60%;
@@ -2472,7 +2475,7 @@ html.sr .load-hidden {
   transition: all ease-in-out 0.2s;
 }
 .partners-page .partners__card .btn:hover {
-  scale: 1.1;
+  scale: 1.05;
 }
 .partners-page .partners__card .signup-link {
   text-transform: capitalize;
@@ -2482,32 +2485,50 @@ html.sr .load-hidden {
 .partners-page .partners .vip {
   border: 1px solid hsl(0, 0%, 41%);
 }
-.partners-page .partners .vip .partners__card--amount {
+.partners-page .partners .vip .partners__card--amount,
+.partners-page .partners .vip .partners__type {
   color: #1e293b;
 }
 .partners-page .partners .vip .btn {
   background-color: hsl(0, 0%, 82%);
   color: #1e293b;
 }
+.partners-page .partners .vip .btn:hover {
+  background-color: hsl(0, 1%, 62%);
+}
 .partners-page .partners .executive {
   border: 1px solid #ec992f;
 }
-.partners-page .partners .executive .partners__card--amount {
+.partners-page .partners .executive .partners__card--amount,
+.partners-page .partners .executive .partners__type {
   color: #ec992f;
 }
 .partners-page .partners .executive .btn {
   background-color: hsl(35, 100%, 94%);
   color: #ec992f;
 }
+.partners-page .partners .executive .btn:hover {
+  background-color: hsl(36, 94%, 87%);
+}
 .partners-page .partners .ambassador {
   border: 1px solid hsl(214, 100%, 21%);
 }
-.partners-page .partners .ambassador .partners__card--amount {
+.partners-page .partners .ambassador .partners__card--amount,
+.partners-page .partners .ambassador .partners__type {
   color: hsl(214, 100%, 21%);
 }
 .partners-page .partners .ambassador .btn {
   background-color: hsl(206, 14%, 69%);
   color: hsl(214, 100%, 21%);
+}
+.partners-page .partners .ambassador .btn:hover {
+  background-color: hsl(207, 25%, 67%);
+}
+@media screen and (max-width: 650px) {
+  .partners-page .partners__logo,
+  .partners-page .description {
+    width: 80%;
+  }
 }
 
 .rigx-page {
