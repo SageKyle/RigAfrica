@@ -63,12 +63,17 @@
 		letter-spacing: -0.04em;
 		color: $primaryColor;
 		-webkit-text-stroke: 2px rgba($backgroundColor, 0.6);
+		animation: pulse 2s alternate infinite;
 	}
 
 	// form wrapper
 	.coming-soon__form--wrapper {
 		margin-top: $tiny;
 		width: 80%;
+
+		.paragraph {
+			font-weight: bold;
+		}
 	}
 
 	.coming-soon__form {
