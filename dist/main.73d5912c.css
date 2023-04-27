@@ -479,7 +479,7 @@ html.sr .load-hidden {
   }
   .newsline {
     height: fit-content;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 0.5rem;
     justify-content: center;
     width: 100%;
   }
@@ -626,6 +626,9 @@ html.sr .load-hidden {
 }
 .about-page .header__wrapper {
   background: rgba(236, 153, 47, 0.2);
+}
+.about-page .navbar {
+  top: 0;
 }
 .about-page .hero {
   width: 80%;
@@ -919,6 +922,9 @@ html.sr .load-hidden {
 
 .rig-school-page {
   background-color: rgba(72, 84, 97, 0.2);
+}
+.rig-school-page .navbar {
+  top: 0;
 }
 .rig-school-page .main {
   width: 80%;
@@ -1592,6 +1598,12 @@ html.sr .load-hidden {
 .events-page {
   background-color: rgba(72, 84, 97, 0.2);
 }
+.events-page .display-on-mobile {
+  display: none !important;
+}
+.events-page .display-on-desktop {
+  display: flex !important;
+}
 .events-page .navbar {
   background-color: rgba(72, 84, 97, 0.6);
   color: #fff;
@@ -1795,10 +1807,12 @@ html.sr .load-hidden {
   .events-page .events .event__date {
     flex-wrap: wrap;
   }
-  .past-events-page .display-on-desktop {
+  .past-events-page .display-on-desktop,
+  .events-page .display-on-desktop {
     display: none !important;
   }
-  .past-events-page .display-on-mobile {
+  .past-events-page .display-on-mobile,
+  .events-page .display-on-mobile {
     display: flex !important;
   }
 }
@@ -1850,6 +1864,7 @@ html.sr .load-hidden {
   margin-top: 6rem;
   margin-inline: auto;
   max-width: 90%;
+  overflow-x: hidden;
 }
 .welcome__txt--title {
   font-family: "Sacramento", cursive;
@@ -1886,6 +1901,7 @@ html.sr .load-hidden {
   align-items: flex-end;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
 }
 .partners__wrapper::after {
   content: "";
@@ -2412,6 +2428,7 @@ html.sr .load-hidden {
 }
 .partners-page .navbar {
   background-color: hsl(207, 7%, 75%);
+  top: 0;
 }
 .partners-page .main {
   margin-block: 16rem 4rem;
@@ -2547,6 +2564,9 @@ html.sr .load-hidden {
 .rigx-page .header {
   background-image: url("/rigx-bg.89b3a959.png");
   max-height: 56rem;
+}
+.rigx-page .navbar {
+  top: 0;
 }
 .rigx-page .hero {
   width: 80%;

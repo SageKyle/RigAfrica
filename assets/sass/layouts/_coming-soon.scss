@@ -6,6 +6,10 @@
 .rig-school-page {
 	background-color: rgba($accentColor, 0.2);
 
+	.navbar {
+		top: 0;
+	}
+
 	.main {
 		width: 80%;
 		margin-inline: auto;

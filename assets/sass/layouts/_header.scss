@@ -189,9 +189,8 @@
 
 	.newsline {
 		height: fit-content;
-		padding: 1rem $tiny;
+		padding: 1rem $tiny 0.5rem;
 		justify-content: center;
-		// position: static;
 		width: 100%;
 
 		&__link--group {

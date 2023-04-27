@@ -75,6 +75,7 @@
 
 .events-page {
 	background-color: rgba($accentColor, 0.2);
+	@include desktop-display;
 
 	.navbar {
 		background-color: rgba($accentColor, 0.6);
@@ -339,7 +340,8 @@
 		}
 	}
 
-	.past-events-page {
+	.past-events-page,
+	.events-page {
 		@include mobile-display;
 	}
 }
