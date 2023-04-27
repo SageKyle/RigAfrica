@@ -44,12 +44,14 @@
 		}
 	}
 
+	// main content wrapper
 	.contact-main {
 		margin-block: $tiny;
 		display: flex;
 		justify-content: space-between;
 		gap: $small;
 
+		// contact form
 		.form {
 			display: flex;
 			flex-direction: column;
@@ -83,15 +85,13 @@
 		textarea {
 			height: 12rem;
 		}
-
-		option {
-			width: inherit;
-		}
 	}
 
+	// image group wrapper
 	.contact__img--group {
 		width: fit-content;
-		margin: $medium auto;
+		margin-block: $medium;
+		margin-inline: auto 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -100,25 +100,25 @@
 	}
 
 	.pattern {
-		width: 25rem;
+		width: 26rem;
 	}
 
 	.center-img {
-		width: 20rem;
+		width: 21rem;
 		z-index: 2;
 		left: -1rem;
 		bottom: 1rem;
 	}
 
 	.top-img {
-		width: $large;
+		width: 12rem;
 		z-index: 3;
 		top: 0;
 		left: -1rem;
 	}
 
 	.bottom-img {
-		width: $large;
+		width: 12rem;
 		z-index: 3;
 		bottom: -1rem;
 		left: 8rem;
@@ -131,6 +131,7 @@
 		position: absolute;
 	}
 
+	// RIG branch cards section
 	.rig-branch__group {
 		width: 100%;
 		display: grid;
