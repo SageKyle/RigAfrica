@@ -132,13 +132,17 @@ ScrollReveal().reveal(rigXCard, {
 });
 
 // ==================== TOGGLE DONATION MODAL =================
-const showDonation = document.querySelector('.show-modal');
+const showDonationBTN = document.querySelectorAll('.show-modal');
 const closeDonation = document.querySelector('.close-donation');
 const donationWrapper = document.querySelector('.donation__wrapper');
 
 // show modal
-showDonation.addEventListener('click', () => {
-	donationWrapper.classList.toggle('hidden');
+showDonationBTN.forEach((showDonation) => {
+	showDonation.addEventListener('click', () => {
+		donationWrapper.classList.toggle('hidden');
+		// also hide navbar when modal is open
+		hideNavbar();
+	});
 });
 
 // hide modal

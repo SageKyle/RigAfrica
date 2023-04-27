@@ -43,10 +43,10 @@
 		justify-content: center;
 		align-items: center;
 		gap: $tiny;
-	}
 
-	.rig-logo {
-		height: $small;
+		.rig-logo {
+			height: $small;
+		}
 	}
 
 	// =============== MISSION SECTION ===============
@@ -84,10 +84,11 @@
 	// FOUNDER SECTION
 	.founder {
 		display: flex;
-		align-items: flex-start;
-		justify-content: center;
+		align-items: center;
+		justify-content: space-around;
 		margin: $medium auto;
 		gap: $tiny;
+		padding: $small;
 
 		.tertiary-heading {
 			margin-bottom: $tiny;
@@ -98,7 +99,7 @@
 			flex-direction: column;
 			align-items: center;
 			gap: $small;
-			width: 40%;
+			width: 25%;
 		}
 
 		&__info {
@@ -128,7 +129,7 @@
 		}
 
 		&__txt {
-			width: 50%;
+			width: 70%;
 
 			.paragraph {
 				font-size: 1.4rem;

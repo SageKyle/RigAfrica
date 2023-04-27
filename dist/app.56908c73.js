@@ -1923,13 +1923,17 @@ var rigXCard = document.querySelectorAll('.contact');
 });
 
 // ==================== TOGGLE DONATION MODAL =================
-var showDonation = document.querySelector('.show-modal');
+var showDonationBTN = document.querySelectorAll('.show-modal');
 var closeDonation = document.querySelector('.close-donation');
 var donationWrapper = document.querySelector('.donation__wrapper');
 
 // show modal
-showDonation.addEventListener('click', function () {
-  donationWrapper.classList.toggle('hidden');
+showDonationBTN.forEach(function (showDonation) {
+  showDonation.addEventListener('click', function () {
+    donationWrapper.classList.toggle('hidden');
+    // also hide navbar when modal is open
+    hideNavbar();
+  });
 });
 
 // hide modal
@@ -1961,7 +1965,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61646" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50011" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
