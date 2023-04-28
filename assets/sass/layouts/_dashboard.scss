@@ -6,6 +6,11 @@
 	background-color: #f7f8fa;
 	@include desktop-display;
 
+	.navbar {
+		top: 0;
+		background-color: hsl(220, 12%, 95%);
+	}
+
 	.profile-card {
 		display: flex;
 		flex-direction: column;

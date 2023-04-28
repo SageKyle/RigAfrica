@@ -50,17 +50,28 @@
 }
 
 .header {
-	// position: static;
-	background-image: url('/assets/images/hero-bg.png');
+	// background-image: url('/assets/images/hero-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-blend-mode: screen;
 	background-color: rgb(8, 23, 39);
 	height: 100vh;
-	height: 100dvh;
+	height: 100svh;
 	width: 100%;
 	top: $small;
+	position: relative;
+
+	// HEADER BACKGROUND IMAGE
+	&__bg-img {
+		display: inline-block;
+		position: absolute;
+		inset: 0 0 0 auto;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+		z-index: 1;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -70,6 +81,8 @@
 		height: 100%;
 		background-image: linear-gradient(rgb(40, 49, 59), rgba(72, 84, 97, 0.46));
 		padding: $small;
+		position: relative;
+		z-index: 2;
 	}
 
 	.search-form {

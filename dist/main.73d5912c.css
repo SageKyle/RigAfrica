@@ -361,16 +361,25 @@ html.sr .load-hidden {
 }
 
 .header {
-  background-image: url("/hero-bg.fc0c277c.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: screen;
   background-color: rgb(8, 23, 39);
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   width: 100%;
   top: 4rem;
+  position: relative;
+}
+.header__bg-img {
+  display: inline-block;
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
 }
 .header__wrapper {
   display: flex;
@@ -380,6 +389,8 @@ html.sr .load-hidden {
   height: 100%;
   background-image: linear-gradient(rgb(40, 49, 59), rgba(72, 84, 97, 0.46));
   padding: 4rem;
+  position: relative;
+  z-index: 2;
 }
 .header .search-form {
   display: flex;
@@ -621,11 +632,24 @@ html.sr .load-hidden {
   display: flex !important;
 }
 .about-page .header {
-  background-image: url("/about-bg.9e70c1ad.png");
+  background-image: none;
   max-height: 56rem;
+  position: relative;
+  top: 0;
 }
 .about-page .header__wrapper {
   background: rgba(236, 153, 47, 0.2);
+  position: relative;
+  z-index: 2;
+}
+.about-page .header__bg-img {
+  display: inline-block;
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
 }
 .about-page .navbar {
   top: 0;
@@ -1217,6 +1241,10 @@ html.sr .load-hidden {
 }
 .dashboard-page .display-on-desktop {
   display: flex !important;
+}
+.dashboard-page .navbar {
+  top: 0;
+  background-color: hsl(220, 12%, 95%);
 }
 .dashboard-page .profile-card {
   display: flex;
@@ -2562,8 +2590,23 @@ html.sr .load-hidden {
   background-color: rgba(72, 84, 97, 0.2);
 }
 .rigx-page .header {
-  background-image: url("/rigx-bg.89b3a959.png");
+  background-image: none;
   max-height: 56rem;
+  position: relative;
+  top: 0;
+}
+.rigx-page .header__wrapper {
+  position: relative;
+  z-index: 2;
+}
+.rigx-page .header__bg-img {
+  display: inline-block;
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
 }
 .rigx-page .navbar {
   top: 0;
@@ -2786,10 +2829,6 @@ html.sr .load-hidden {
 }
 
 @media screen and (max-width: 800px) {
-  .secondary-heading,
-  .primary-heading {
-    margin: 0;
-  }
   .top-bar {
     padding: 0;
   }
@@ -2805,6 +2844,10 @@ html.sr .load-hidden {
     width: 100%;
     position: unset;
     transform: unset;
+  }
+  .shop-page .secondary-heading,
+  .shop-page .primary-heading {
+    margin: 0;
   }
   .shop-page .shop {
     padding: 0;
