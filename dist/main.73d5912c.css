@@ -813,7 +813,7 @@ html.sr .load-hidden {
 .auth-page .container {
   min-height: 90vh;
   width: 100%;
-  background-image: url("/shokunin_World_Map 3.0f40bd24.png");
+  background-image: url("/auth-bg.e6c8a530.png");
   background-position: center;
   position: relative;
 }
@@ -822,8 +822,7 @@ html.sr .load-hidden {
 }
 .auth-page .header {
   width: 100%;
-  height: fit-content;
-  display: block;
+  height: 6rem;
   background: unset;
   position: relative;
 }

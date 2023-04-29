@@ -5,9 +5,7 @@
 	.container {
 		min-height: 90vh;
 		width: 100%;
-		background-image: url('/assets/images/shokunin_World_Map\ 3.png');
-		// background-size: contain;
-		// background-repeat: no-repeat;
+		background-image: url('/assets/images/auth-bg.png');
 		background-position: center;
 		position: relative;
 	}
@@ -18,8 +16,7 @@
 
 	.header {
 		width: 100%;
-		height: fit-content;
-		display: block;
+		height: 6rem;
 		background: unset;
 		position: relative;
 	}
