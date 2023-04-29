@@ -12,6 +12,10 @@
 		position: relative;
 	}
 
+	.navbar {
+		top: 0;
+	}
+
 	.header {
 		width: 100%;
 		height: fit-content;
@@ -22,15 +26,15 @@
 
 	.main {
 		width: 45%;
-		margin: auto;
+		margin: $tiny auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding-block: $medium;
+		// padding-block: $medium;
 
 		&__img {
-			width: 100%;
+			width: 80%;
 			display: inline-block;
 			margin-block: $big $small;
 		}

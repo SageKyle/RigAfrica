@@ -89,10 +89,7 @@
 	z-index: 20;
 	height: 100vh;
 	height: 100svh;
-	top: $tiny;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	inset: 0;
 	border: unset;
 	background-color: rgba($accentColor, 0.2);
 	animation-name: popIn;
@@ -113,6 +110,8 @@
 		background-position: left;
 		background-color: rgba($primaryColor, 1);
 		position: relative;
+		top: $tiny;
+		bottom: $tiny;
 
 		&::before {
 			content: '';
@@ -174,9 +173,9 @@
 
 	// ================= MEDIA QUERIES =================
 	@media screen and (max-width: 650px) {
-		height: 80vh;
-		height: 80svh;
-		top: unset;
+		// height: 80vh;
+		// height: 80svh;
+		// top: unset;
 
 		.donation__container {
 			height: auto;

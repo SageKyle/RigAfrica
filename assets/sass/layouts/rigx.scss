@@ -85,6 +85,14 @@
 	// =============== MEDIA QUERIES ===================
 
 	@media screen and (max-width: 650px) {
+		.header {
+			background-image: url('/assets/images/rigx-bg.png');
+
+			&__bg-img {
+				display: none;
+			}
+		}
+
 		.contact__group {
 			grid-template-columns: 1fr;
 		}

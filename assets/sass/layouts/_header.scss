@@ -50,7 +50,7 @@
 }
 
 .header {
-	// background-image: url('/assets/images/hero-bg.png');
+	background-image: url('/assets/images/hero-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -60,18 +60,18 @@
 	height: 100svh;
 	width: 100%;
 	top: $small;
-	position: relative;
+	// position: relative;
 
 	// HEADER BACKGROUND IMAGE
-	&__bg-img {
-		display: inline-block;
-		position: absolute;
-		inset: 0 0 0 auto;
-		width: 100%;
-		height: 100%;
-		object-fit: fill;
-		z-index: 1;
-	}
+	// &__bg-img {
+	// 	display: inline-block;
+	// 	position: absolute;
+	// 	inset: 0 0 0 auto;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	object-fit: fill;
+	// 	z-index: 1;
+	// }
 
 	&__wrapper {
 		display: flex;
@@ -81,8 +81,8 @@
 		height: 100%;
 		background-image: linear-gradient(rgb(40, 49, 59), rgba(72, 84, 97, 0.46));
 		padding: $small;
-		position: relative;
-		z-index: 2;
+		// position: relative;
+		// z-index: 2;
 	}
 
 	.search-form {
@@ -233,5 +233,12 @@
 		.stat__info {
 			font-size: 1.4rem;
 		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header {
+		height: 95vh;
+		height: 100svh;
 	}
 }
