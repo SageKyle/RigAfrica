@@ -48,7 +48,7 @@
 	.contact-main {
 		margin-block: $tiny;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		gap: $small;
 
 		// contact form
@@ -78,8 +78,8 @@
 		}
 
 		.btn {
-			max-width: 40%;
-			margin: $tiny $medium;
+			width: 40%;
+			margin: $tiny auto;
 		}
 
 		textarea {
@@ -92,7 +92,7 @@
 		width: fit-content;
 		height: 27rem;
 		margin-block: $medium;
-		margin-inline: auto 0;
+		margin-inline: $medium 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;

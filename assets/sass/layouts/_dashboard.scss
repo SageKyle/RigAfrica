@@ -136,6 +136,26 @@
 					}
 				}
 			}
+
+			.btn {
+				width: fit-content;
+
+				&:hover {
+					scale: unset;
+				}
+			}
+
+			form {
+				width: fit-content;
+				margin-left: auto;
+			}
+
+			// hide image input
+			input[type='file'] {
+				visibility: hidden;
+				width: 1rem;
+				height: 1rem;
+			}
 		}
 
 		.main-card {

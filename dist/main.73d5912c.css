@@ -817,6 +817,16 @@ html.sr .load-hidden {
   background-position: center;
   position: relative;
 }
+.auth-page .container::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  position: absolute;
+  background-color: rgba(72, 84, 97, 0.1);
+}
 .auth-page .navbar {
   top: 0;
 }
@@ -1122,7 +1132,7 @@ html.sr .load-hidden {
 .contact-page .contact-main {
   margin-block: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 4rem;
 }
 .contact-page .contact-main .form {
@@ -1146,8 +1156,8 @@ html.sr .load-hidden {
   background-color: rgba(255, 255, 255, 0.8);
 }
 .contact-page .contact-main .btn {
-  max-width: 40%;
-  margin: 2rem 6rem;
+  width: 40%;
+  margin: 2rem auto;
 }
 .contact-page .contact-main textarea {
   height: 12rem;
@@ -1156,7 +1166,7 @@ html.sr .load-hidden {
   width: fit-content;
   height: 27rem;
   margin-block: 6rem;
-  margin-inline: auto 0;
+  margin-inline: 6rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1347,6 +1357,21 @@ html.sr .load-hidden {
 .dashboard-page .main-content .topbar .profile-card .user-info__avatar {
   width: 4rem;
   margin: 0;
+}
+.dashboard-page .main-content .topbar .btn {
+  width: fit-content;
+}
+.dashboard-page .main-content .topbar .btn:hover {
+  scale: unset;
+}
+.dashboard-page .main-content .topbar form {
+  width: fit-content;
+  margin-left: auto;
+}
+.dashboard-page .main-content .topbar input[type=file] {
+  visibility: hidden;
+  width: 1rem;
+  height: 1rem;
 }
 .dashboard-page .main-content .main-card {
   width: 100%;
@@ -1808,9 +1833,6 @@ html.sr .load-hidden {
 .past-events-page .cta__wrapper {
   width: 100%;
 }
-.past-events-page .cta::after {
-  display: none;
-}
 
 @media screen and (max-width: 800px) {
   .past-events-page .top-bar,
@@ -1916,7 +1938,10 @@ html.sr .load-hidden {
   align-self: flex-start;
 }
 .welcome__img {
-  margin-top: -10rem;
+  margin-top: -8rem;
+}
+.welcome .main-img {
+  max-height: 21rem;
 }
 
 .partners {
@@ -2118,9 +2143,9 @@ html.sr .load-hidden {
   font-family: "Gabriela", serif;
   font-size: 5rem;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
   top: 8rem;
-  right: 25%;
+  left: 2rem;
   position: absolute;
   z-index: 1;
 }
@@ -2184,6 +2209,7 @@ html.sr .load-hidden {
 @media screen and (max-width: 800px) {
   .welcome__img {
     width: 60%;
+    max-height: unset;
     order: -1;
     margin-top: 0;
   }
@@ -2231,7 +2257,7 @@ html.sr .load-hidden {
     width: 80%;
   }
   .prophecy-section.split-2 .prophecy-section__txt {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   .cta__wrapper {
     height: auto;
@@ -2289,7 +2315,7 @@ html.sr .load-hidden {
     padding: 0;
   }
   .cta::after {
-    display: none;
+    font-size: 4rem;
   }
   .cta__txt {
     width: 100%;

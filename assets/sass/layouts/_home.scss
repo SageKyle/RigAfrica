@@ -31,7 +31,11 @@
 	}
 
 	&__img {
-		margin-top: -$large;
+		margin-top: -$big;
+	}
+
+	.main-img {
+		max-height: 21rem;
 	}
 }
 
@@ -274,9 +278,9 @@
 		font-family: 'Gabriela', serif;
 		font-size: 5rem;
 		color: transparent;
-		-webkit-text-stroke: 2px rgba($backgroundColor, 0.4);
+		-webkit-text-stroke: 2px rgba($backgroundColor, 0.3);
 		top: $big;
-		right: 25%;
+		left: $tiny;
 		position: absolute;
 		z-index: 1;
 		// animation: loopHorizontal 15s linear infinite;
@@ -332,7 +336,6 @@
 
 	&__img {
 		width: 25%;
-		// position: absolute;
 		right: $small;
 		align-self: flex-end;
 		z-index: 2;
@@ -359,6 +362,7 @@
 @media screen and (max-width: 800px) {
 	.welcome__img {
 		width: 60%;
+		max-height: unset;
 		order: -1;
 		margin-top: 0;
 	}
@@ -419,7 +423,7 @@
 		}
 
 		.prophecy-section__txt {
-			padding: $tiny;
+			padding: 0 $tiny;
 		}
 	}
 
@@ -501,7 +505,7 @@
 	}
 
 	.cta::after {
-		display: none;
+		font-size: 4rem;
 	}
 
 	.cta__txt {
