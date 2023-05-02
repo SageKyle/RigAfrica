@@ -2,6 +2,12 @@
 @use '../abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 
+.home-page {
+	.navbar {
+		color: $backgroundColor;
+	}
+}
+
 // ================ WELCOME SECTION ==============
 .welcome {
 	margin-top: $medium;
@@ -86,10 +92,15 @@
 			rgba(248, 248, 248, 0) 100%
 		);
 		box-shadow: -15px 17px 27px 1px rgba(13, 13, 13, 0.15);
+		transition: all ease-in-out 0.2s;
 
 		&--heading {
 			color: $backgroundColor;
 		}
+	}
+
+	&__card:hover {
+		scale: 1.05;
 	}
 
 	.icon {
@@ -209,7 +220,8 @@
 		display: block;
 		content: url('/assets/images/map-bg.png');
 		width: 100%;
-		top: $tiny;
+		height: 100%;
+		top: $big;
 		bottom: $tiny;
 		position: absolute;
 		z-index: -1;

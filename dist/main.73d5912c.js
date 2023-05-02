@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\hero-bg.png":[["hero-bg.fc0c277c.png","assets/images/hero-bg.png"],"assets/images/hero-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\about-bg.png":[["about-bg.9e70c1ad.png","assets/images/about-bg.png"],"assets/images/about-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\auth-bg.png":[["auth-bg.e6c8a530.png","assets/images/auth-bg.png"],"assets/images/auth-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\icons\\tick-square.png":[["tick-square.12e328c2.png","assets/icons/tick-square.png"],"assets/icons/tick-square.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\partners-bg.svg":[["partners-bg.6c0d7023.svg","assets/images/partners-bg.svg"],"assets/images/partners-bg.svg"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\map-bg.png":[["map-bg.db189f06.png","assets/images/map-bg.png"],"assets/images/map-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\rigx-bg.png":[["rigx-bg.89b3a959.png","assets/images/rigx-bg.png"],"assets/images/rigx-bg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\hero-bg.jpg":[["hero-bg.3c28f247.jpg","assets/images/hero-bg.jpg"],"assets/images/hero-bg.jpg"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\about-bg.jpg":[["about-bg.a9ec3ae8.jpg","assets/images/about-bg.jpg"],"assets/images/about-bg.jpg"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\auth-bg.png":[["auth-bg.e6c8a530.png","assets/images/auth-bg.png"],"assets/images/auth-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\icons\\tick-square.png":[["tick-square.12e328c2.png","assets/icons/tick-square.png"],"assets/icons/tick-square.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\partners-bg.svg":[["partners-bg.6c0d7023.svg","assets/images/partners-bg.svg"],"assets/images/partners-bg.svg"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\map-bg.png":[["map-bg.db189f06.png","assets/images/map-bg.png"],"assets/images/map-bg.png"],"C:\\Users\\alber\\Documents\\Web Dev\\collab\\RigAfrica\\assets\\images\\rigx-bg.png":[["rigx-bg.89b3a959.png","assets/images/rigx-bg.png"],"assets/images/rigx-bg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50050" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53646" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

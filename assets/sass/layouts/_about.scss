@@ -9,7 +9,7 @@
 	@include desktop-display;
 
 	.header {
-		background-image: url('/assets/images/about-bg.png');
+		background-image: url('/assets/images/about-bg.jpg');
 		max-height: 56rem;
 		position: relative;
 		top: 0;
@@ -95,6 +95,7 @@
 
 		&__img {
 			width: 40%;
+			max-width: 25rem;
 			border-radius: 1rem;
 		}
 	}
@@ -128,6 +129,7 @@
 
 			&--img {
 				width: 100%;
+				border-radius: $tiny;
 			}
 		}
 
@@ -181,7 +183,7 @@
 			flex-direction: column;
 
 			.primary-heading {
-				width: 100%;
+				width: auto;
 			}
 
 			&__img {
